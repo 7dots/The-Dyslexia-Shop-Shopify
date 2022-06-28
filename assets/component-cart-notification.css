@@ -19,6 +19,7 @@
   visibility: hidden;
   width: 100%;
   z-index: -1;
+  background-color: var(--color-white);
   filter: drop-shadow(
     var(--popup-shadow-horizontal-offset)
     var(--popup-shadow-vertical-offset)
