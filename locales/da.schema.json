@@ -1,28 +1,5 @@
 {
   "settings_schema": {
-    "colors": {
-      "name": "Farver",
-      "settings": {
-        "header__1": {
-          "content": "Primære farver"
-        },
-        "header__2": {
-          "content": "Sekundære farver"
-        },
-        "gradient_accent_1": {
-          "label": "Markering 1 – graduering"
-        },
-        "gradient_accent_2": {
-          "label": "Markering 2 – graduering"
-        },
-        "gradient_background_1": {
-          "label": "Baggrund 1 – graduering"
-        },
-        "gradient_background_2": {
-          "label": "Baggrund 2 – graduering"
-        }
-      }
-    },
     "typography": {
       "name": "Typografi",
       "settings": {

@@ -1,28 +1,5 @@
 {
   "settings_schema": {
-    "colors": {
-      "name": "Colores",
-      "settings": {
-        "header__1": {
-          "content": "Colores primarios"
-        },
-        "header__2": {
-          "content": "Colores secundarios"
-        },
-        "gradient_accent_1": {
-          "label": "Degradado resaltado 1"
-        },
-        "gradient_accent_2": {
-          "label": "Degradado resaltado 2"
-        },
-        "gradient_background_1": {
-          "label": "Degradado de fondo 1"
-        },
-        "gradient_background_2": {
-          "label": "Degradado de fondo 2"
-        }
-      }
-    },
     "typography": {
       "name": "Tipografía",
       "settings": {

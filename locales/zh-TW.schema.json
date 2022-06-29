@@ -1,28 +1,5 @@
 {
   "settings_schema": {
-    "colors": {
-      "name": "色彩",
-      "settings": {
-        "header__1": {
-          "content": "主要顏色"
-        },
-        "header__2": {
-          "content": "次要顏色"
-        },
-        "gradient_accent_1": {
-          "label": "強調色 1 (漸層效果)"
-        },
-        "gradient_accent_2": {
-          "label": "強調色 2 (漸層效果)"
-        },
-        "gradient_background_1": {
-          "label": "背景 1 (漸層效果)"
-        },
-        "gradient_background_2": {
-          "label": "背景 2 (漸層效果)"
-        }
-      }
-    },
     "typography": {
       "name": "字體",
       "settings": {

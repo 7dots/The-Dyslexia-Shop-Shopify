@@ -1,28 +1,5 @@
 {
   "settings_schema": {
-    "colors": {
-      "name": "颜色",
-      "settings": {
-        "header__1": {
-          "content": "主色"
-        },
-        "header__2": {
-          "content": "辅助颜色"
-        },
-        "gradient_accent_1": {
-          "label": "强调色 1 渐变"
-        },
-        "gradient_accent_2": {
-          "label": "强调色 2 渐变"
-        },
-        "gradient_background_1": {
-          "label": "背景 1 渐变"
-        },
-        "gradient_background_2": {
-          "label": "背景 2 渐变"
-        }
-      }
-    },
     "typography": {
       "name": "版式",
       "settings": {

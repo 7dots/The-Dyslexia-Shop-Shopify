@@ -1,28 +1,5 @@
 {
   "settings_schema": {
-    "colors": {
-      "name": "Farger",
-      "settings": {
-        "header__1": {
-          "content": "Primærfarger"
-        },
-        "header__2": {
-          "content": "Sekundærfarger"
-        },
-        "gradient_accent_1": {
-          "label": "Aksent 1-fargeovergang"
-        },
-        "gradient_accent_2": {
-          "label": "Aksent 2-fargeovergang"
-        },
-        "gradient_background_1": {
-          "label": "Bakgrunn 1-fargeovergang"
-        },
-        "gradient_background_2": {
-          "label": "Bakgrunn 2-fargeovergang"
-        }
-      }
-    },
     "typography": {
       "name": "Typografi",
       "settings": {

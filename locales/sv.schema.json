@@ -1,28 +1,5 @@
 {
   "settings_schema": {
-    "colors": {
-      "name": "Färger",
-      "settings": {
-        "header__1": {
-          "content": "Primärfärger"
-        },
-        "header__2": {
-          "content": "Sekundära färger"
-        },
-        "gradient_accent_1": {
-          "label": "Tonad accent 1"
-        },
-        "gradient_accent_2": {
-          "label": "Tonad accent 2"
-        },
-        "gradient_background_1": {
-          "label": "Tonad bakgrund 1"
-        },
-        "gradient_background_2": {
-          "label": "Tonad bakgrund 2"
-        }
-      }
-    },
     "typography": {
       "name": "Typografi",
       "settings": {

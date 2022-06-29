@@ -100,12 +100,6 @@
         },
         "header__2": {
           "content": "Secondary colors"
-        },
-        "colors_background_1": {
-          "label": "Background 1"
-        },
-        "gradient_background_2": {
-          "label": "Background 2 gradient"
         }
       }
     },
