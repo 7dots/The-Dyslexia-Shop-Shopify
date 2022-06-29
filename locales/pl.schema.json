@@ -3,36 +3,11 @@
     "colors": {
       "name": "Kolory",
       "settings": {
-        "colors_solid_button_labels": {
-          "label": "Przycisk z etykietą w jednolitym kolorze",
-          "info": "Używany jako kolor pierwszego planu na kolorach akcentujących."
-        },
-        "colors_accent_1": {
-          "label": "Akcent 1",
-          "info": "Używane dla tła przycisku w jednolitym kolorze."
-        },
-        "colors_accent_2": {
-          "label": "Akcent 2"
-        },
         "header__1": {
           "content": "Kolory podstawowe"
         },
         "header__2": {
           "content": "Kolory dodatkowe"
-        },
-        "colors_text": {
-          "label": "Tekst",
-          "info": "Używany jako kolor pierwszego planu na kolorach tła."
-        },
-        "colors_outline_button_labels": {
-          "label": "Przycisk konspektu",
-          "info": "Używany również dla linków tekstowych."
-        },
-        "colors_background_1": {
-          "label": "Tło 1"
-        },
-        "colors_background_2": {
-          "label": "Tło 2"
         },
         "gradient_accent_1": {
           "label": "Gradient koloru akcentu 1"

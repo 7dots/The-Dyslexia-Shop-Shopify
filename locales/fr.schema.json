@@ -3,36 +3,11 @@
     "colors": {
       "name": "Couleurs",
       "settings": {
-        "colors_solid_button_labels": {
-          "label": "Texte de bouton plein",
-          "info": "Utilisé comme couleur de premier plan sur les couleurs d'accentuation."
-        },
-        "colors_accent_1": {
-          "label": "Accentuation 1",
-          "info": "Utilisé pour l'arrière-plan de bouton uni."
-        },
-        "colors_accent_2": {
-          "label": "Accentuation 2"
-        },
         "header__1": {
           "content": "Couleurs primaires"
         },
         "header__2": {
           "content": "Couleurs secondaires"
-        },
-        "colors_text": {
-          "label": "Texte",
-          "info": "Utilisé comme couleur de premier plan sur les couleurs d'arrière-plan."
-        },
-        "colors_outline_button_labels": {
-          "label": "Bouton en relief",
-          "info": "Utilisé également pour les liens de texte."
-        },
-        "colors_background_1": {
-          "label": "Arrière-plan 1"
-        },
-        "colors_background_2": {
-          "label": "Arrière-plan 2"
         },
         "gradient_accent_1": {
           "label": "Dégradé accent 1"

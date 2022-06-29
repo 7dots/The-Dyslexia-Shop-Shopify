@@ -3,36 +3,11 @@
     "colors": {
       "name": "สี",
       "settings": {
-        "colors_solid_button_labels": {
-          "label": "ป้ายกำกับปุ่มทึบ",
-          "info": "ใช้เป็นสีพื้นหน้าบนสีที่เน้น"
-        },
-        "colors_accent_1": {
-          "label": "การเน้น 1",
-          "info": "ใช้เป็นพื้นหลังปุ่มทึบ"
-        },
-        "colors_accent_2": {
-          "label": "การเน้น 2"
-        },
         "header__1": {
           "content": "สีหลัก"
         },
         "header__2": {
           "content": "สีรอง"
-        },
-        "colors_text": {
-          "label": "ข้อความ",
-          "info": "ใช้เป็นสีพื้นหน้าบนสีพื้นหลัง"
-        },
-        "colors_outline_button_labels": {
-          "label": "ปุ่มแบบเค้าโครง",
-          "info": "ใช้กับลิงก์ข้อความได้อีกด้วย"
-        },
-        "colors_background_1": {
-          "label": "พื้นหลัง 1"
-        },
-        "colors_background_2": {
-          "label": "พื้นหลัง 2"
         },
         "gradient_accent_1": {
           "label": "การเน้น 1 แบบไล่ระดับสี"

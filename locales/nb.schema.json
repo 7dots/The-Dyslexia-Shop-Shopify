@@ -3,36 +3,11 @@
     "colors": {
       "name": "Farger",
       "settings": {
-        "colors_solid_button_labels": {
-          "label": "Fylt knappetikett",
-          "info": "Brukes som forgrunnsfarge på aksentfarger."
-        },
-        "colors_accent_1": {
-          "label": "Aksent 1",
-          "info": "Brukes til fylt knappbakgrunn."
-        },
-        "colors_accent_2": {
-          "label": "Aksent 2"
-        },
         "header__1": {
           "content": "Primærfarger"
         },
         "header__2": {
           "content": "Sekundærfarger"
-        },
-        "colors_text": {
-          "label": "Tekst",
-          "info": "Brukes som forgrunnsfarge på bakgrunnsfarger."
-        },
-        "colors_outline_button_labels": {
-          "label": "Omriss rundt knapp",
-          "info": "Brukes også til tekstkoblinger."
-        },
-        "colors_background_1": {
-          "label": "Bakgrunn 1"
-        },
-        "colors_background_2": {
-          "label": "Bakgrunn 2"
         },
         "gradient_accent_1": {
           "label": "Aksent 1-fargeovergang"

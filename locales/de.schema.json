@@ -3,36 +3,11 @@
     "colors": {
       "name": "Farben",
       "settings": {
-        "colors_solid_button_labels": {
-          "label": "Beschriftung für durchgehende Schaltfläche",
-          "info": "Wird als Vordergrundfarbe für Akzentfarben verwendet."
-        },
-        "colors_accent_1": {
-          "label": "Akzent 1",
-          "info": "Wird als Hintergrund für durchgehende Schaltflächen verwendet."
-        },
-        "colors_accent_2": {
-          "label": "Akzent 2"
-        },
         "header__1": {
           "content": "Primärfarben"
         },
         "header__2": {
           "content": "Sekundärfarben"
-        },
-        "colors_text": {
-          "label": "Text",
-          "info": "Wird als Vordergrundfarbe für Hintergrundfarben verwendet."
-        },
-        "colors_outline_button_labels": {
-          "label": "Umriss-Schaltfläche",
-          "info": "Wird auch für Textlinks verwendet."
-        },
-        "colors_background_1": {
-          "label": "Hintergrund 1"
-        },
-        "colors_background_2": {
-          "label": "Hintergrund 2"
         },
         "gradient_accent_1": {
           "label": "Akzent 1 Farbverlauf"

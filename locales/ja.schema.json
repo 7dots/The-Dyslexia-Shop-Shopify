@@ -3,36 +3,11 @@
     "colors": {
       "name": "色",
       "settings": {
-        "colors_solid_button_labels": {
-          "label": "ソリッドカラーのボタンのラベル",
-          "info": "アクセントカラーのフォアグラウンドカラーとして使用します。"
-        },
-        "colors_accent_1": {
-          "label": "アクセント1",
-          "info": "ソリッドカラーのボタンの背景に使用されます。"
-        },
-        "colors_accent_2": {
-          "label": "アクセント2"
-        },
         "header__1": {
           "content": "最初の色"
         },
         "header__2": {
           "content": "2番目の色"
-        },
-        "colors_text": {
-          "label": "テキスト",
-          "info": "アクセントカラーのバックグラウンドカラーとして使用します。"
-        },
-        "colors_outline_button_labels": {
-          "label": "アウトラインボタン",
-          "info": "テキストリンクにも使用されます。"
-        },
-        "colors_background_1": {
-          "label": "背景1"
-        },
-        "colors_background_2": {
-          "label": "背景2"
         },
         "gradient_accent_1": {
           "label": "アクセント1のグラデーション"

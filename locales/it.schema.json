@@ -3,36 +3,11 @@
     "colors": {
       "name": "Colori",
       "settings": {
-        "colors_solid_button_labels": {
-          "label": "Etichetta pulsante in tinta unita",
-          "info": "Utilizzato come colore in primo piano sui colori in risalto."
-        },
-        "colors_accent_1": {
-          "label": "Elemento in risalto 1",
-          "info": "Utilizzato per lo sfondo dei pulsanti in tinta unita."
-        },
-        "colors_accent_2": {
-          "label": "Elemento in risalto 2"
-        },
         "header__1": {
           "content": "Colori primari"
         },
         "header__2": {
           "content": "Colori secondari"
-        },
-        "colors_text": {
-          "label": "Testo",
-          "info": "Utilizzato come colore in primo piano sui colori dello sfondo."
-        },
-        "colors_outline_button_labels": {
-          "label": "Contorno pulsante",
-          "info": "Anche utilizzato per i link testuali."
-        },
-        "colors_background_1": {
-          "label": "Sfondo 1"
-        },
-        "colors_background_2": {
-          "label": "Sfondo 2"
         },
         "gradient_accent_1": {
           "label": "Gradiente Elemento in risalto 1"

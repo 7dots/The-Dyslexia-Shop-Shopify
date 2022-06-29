@@ -3,36 +3,11 @@
     "colors": {
       "name": "Farver",
       "settings": {
-        "colors_solid_button_labels": {
-          "label": "Udfyldt knaptekst",
-          "info": "Bruges som forgrundsfarve på markeringsfarver."
-        },
-        "colors_accent_1": {
-          "label": "Markering 1",
-          "info": "Bruges til udfyldt knapbaggrund."
-        },
-        "colors_accent_2": {
-          "label": "Markering 2"
-        },
         "header__1": {
           "content": "Primære farver"
         },
         "header__2": {
           "content": "Sekundære farver"
-        },
-        "colors_text": {
-          "label": "Tekstfarve",
-          "info": "Bruges som forgrundsfarve på baggrundsfarver."
-        },
-        "colors_outline_button_labels": {
-          "label": "Rammeknap",
-          "info": "Bruges også til tekstlinks."
-        },
-        "colors_background_1": {
-          "label": "Baggrund 1"
-        },
-        "colors_background_2": {
-          "label": "Baggrund 2"
         },
         "gradient_accent_1": {
           "label": "Markering 1 – graduering"

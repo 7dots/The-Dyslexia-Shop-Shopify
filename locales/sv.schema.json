@@ -3,36 +3,11 @@
     "colors": {
       "name": "Färger",
       "settings": {
-        "colors_solid_button_labels": {
-          "label": "Tydlig knappetikett",
-          "info": "Används som förgrundsfärg på accentfärger."
-        },
-        "colors_accent_1": {
-          "label": "Accent 1",
-          "info": "Används för tydlig knappbakgrund."
-        },
-        "colors_accent_2": {
-          "label": "Accent 2"
-        },
         "header__1": {
           "content": "Primärfärger"
         },
         "header__2": {
           "content": "Sekundära färger"
-        },
-        "colors_text": {
-          "label": "Text",
-          "info": "Används som förgrundsfärg på bakgrundsfärger."
-        },
-        "colors_outline_button_labels": {
-          "label": "Knapp-kontur",
-          "info": "Används också för textlänkar."
-        },
-        "colors_background_1": {
-          "label": "Bakgrund 1"
-        },
-        "colors_background_2": {
-          "label": "Bakgrund 2"
         },
         "gradient_accent_1": {
           "label": "Tonad accent 1"

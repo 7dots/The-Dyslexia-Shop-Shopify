@@ -3,36 +3,11 @@
     "colors": {
       "name": "Colores",
       "settings": {
-        "colors_solid_button_labels": {
-          "label": "Etiqueta de botón sólido",
-          "info": "Se utiliza como color de primer plano sobre los colores de acento."
-        },
-        "colors_accent_1": {
-          "label": "Acento 1",
-          "info": "Se utiliza para el fondo de botón sólido"
-        },
-        "colors_accent_2": {
-          "label": "Acento 2"
-        },
         "header__1": {
           "content": "Colores primarios"
         },
         "header__2": {
           "content": "Colores secundarios"
-        },
-        "colors_text": {
-          "label": "Texto",
-          "info": "Se utiliza como color de primer plano sobre los colores de fondo."
-        },
-        "colors_outline_button_labels": {
-          "label": "Botón con contorno",
-          "info": "También se utiliza para enlaces de texto."
-        },
-        "colors_background_1": {
-          "label": "Fondo 1"
-        },
-        "colors_background_2": {
-          "label": "Fondo 2"
         },
         "gradient_accent_1": {
           "label": "Degradado resaltado 1"

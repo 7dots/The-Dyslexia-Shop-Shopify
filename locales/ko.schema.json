@@ -3,36 +3,11 @@
     "colors": {
       "name": "색상",
       "settings": {
-        "colors_solid_button_labels": {
-          "label": "단색 버튼 레이블",
-          "info": "강조 색상의 전경색으로 사용됩니다."
-        },
-        "colors_accent_1": {
-          "label": "강조 1",
-          "info": "단색 버튼의 배경에 사용됩니다."
-        },
-        "colors_accent_2": {
-          "label": "강조 2"
-        },
         "header__1": {
           "content": "기본 색상"
         },
         "header__2": {
           "content": "보조 색상"
-        },
-        "colors_text": {
-          "label": "텍스트",
-          "info": "배경색 위에 전경색으로 사용됩니다."
-        },
-        "colors_outline_button_labels": {
-          "label": "윤곽 버튼",
-          "info": "또한 텍스트 링크에도 사용됩니다."
-        },
-        "colors_background_1": {
-          "label": "배경 1"
-        },
-        "colors_background_2": {
-          "label": "배경 2"
         },
         "gradient_accent_1": {
           "label": "강조 1 그라데이션"

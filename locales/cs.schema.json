@@ -3,36 +3,11 @@
     "colors": {
       "name": "Barvy",
       "settings": {
-        "colors_solid_button_labels": {
-          "label": "Text tlačítka v jednolité barvě",
-          "info": "Používá se jako barva popředí v kombinaci s barvami zvýraznění."
-        },
-        "colors_accent_1": {
-          "label": "Zvýraznění 1",
-          "info": "Používá se jako pozadí tlačítka v jednolité barvě."
-        },
-        "colors_accent_2": {
-          "label": "Zvýraznění 2"
-        },
         "header__1": {
           "content": "Primární barvy"
         },
         "header__2": {
           "content": "Sekundární barvy"
-        },
-        "colors_text": {
-          "label": "Text",
-          "info": "Používá se jako barva popředí v kombinaci s barvami pozadí."
-        },
-        "colors_outline_button_labels": {
-          "label": "Tlačítko s obrysem",
-          "info": "Používá se také pro textové odkazy."
-        },
-        "colors_background_1": {
-          "label": "Pozadí 1"
-        },
-        "colors_background_2": {
-          "label": "Pozadí 2"
         },
         "gradient_accent_1": {
           "label": "Přechod 1 zvýraznění"

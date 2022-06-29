@@ -3,36 +3,11 @@
     "colors": {
       "name": "Màu sắc",
       "settings": {
-        "colors_solid_button_labels": {
-          "label": "Nhãn nút đặc",
-          "info": "Được sử dụng làm màu tiền cảnh trên màu nhấn."
-        },
-        "colors_accent_1": {
-          "label": "Nhấn 1",
-          "info": "Được sử dụng làm nền nút đặc."
-        },
-        "colors_accent_2": {
-          "label": "Nhấn 2"
-        },
         "header__1": {
           "content": "Màu chính"
         },
         "header__2": {
           "content": "Màu phụ"
-        },
-        "colors_text": {
-          "label": "Văn bản",
-          "info": "Được sử dụng làm màu tiền cảnh trên màu nền."
-        },
-        "colors_outline_button_labels": {
-          "label": "Nút viền ngoài",
-          "info": "Cũng được sử dụng cho liên kết văn bản."
-        },
-        "colors_background_1": {
-          "label": "Nền 1"
-        },
-        "colors_background_2": {
-          "label": "Nền 2"
         },
         "gradient_accent_1": {
           "label": "Hiệu ứng chuyển màu của Điểm nhấn 1"

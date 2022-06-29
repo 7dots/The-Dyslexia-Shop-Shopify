@@ -3,36 +3,11 @@
     "colors": {
       "name": "Renkler",
       "settings": {
-        "colors_solid_button_labels": {
-          "label": "Sabit düğme etiketi",
-          "info": "Vurgu renklerinde ön plan rengi olarak kullanılır."
-        },
-        "colors_accent_1": {
-          "label": "1. Vurgu",
-          "info": "Sabit düğme arka planı için kullanılır."
-        },
-        "colors_accent_2": {
-          "label": "2. Vurgu"
-        },
         "header__1": {
           "content": "Birincil renkler"
         },
         "header__2": {
           "content": "İkincil renkler"
-        },
-        "colors_text": {
-          "label": "Metin",
-          "info": "Arka plan renklerinde ön plan rengi olarak kullanılır."
-        },
-        "colors_outline_button_labels": {
-          "label": "Dış çizgi düğmesi",
-          "info": "Metin bağlantıları için de kullanılır."
-        },
-        "colors_background_1": {
-          "label": "1. Arka plan"
-        },
-        "colors_background_2": {
-          "label": "2. Arka plan"
         },
         "gradient_accent_1": {
           "label": "1. Vurgu gradyanı"
