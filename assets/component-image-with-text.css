@@ -78,6 +78,7 @@
   padding: 4rem calc(4rem / var(--font-body-scale)) 5rem;
   position: relative;
   z-index: 1;
+  background-color: var(--color-light-grey);
 }
 
 .image-with-text .grid__item::after {
@@ -279,7 +280,8 @@
 
 @media screen and (min-width: 990px) {
   .image-with-text__content {
-    padding: 6rem 7rem 7rem;
+    padding-left: 38px;
+    padding-top: 40px;
   }
 }
 
@@ -313,6 +315,12 @@
 .image-with-text__heading {
   word-break: break-word;
   margin-bottom: 0;
+  max-width: 235px;
+  font-size: 30px;
+}
+
+.image-with-text__text{
+  max-width: 420px;
 }
 
 .image-with-text__text p {
