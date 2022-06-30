@@ -144,6 +144,14 @@
   width: 100%;
 }
 
+.card__media .media-padded img {
+  object-fit: contain;
+  height: 100%;
+  width: 100%;
+  padding: 25px;
+  object-position: center center;
+}
+
 .card__inner:not(.ratio) > .card__content {
   height: 100%;
 }
