@@ -13,10 +13,10 @@
     }
   }
 {%- endstyle -%}
-
 <div class="image-with-text page-width isolate">
-  <div class="image-with-text__grid grid grid--gapless grid--1-col grid--2-col-tablet {% if section.settings.layout == 'text_first' %} image-with-text__grid--reverse{% endif %}">
-    <div class="image-with-text__media-item image-with-text__media-item--medium image-with-text__media-item--top grid__item">
+  <div class="image-with-text__grid grid grid--gapless grid--1-col grid--3-col-tablet {{section.settings.block_background}}
+    {% if section.settings.layout == 'text_first' %} image-with-text__grid--reverse{% endif %}">
+    <div class="image-with-text__media-item image-with-text__media-item--medium grid__item image-with-text__media-item--{{ section.settings.desktop_content_position }}">
       <div class="image-with-text__media image-with-text__media--{{ section.settings.height }} global-media-settings {% if section.settings.image != blank %}media{% else %}image-with-text__media--placeholder placeholder{% endif %}"
         style="padding-bottom: {{ 1 | divided_by: section.settings.image.aspect_ratio | times: 100 }}%;"
       >
@@ -35,6 +35,8 @@
             loading="lazy"
             width="{{ section.settings.image.width }}"
             height="{{ section.settings.image.height }}"
+            {% if section.settings.image_padding == true %}class="image-with-text__padding"{% endif %} 
+          
           >
         {%- else -%}
           {{ 'image' | placeholder_svg_tag: 'placeholder-svg' }}
@@ -42,7 +44,7 @@
       </div>
     </div>
     <div class="image-with-text__text-item grid__item">
-      <div id="ImageWithText--{{ section.id }}" class="image-with-text__content image-with-text__content--top image-with-text__content--desktop-left image-with-text__content--mobile-center image-with-text__content--adapt content-container">
+      <div id="ImageWithText--{{ section.id }}" class="image-with-text__content image-with-text__content image-with-text__content--{{ section.settings.desktop_content_position }} image-with-text__content--desktop-left image-with-text__content--mobile-center image-with-text__content--adapt content-container">
         {%- for block in section.blocks -%}
           {% case block.type %}
             {%- when 'heading' -%}
@@ -72,9 +74,23 @@
   "class": "section",
   "settings": [
     {
+      "type": "header",
+      "content": "Media"
+    },
+    {
       "type": "image_picker",
       "id": "image",
       "label": "t:sections.image-with-text.settings.image.label"
+    },
+    {
+      "type": "checkbox",
+      "id": "image_padding",
+      "default": false,
+      "label": "Image padding"
+    },
+    {
+      "type": "header",
+      "content": "Layout options"
     },
     {
       "type": "select",
@@ -92,6 +108,66 @@
       "default": "image_first",
       "label": "t:sections.image-with-text.settings.layout.label",
       "info": "t:sections.image-with-text.settings.layout.info"
+    },
+    {
+      "type": "select",
+      "id": "content_ratio",
+      "options": [
+        {
+          "value": "1:1",
+          "label": "1:1"
+        },
+        {
+          "value": "2:1",
+          "label": "2:1"
+        }
+      ],
+      "default": "1:1",
+      "label": "Content ratio"
+    },
+    {
+      "type": "select",
+      "id": "desktop_content_position",
+      "options": [
+        {
+          "value": "top",
+          "label": "t:sections.image-with-text.settings.desktop_content_position.options__1.label"
+        },
+        {
+          "value": "middle",
+          "label": "t:sections.image-with-text.settings.desktop_content_position.options__2.label"
+        },
+        {
+          "value": "bottom",
+          "label": "t:sections.image-with-text.settings.desktop_content_position.options__3.label"
+        }
+      ],
+      "default": "top",
+      "label": "t:sections.image-with-text.settings.desktop_content_position.label"
+    },
+    {
+      "type": "header",
+      "content": "Colour options"
+    },
+    {
+      "type": "select",
+      "id": "block_background",
+      "options": [
+        {
+          "value": "image-text__light-grey",
+          "label": "Grey"
+        },
+        {
+          "value": "image-text__white",
+          "label": "White"
+        },
+        {
+          "value": "image-text__light-green",
+          "label": "Light green"
+        }
+      ],
+      "default": "image-text__light-grey",
+      "label": "Background Colour"
     }
   ],
   "blocks": [

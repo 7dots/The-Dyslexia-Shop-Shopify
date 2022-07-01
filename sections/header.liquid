@@ -429,7 +429,7 @@
                               <details id="Details-HeaderSubMenu-{{ forloop.index }}">
                                 <summary class="header__menu-item link link--text list-menu__item focus-inset caption-large">
                                   <span class="header__menu-dropdown-title">{{ childlink.title | escape }}</span>
-                                  {% render 'icon-caret' %}
+                                  {% render 'icon-caret-white' %}
                                 </summary>
                                 <ul id="HeaderMenu-SubMenuList-{{ forloop.index }}" class="header__submenu list-menu motion-reduce">
                                   {%- for grandchildlink in childlink.links -%}
