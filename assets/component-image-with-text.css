@@ -17,18 +17,11 @@
   overflow: visible;
 }
 
-.image-with-text__media--small {
-  height: 19.4rem;
-}
-
 .image-with-text__media--large {
   height: 43.5rem;
 }
 
 @media screen and (min-width: 750px) {
-  .image-with-text__media--small {
-    height: 31.4rem;
-  }
 
   .image-with-text__media--large {
     height: 69.5rem;
@@ -224,15 +217,6 @@
     align-self: flex-start;
   }
 
-  .image-with-text--overlap .image-with-text__media-item--middle {
-    align-self: center;
-  }
-
-  .image-with-text--overlap .image-with-text__media-item--bottom {
-    align-self: flex-end;
-  }
-
-  .image-with-text__media-item--small,
   .image-with-text__media-item--large + .image-with-text__text-item {
     flex-grow: 0;
   }
