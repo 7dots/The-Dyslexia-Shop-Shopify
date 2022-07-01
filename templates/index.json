@@ -69,6 +69,8 @@
         "text"
       ],
       "settings": {
+        "desktop_content_position": "center",
+        "content_alignment": "center",
         "color_scheme": "background-1",
         "full_width": true,
         "padding_top": 40,
@@ -80,14 +82,21 @@
       "settings": {
         "title": "Featured products",
         "heading_size": "h2",
+        "description": "",
+        "show_description": false,
+        "description_style": "body",
         "collection": "all",
         "products_to_show": 8,
         "columns_desktop": 4,
+        "full_width": false,
         "show_view_all": false,
+        "view_all_style": "solid",
+        "enable_desktop_slider": false,
         "color_scheme": "background-1",
         "show_secondary_image": true,
         "show_vendor": false,
         "show_rating": false,
+        "enable_quick_add": false,
         "columns_mobile": "2",
         "swipe_on_mobile": false,
         "padding_top": 28,
@@ -151,6 +160,7 @@
         "column1": {
           "type": "column",
           "settings": {
+            "image": "shopify:\/\/shop_images\/Smiley_6b37bbeb-57fe-449d-8a0c-38045ab6606d.png",
             "title": "Expert Friendly Advice",
             "heading_size": "h2",
             "heading_font_weight": "bold",
@@ -164,7 +174,8 @@
         "column2": {
           "type": "column",
           "settings": {
-            "title": "Expert Friendly Advice",
+            "image": "shopify:\/\/shop_images\/Arrow.png",
+            "title": "No - Hassle   returns",
             "heading_size": "h2",
             "heading_font_weight": "bold",
             "text": "",
@@ -177,7 +188,8 @@
         "column3": {
           "type": "column",
           "settings": {
-            "title": "Expert Friendly Advice",
+            "image": "shopify:\/\/shop_images\/Pound.png",
+            "title": "Flexible Payment Options",
             "heading_size": "h2",
             "heading_font_weight": "bold",
             "text": "",
@@ -190,7 +202,8 @@
         "column4": {
           "type": "column",
           "settings": {
-            "title": "Expert Friendly Advice",
+            "image": "shopify:\/\/shop_images\/Five-Stars.png",
+            "title": "5 Star Customer Rating",
             "heading_size": "h2",
             "heading_font_weight": "bold",
             "text": "",
