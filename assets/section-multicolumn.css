@@ -134,12 +134,26 @@
 }
 
 /* might want to set this globally later  */
-.multicolumn-card__info>h3{
+.multicolumn-card__info> .h1{
+  font-size: 40px;
+  line-height: 40px;
+  letter-spacing: 1.3px;
+}
+.multicolumn-card__info> .h2{
   font-size: 30px;
-  font-weight: bold;
   line-height: 30px;
   letter-spacing: 1.3px;
-  text-align: center;
+}
+.multicolumn-card__info> .p{
+  font-size: 16px;;
+}
+
+.multi-column__font-weight-normal{
+  font-weight: normal;
+}
+
+.multi-column__font-weight-bold{
+  font-weight: bold;
 }
 
 @media screen and (max-width: 749px){
@@ -224,9 +238,9 @@
 .multicolumn-card__info{
   flex: 1 1 auto;
   height: 100%;
-  display: flex;
+  /* display: flex;
   flex-direction: column;
-  justify-content: space-between;
+  justify-content: space-between; */
 }
 
 .multicolumn-card {
@@ -253,5 +267,29 @@
 @media screen and (min-width: 990px) {
   .multicolumn-list__item--empty {
     display: list-item;
+  }
+}
+
+@media screen and (min-width: 750px){
+  .multi-card__text-desktop-center{
+    text-align: center;
+  }
+  .multi-card__text-desktop-left{
+    text-align: left;
+  }
+  .multi-card__text-desktop-right{
+    text-align: right;
+  }
+}
+
+@media screen and (max-width: 749px){
+  .multi-card__text-mobile-center{
+    text-align: center;
+  }
+  .multi-card__text-mobile-left{
+    text-align: left;
+  }
+  .multi-card__text-mobile-right{
+    text-align: right;
   }
 }

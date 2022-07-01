@@ -78,12 +78,15 @@ endif
                 </div>
               {%- endif -%}
               <div class="multicolumn-card__info-wrapper">
-              <div class="multicolumn-card__info">
+              <div class="multicolumn-card__info
+                {% if block.settings.text_alignment == 'center' %} multi-card__text-desktop-center{% endif %}
+                {% if block.settings.text_alignment == 'left'%} multi-card__text-desktop-left{% endif %}
+                {% if block.settings.text_alignment == 'right'%} multi-card__text-desktop-right{% endif %}
+                ">
                 {%- if block.settings.title != blank -%}
-                  <h3>{{ block.settings.title | escape }}</h3>
+                  <p class="{{ block.settings.heading_font_weight}} {{block.settings.heading_size}}">{{ block.settings.title | escape }}</p>
                 {%- endif -%}
                 {%- if block.settings.text != blank -%}
-                  {{ block.settings.text_alignment}}
                   <div class="rte">{{ block.settings.text }}</div>
                 {%- endif -%}
                 {%- if block.settings.link_label != blank -%}
@@ -170,15 +173,15 @@ endif
           "id": "heading_size",
           "options": [
             {
-              "value": "h2",
+              "value": "p",
               "label": "t:sections.all.heading_size.options__1.label"
             },
             {
-              "value": "h1",
+              "value": "h2",
               "label": "t:sections.all.heading_size.options__2.label"
             },
             {
-              "value": "h0",
+              "value": "h1",
               "label": "t:sections.all.heading_size.options__3.label"
             }
           ],
@@ -186,16 +189,26 @@ endif
           "label": "t:sections.all.heading_size.label"
         },
         {
+          "type": "select",
+          "id": "heading_font_weight",
+          "options": [
+            {
+              "value": "multi-column__font-weight-normal",
+              "label": "Normal"
+            },
+            {
+              "value": "multi-column__font-weight-bold",
+              "label": "Bold"
+            }
+          ],
+          "default": "multi-column__font-weight-normal",
+          "label": "Heading Font Weight"
+        },
+        {
           "type": "richtext",
           "id": "text",
           "default": "<p>Pair text with an image to focus on your chosen product, collection, or blog post. Add details on availability, style, or even provide a review.</p>",
           "label": "t:sections.multicolumn.blocks.column.settings.text.label"
-        },
-        {
-          "type": "text",
-          "id": "link_label",
-          "default": "Find out more",
-          "label": "t:sections.multicolumn.blocks.column.settings.link_label.label"
         },
         {
           "type": "header",
@@ -244,6 +257,12 @@ endif
         {
           "type": "header",
           "content": "Link"
+        },
+        {
+          "type": "text",
+          "id": "link_label",
+          "default": "Find out more",
+          "label": "t:sections.multicolumn.blocks.column.settings.link_label.label"
         },
         {
           "type": "url",
