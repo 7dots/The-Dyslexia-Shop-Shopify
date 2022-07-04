@@ -148,7 +148,7 @@
           "type": "heading",
           "settings": {
             "heading": "Image with text",
-            "heading_size": "h1"
+            "heading_size": "medium"
           }
         },
         "image-with-text-1": {
@@ -164,16 +164,11 @@
         "image-with-text-1"
       ],
       "settings": {
-        "height": "small",
-        "desktop_image_width": "medium",
-        "layout": "text_first",
+        "layout": "image_first",
+        "image_padding": true,
         "desktop_content_position": "top",
-        "desktop_content_alignment": "left",
-        "content_layout": "no-overlap",
         "color_scheme": "background-2",
-        "mobile_content_alignment": "left",
-        "padding_top": 36,
-        "padding_bottom": 36
+        "content_ratio": "2:1"
       }
     },
     "video": {

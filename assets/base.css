@@ -13,6 +13,14 @@
   --color-light-green: #2AC632;
   --color-light-green-rgb: 42, 198, 50;
 
+
+  /* Line heights */
+  --h1-line-height: 52px;
+  --h2-line-height: 40px;
+  --h3-line-height: 32px;
+  --h4-line-height: 18px;
+
+
 }
 
 
@@ -429,12 +437,14 @@ h5,
 h1,
 .h1 {
   font-size: calc(var(--font-heading-scale) * 3rem);
+  line-height: var(--h1-line-height);
 }
 
 @media only screen and (min-width: 750px) {
   h1,
   .h1 {
     font-size: calc(var(--font-heading-scale) * 4rem);
+      line-height: var(--h1-line-height);
   }
 }
 
