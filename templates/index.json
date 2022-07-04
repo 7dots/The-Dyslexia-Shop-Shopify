@@ -7,7 +7,8 @@
           "type": "heading",
           "settings": {
             "heading": "Image banner",
-            "heading_size": "h0"
+            "heading_size": "h2",
+            "heading_full_width": true
           }
         },
         "text": {
@@ -168,7 +169,8 @@
         "image_padding": true,
         "desktop_content_position": "top",
         "color_scheme": "background-2",
-        "content_ratio": "2:1"
+        "content_ratio": "2:1",
+        "block_background": "image-text__light-green"
       }
     },
     "video": {
