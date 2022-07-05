@@ -216,12 +216,20 @@
               "text": "Blog",
               "link": ""
             }
+          },
+          "f41e79d9-cdaa-4828-ac97-d50a4dfbb1e8": {
+            "type": "utility",
+            "settings": {
+              "text": "Create an Account",
+              "link": ""
+            }
           }
         },
         "block_order": [
           "9c438c01-da2c-4c7d-9e4b-8897e336733c",
           "22efa2b0-b58b-4b48-b3bf-e5c02f95cbbd",
-          "a2e739c0-9341-43d6-afaa-da9167ca9150"
+          "a2e739c0-9341-43d6-afaa-da9167ca9150",
+          "f41e79d9-cdaa-4828-ac97-d50a4dfbb1e8"
         ],
         "settings": {
         }
