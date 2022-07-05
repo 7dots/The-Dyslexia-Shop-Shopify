@@ -106,6 +106,12 @@
               "text": "<p><strong>Free Shipping <\/strong>Over £100 to UK<\/p>"
             }
           },
+          "3e976f9b-1d85-4d63-82d5-93b3b22e9404": {
+            "type": "announcement",
+            "settings": {
+              "text": "<p><strong>30 Day Credit <\/strong>Accounts for Schools and Organisations<\/p>"
+            }
+          },
           "5caced54-1786-4d65-9afe-cb39dbd6efaf": {
             "type": "announcement",
             "settings": {
@@ -115,6 +121,7 @@
         },
         "block_order": [
           "announcement-bar-0",
+          "3e976f9b-1d85-4d63-82d5-93b3b22e9404",
           "5caced54-1786-4d65-9afe-cb39dbd6efaf"
         ],
         "settings": {
