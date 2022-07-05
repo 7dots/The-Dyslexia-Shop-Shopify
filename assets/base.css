@@ -6,7 +6,7 @@
   --color-primary: rgb(0, 138, 7);
   --color-secondary: rgb(228, 228, 228);
   --color-white: #fff;
-  --color-black: #000;
+  --color-black: #070707;
   
 
   --color-dark-grey: #333;
@@ -22,7 +22,8 @@
   --h3-line-height: 32px;
   --h4-line-height: 18px;
 
-
+  /* font sizes */
+  --font-size-text-small: 13px;
 }
 
 
@@ -2186,14 +2187,34 @@ input[type='checkbox'] {
   height: 38px;
 }
 
+.utility-bar{
+  height: 100%;
+  border-bottom: 0.1rem solid rgba(var(--color-foreground), 0.08);
+  background-color: var(--color-white);
+}
+
+.utility-bar__wrapper{
+  display: flex;
+  flex-direction: row;
+  column-gap: 30px;
+  height: 100%
+}
+
+.utility-bar__wrapper > a {
+  text-decoration: none;
+  align-self: center;
+  color: var(--color-black);
+  font-size: var(--font-size-text-small);
+}
+
+
 /* section-announcement-bar */
 #shopify-section-announcement-bar {
   z-index: 4;
 }
 
 
-
-.announcement-bar, .utility-bar {
+.announcement-bar {
   border-bottom: 0.1rem solid rgba(var(--color-foreground), 0.08);
   background-color: var(--color-secondary);
 }
