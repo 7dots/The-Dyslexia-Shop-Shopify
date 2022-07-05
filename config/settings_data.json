@@ -103,9 +103,7 @@
           "announcement-bar-0": {
             "type": "announcement",
             "settings": {
-              "text": "This is a test",
-              "color_scheme": "background-1",
-              "link": ""
+              "text": "<p><strong>Free Shipping <\/strong>Over £100 to UK<\/p>"
             }
           }
         },
@@ -179,6 +177,11 @@
         "type": "main-password-footer",
         "settings": {
           "color_scheme": "background-1"
+        }
+      },
+      "utility-bar": {
+        "type": "utility-bar",
+        "settings": {
         }
       }
     },
