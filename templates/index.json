@@ -185,8 +185,8 @@
         "padding_bottom": 36
       }
     },
-    "multicolumn": {
-      "type": "multicolumn",
+    "multicolumn-icon": {
+      "type": "multicolumn-icon",
       "blocks": {
         "column1": {
           "type": "column",
@@ -264,6 +264,6 @@
     "collage",
     "image-with-text",
     "video",
-    "multicolumn"
+    "multicolumn-icon"
   ]
 }
