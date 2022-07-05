@@ -2229,6 +2229,12 @@ input[type='checkbox'] {
   font-size: var(--font-size-text-small);
 }
 
+.announcement-bar__wrapper > div > p {
+  display: flex;
+  flex-direction: row;
+  column-gap: 13px;
+}
+
 /* section-header */
 #shopify-section-header {
   z-index: 3;
