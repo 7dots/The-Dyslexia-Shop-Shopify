@@ -155,7 +155,7 @@
         "image-with-text-1": {
           "type": "text",
           "settings": {
-            "text": "<p>We pride ourselves on providing outstanding, expert and friendly customer services - please do call us for advice.<br\/><br\/>We have one of the largest selections of products for special educational needs - all hand selected and tested by our team.<br\/><br\/>Gold rated in customer feedback, fast convenient delivery and flexible payment options (including on account for organisations).<\/p>",
+            "text": "<p>We pride ourselves on providing outstanding, expert and friendly customer services - please do call us for advice.<br\/><\/p><p>We have one of the largest selections of products for special educational needs - all hand selected and tested by our team.<br\/><\/p><p>Gold rated in customer feedback, fast convenient delivery and flexible payment options (including on account for organisations).<\/p>",
             "text_style": "body"
           }
         }
