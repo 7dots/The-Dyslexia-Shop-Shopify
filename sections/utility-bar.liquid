@@ -1,0 +1,35 @@
+<div class="utility-bar" role="region" aria-label="Utility" {{ block.shopify_attributes }}>
+  <div class="utility-bar__wrapper page-width">
+    <a href=''>Contact us: T +44 (0) 1394 7671 818</a>
+    <a href=''>|&nbsp&nbsp&nbspE: hello@thedyslexiashop.co.uk</a>
+    <a href=''>Link 1</a>
+    <a href=''>Link 2</a>
+
+  </div>
+</div>
+
+{% schema %}
+{
+  "name": "Utility bar",
+  "max_blocks": 12,
+  "blocks": [
+    {
+      "type": "utility",
+      "name": "Utility bar",
+      "settings": [
+        {
+          "type": "text",
+          "id": "text",
+          "default": "Welcome to our store",
+          "label": "Text"
+        },
+        {
+          "type": "url",
+          "id": "link",
+          "label": "t:sections.utility-bar.blocks.utility.settings.link.label"
+        }
+      ]
+    }
+  ]
+}
+{% endschema %}

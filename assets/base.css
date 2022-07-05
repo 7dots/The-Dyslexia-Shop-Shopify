@@ -2180,29 +2180,37 @@ input[type='checkbox'] {
   line-height: calc(1 + 0.1 / var(--font-body-scale));
 }
 
+/* section-utility-bar */
+#shopify-section-utility-bar {
+  z-index: 4;
+  height: 38px;
+}
+
 /* section-announcement-bar */
 #shopify-section-announcement-bar {
   z-index: 4;
 }
 
-.announcement-bar {
+
+
+.announcement-bar, .utility-bar {
   border-bottom: 0.1rem solid rgba(var(--color-foreground), 0.08);
   background-color: var(--color-secondary);
 }
 
-.announcement-bar__link {
+.announcement-bar__link , .utility-bar__link {
   display: block;
   width: 100%;
   padding: 1rem 2rem;
   text-decoration: none;
 }
 
-.announcement-bar__link:hover {
+.announcement-bar__link:hover .utility-bar__link:hover {
   color: rgb(var(--color-foreground));
   background-color: rgba(var(--color-card-hover), 0.06);
 }
 
-.announcement-bar__link .icon-arrow {
+.announcement-bar__link .icon-arrow, .utility-bar__link .icon-arrow {
   display: inline-block;
   pointer-events: none;
   margin-left: 0.8rem;
