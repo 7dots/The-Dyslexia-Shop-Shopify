@@ -2253,6 +2253,13 @@ input[type='checkbox'] {
   font-size: var(--font-size-text-small);
 }
 
+@media screen and (max-width: 1200px){
+  .announcement-bar__wrapper{
+      column-gap: 60px;
+  }
+}
+
+
 .announcement-bar__wrapper > div > p {
   display: flex;
   flex-direction: row;
@@ -2286,11 +2293,6 @@ input[type='checkbox'] {
   display: block;
   position: relative;
   background-color: var(--color-primary);
-}
-
-
-.header-wrapper--border-bottom {
-  border-bottom: 0.1rem solid rgba(var(--color-foreground), 0.08);
 }
 
 .header {

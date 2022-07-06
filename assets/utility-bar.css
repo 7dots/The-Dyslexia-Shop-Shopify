@@ -127,3 +127,8 @@ animation: animateLocalization var(--duration-default) ease;
 .disclosure__link--active.-nav{
     text-decoration: underline;
 }
+
+.localization_form__currency{
+    text-decoration: none;
+    display: inline-block;
+}
