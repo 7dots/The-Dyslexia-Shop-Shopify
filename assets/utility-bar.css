@@ -87,7 +87,12 @@ position: absolute;
 content: '';
 height: 0.6rem;
 right: calc(var(--inputs-border-width) + 1.5rem);
+transform: rotate(0deg);
 }
+
+.localization_form-select[aria-expanded="true"] .icon-caret{
+    transform: rotate(180deg);
+  }
 
 .localization-selector.link {
 text-decoration: none;
