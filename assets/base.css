@@ -24,6 +24,10 @@
 
   /* font sizes */
   --font-size-text-small: 13px;
+
+
+  /* box shadow */
+  --box-shadow-primary: 0px 6px 5px -1px rgba(0,0,0,0.47);
 }
 
 
@@ -1690,6 +1694,11 @@ details[open] > .share-button__fallback {
   border: 0;
 }
 
+.localization_form{
+  height: 100%;
+}
+
+
 .field:before,
 .select:before,
 .customer .field:before,
@@ -2210,7 +2219,7 @@ input[type='checkbox'] {
 
 /* section-announcement-bar */
 #shopify-section-announcement-bar {
-  z-index: 4;
+  z-index: 1;
 }
 
 

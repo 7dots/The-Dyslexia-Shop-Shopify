@@ -1,11 +1,108 @@
+<link rel="stylesheet" href="{{ 'utility-bar.css' | asset_url }}" media="print" onload="this.media='all'">
+
+<noscript>{{ 'utility-bar.css' | asset_url | stylesheet_tag }}</noscript>
+
+
 <div class="utility-bar" role="region" aria-label="Utility" {{ block.shopify_attributes }}>
   <div class="utility-bar__wrapper page-width">
     {%- for block in section.blocks -%}
       <a href='{{- block.settings.url -}}'>{{- block.settings.text -}}</a>
     {%- endfor -%}  
+    {%- if localization.available_countries.size > 1 -%}
+      <noscript>
+        {%- form 'localization', id: 'FooterCountryFormNoScript', class: 'localization_form' -%}
+          <div class="localization_form-select">
+            <h2 class="visually-hidden" id="FooterCountryLabelNoScript">{{ 'localization.country_label' | t }}</h2>
+            <select class="localization-selector link" name="country_code" aria-labelledby="FooterCountryLabelNoScript">
+              {%- for country in localization.available_countries -%}
+                <option value="{{ country.iso_code }}" {%- if country.iso_code == localization.country.iso_code %} selected{% endif %}>
+                  {{ country.name }} ({{ country.currency.iso_code }} {{ country.currency.symbol }})
+                </option>
+              {%- endfor -%}
+            </select>
+            {% render 'icon-caret' %}
+          </div>
+          <button class="button button--tertiary">{{ 'localization.update_country' | t }}</button>
+        {%- endform -%}
+      </noscript>
+      <localization-form>
+        {%- form 'localization', id: 'FooterCountryForm', class: 'localization_form' -%}
+          <div class="no-js-hidden">
+            <div class="disclosure">
+              <button type="button" class="disclosure__button localization_form-select localization-selector link link--text caption-large" aria-expanded="false" aria-controls="FooterCountryList" aria-describedby="FooterCountryLabel">
+                {{ localization.country.name }} ({{ localization.country.currency.iso_code }} {{ localization.country.currency.symbol }})
+                {% render 'icon-caret' %}
+              </button>
+              <div class="disclosure__list-wrapper -nav" hidden>
+                <ul id="FooterCountryList" role="list" class="disclosure__list list-unstyled">
+                  {%- for country in localization.available_countries -%}
+                    <li class="disclosure__item" tabindex="-1">
+                      <a class="link link--text disclosure__link -nav caption-large{% if country.iso_code == localization.country.iso_code %} disclosure__link--active{% endif %} focus-inset" href="#"{% if country.iso_code == localization.country.iso_code %} aria-current="true"{% endif %} data-value="{{ country.iso_code }}">
+                        {{ country.name }} <span class="localization_form__currency">({{ country.currency.iso_code }} {{ country.currency.symbol }})</span>
+                      </a>
+                    </li>
+                  {%- endfor -%}
+                </ul>
+              </div>
+            </div>
+            <input type="hidden" name="country_code" value="{{ localization.country.iso_code }}">
+          </div>
+        {%- endform -%}
+      </localization-form>
+    {%- endif -%}
   </div>
 </div>
+{% javascript %}
+  class LocalizationForm extends HTMLElement {
+    constructor() {
+      super();
+      this.elements = {
+        input: this.querySelector('input[name="locale_code"], input[name="country_code"]'),
+        button: this.querySelector('button'),
+        panel: this.querySelector('.disclosure__list-wrapper'),
+      };
+      this.elements.button.addEventListener('click', this.openSelector.bind(this));
+      this.elements.button.addEventListener('focusout', this.closeSelector.bind(this));
+      this.addEventListener('keyup', this.onContainerKeyUp.bind(this));
 
+      this.querySelectorAll('a').forEach(item => item.addEventListener('click', this.onItemClick.bind(this)));
+    }
+
+    hidePanel() {
+      this.elements.button.setAttribute('aria-expanded', 'false');
+      this.elements.panel.setAttribute('hidden', true);
+    }
+
+    onContainerKeyUp(event) {
+      if (event.code.toUpperCase() !== 'ESCAPE') return;
+
+      this.hidePanel();
+      this.elements.button.focus();
+    }
+
+    onItemClick(event) {
+      event.preventDefault();
+      const form = this.querySelector('form');
+      this.elements.input.value = event.currentTarget.dataset.value;
+      if (form) form.submit();
+    }
+
+    openSelector() {
+      this.elements.button.focus();
+      this.elements.panel.toggleAttribute('hidden');
+      this.elements.button.setAttribute('aria-expanded', (this.elements.button.getAttribute('aria-expanded') === 'false').toString());
+    }
+
+    closeSelector(event) {
+      const shouldClose = event.relatedTarget && event.relatedTarget.nodeName === 'BUTTON';
+      if (event.relatedTarget === null || shouldClose) {
+        this.hidePanel();
+      }
+    }
+  }
+
+  customElements.define('localization_form', LocalizationForm);
+{% endjavascript %}
 {% schema %}
 {
   "name": "Utility bar",
