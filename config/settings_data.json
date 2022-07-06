@@ -133,7 +133,6 @@
           "logo": "shopify:\/\/shop_images\/tds_logo.png",
           "menu": "main-menu",
           "menu_type_desktop": "dropdown",
-          "show_line_separator": true,
           "enable_sticky_header": true
         }
       },
@@ -143,7 +142,7 @@
           "footer-0": {
             "type": "link_list",
             "settings": {
-              "heading": "Quick links",
+              "heading": "",
               "menu": "footer"
             }
           },
@@ -151,21 +150,21 @@
             "type": "link_list",
             "settings": {
               "heading": "Info",
-              "menu": "footer"
+              "menu": "footermenu-2"
             }
           },
-          "footer-2": {
-            "type": "text",
+          "f500c74d-8c9c-4df3-9eab-5c111cbe1811": {
+            "type": "link_list",
             "settings": {
-              "heading": "Our mission",
-              "subtext": "<p>Share contact information, store details, and brand content with your customers.<\/p>"
+              "heading": "Quick links",
+              "menu": "footer-menu-3"
             }
           }
         },
         "block_order": [
           "footer-0",
           "footer-1",
-          "footer-2"
+          "f500c74d-8c9c-4df3-9eab-5c111cbe1811"
         ],
         "settings": {
           "color_scheme": "background-1",
