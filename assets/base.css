@@ -104,6 +104,8 @@
   --color-button-text: var(--color-background);
 }
 
+
+
 .button--secondary {
   --color-button: var(--color-base-outline-button-labels);
   --color-button-text: var(--color-base-outline-button-labels);
@@ -2953,4 +2955,15 @@ details-disclosure > details {
 
 .font-body-bold {
   font-weight: var(--font-body-weight-bold);
+}
+
+
+/* buttons */
+.button--primary{
+  background-color: var(--color-primary);
+  color: var(--color-white);
+}
+
+.button--secondary{
+  border: 1px solid var(--color-black);
 }
