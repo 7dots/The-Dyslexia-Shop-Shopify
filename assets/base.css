@@ -2718,7 +2718,8 @@ details[open] > .header__menu-item .icon-caret {
 .global-settings-popup,
 .header__submenu.global-settings-popup {
   border-style: hidden;
-  box-shadow: var(--popup-shadow-horizontal-offset) var(--popup-shadow-vertical-offset) var(--popup-shadow-blur-radius) rgba(var(--color-shadow), var(--popup-shadow-opacity));
+  -webkit-box-shadow: var(--box-shadow-primary); 
+  box-shadow: var(--box-shadow-primary);  
 }
 
 .header__submenu.list-menu {
