@@ -1345,11 +1345,11 @@ button.shopify-payment-button__button--unbranded {
   font: inherit;
   font-size: 1.5rem;
   text-decoration: none;
-  color: rgb(var(--color-button-text));
+  color: var(--color-white);
   transition: box-shadow var(--duration-short) ease;
   -webkit-appearance: none;
   appearance: none;
-  background-color: rgba(var(--color-button), var(--alpha-button-background));
+  background-color: var(--color-primary);
 }
 
 .button:before,
@@ -1391,8 +1391,8 @@ button.shopify-payment-button__button--unbranded {
 .customer button:hover::after,
 .shopify-payment-button__button--unbranded:hover::after {
   --border-offset: 1.3px;
-  box-shadow: 0 0 0 calc(var(--buttons-border-width) + var(--border-offset)) rgba(var(--color-button-text), var(--border-opacity)),
-    0 0 0 calc(var(--buttons-border-width) + 1px) rgba(var(--color-button), var(--alpha-button-background));
+  box-shadow: 0 0 0 calc(var(--buttons-border-width) + var(--border-offset)) var(--color-white),
+    0 0 0 calc(var(--buttons-border-width) + 1px) var(--color-primary);
 }
 
 .button--secondary:after {
@@ -1704,8 +1704,7 @@ details[open] > .share-button__fallback {
 .field:before,
 .select:before,
 .customer .field:before,
-.customer select:before,
-.localization-form__select:before {
+.customer select:before {
   pointer-events: none;
   content: '';
   position: absolute;
@@ -1722,7 +1721,7 @@ details[open] > .share-button__fallback {
 .select:after,
 .customer .field:after,
 .customer select:after,
-.localization-form__select:after {
+{
   pointer-events: none;
   content: '';
   position: absolute;
@@ -1749,8 +1748,7 @@ details[open] > .share-button__fallback {
 .select:hover.select:after,
 .select__select:hover.select__select:after,
 .customer .field:hover.field:after,
-.customer select:hover.select:after,
-.localization-form__select:hover.localization-form__select:after {
+.customer select:hover.select:after {
   box-shadow: 0 0 0 calc(0.1rem + var(--inputs-border-width)) rgba(var(--color-foreground),var(--inputs-border-opacity));
   outline: 0;
   border-radius: var(--inputs-radius);
@@ -1759,8 +1757,7 @@ details[open] > .share-button__fallback {
 .field__input:focus-visible,
 .select__select:focus-visible,
 .customer .field input:focus-visible,
-.customer select:focus-visible,
-.localization-form__select:focus-visible.localization-form__select:after {
+.customer select:focus-visible {
   box-shadow: 0 0 0 calc(0.1rem + var(--inputs-border-width)) rgba(var(--color-foreground));
   outline: 0;
   border-radius: var(--inputs-radius);
@@ -1769,16 +1766,10 @@ details[open] > .share-button__fallback {
 .field__input:focus,
 .select__select:focus,
 .customer .field input:focus,
-.customer select:focus,
-.localization-form__select:focus.localization-form__select:after {
+.customer select:focus {
   box-shadow: 0 0 0 calc(0.1rem + var(--inputs-border-width)) rgba(var(--color-foreground));
   outline: 0;
   border-radius: var(--inputs-radius);
-}
-
-.localization-form__select:focus {
-  outline: 0;
-  box-shadow: none;
 }
 
 .text-area,
