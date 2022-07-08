@@ -218,6 +218,15 @@
   flex: 0 1 auto;
 }
 
+
+.cta-img-card:hover > .cta-img-card__image-wrapper > .media > .cta-img-card__image{
+  transform: scale(1.05);
+}
+
+.media > .cta-img-card__image{
+  transition: transform 0.4s;
+}
+
 .cta-img-card {
   height: 100%;
   display: flex;
