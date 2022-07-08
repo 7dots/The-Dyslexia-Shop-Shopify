@@ -1,0 +1,203 @@
+{{ 'section-cta-image-column.css' | asset_url | stylesheet_tag }}
+<link rel="stylesheet" href="{{ 'component-slider.css' | asset_url }}" media="print" onload="this.media='all'">
+<noscript>{{ 'component-slider.css' | asset_url | stylesheet_tag }}</noscript>
+
+{%- style -%}
+  .section-{{ section.id }}-padding {
+    padding-top: 40px;
+    padding-bottom: {{ 35 | times: 0.75 | round: 0 }}px;
+  }
+
+  @media screen and (min-width: 750px) {
+    .section-{{ section.id }}-padding {
+      padding-top: 40px;
+      padding-bottom: 35px;
+    }
+  }
+{%- endstyle -%}
+
+{%- liquid
+if section.settings.swipe_on_mobile == true
+   assign show_mobile_slider = true
+else
+    assign show_mobile_slider = false
+endif       
+
+-%}
+
+<div class="gradient">
+  <div class="page-width section-{{ section.id }}-padding isolate">
+    {%- unless section.settings.title == blank -%}
+      <div class="title-wrapper-with-link title-wrapper--self-padded-mobile title-wrapper--no-top-margin">
+        <h2 class="title h1">
+          {{ section.settings.title | escape }}
+        </h2>
+      </div>
+    {%- endunless -%}
+    <slider-component class="slider-mobile-gutter">
+      <ul class="cta-img-list contains-content-container grid grid--1-col-tablet-down grid--{{ section.settings.columns_desktop }}-col-desktop{% if show_mobile_slider %} slider slider--mobile grid--peek{% endif %}"
+        id="Slider-{{ section.id }}"
+        role="list"
+      >
+        {%- liquid
+          assign highest_ratio = 0
+          for block in section.blocks
+            if block.settings.image.aspect_ratio > highest_ratio
+              assign highest_ratio = block.settings.image.aspect_ratio
+            endif
+          endfor
+        -%}
+        {%- for block in section.blocks -%}
+          {%- assign empty_column = '' -%}
+          {%- if block.settings.image == blank and block.settings.title == blank and block.settings.text == blank and block.settings.link_label == blank -%}
+            {%- assign empty_column = ' cta-img-list__item--empty' -%}
+          {%- endif -%}
+
+          <li id="Slide-{{ section.id }}-{{ forloop.index }}" class="cta-img-list__item grid__item{% if section.settings.swipe_on_mobile %} slider__slide{% endif %} center {{ empty_column }}" {{ block.shopify_attributes }}>            
+            <div class="cta-img-card content-container">
+              {%- if block.settings.image != blank -%}
+                <div class="cta-img-card__image-wrapper cta-img-card-spacing">
+                  <div class="media media--transparent" style="padding-bottom: {{ 1 | divided_by: highest_ratio | times: 100 }}%;">
+                    <img
+                      class="cta-img-card__image"
+                      srcset="{%- if block.settings.image.width >= 275 -%}{{ block.settings.image | image_url: width: 275 }} 275w,{%- endif -%}
+                        {%- if block.settings.image.width >= 550 -%}{{ block.settings.image | image_url: width: 550 }} 550w,{%- endif -%}
+                        {%- if block.settings.image.width >= 710 -%}{{ block.settings.image | image_url: width: 710 }} 710w,{%- endif -%}
+                        {%- if block.settings.image.width >= 1420 -%}{{ block.settings.image | image_url: width: 1420 }} 1420w,{%- endif -%}
+                        {{ block.settings.image | image_url }} {{ block.settings.image.width }}w"
+                      src="{{ block.settings.image | image_url: width: 550 }}"
+                      sizes="(min-width: 990px) {% if section.blocks.size <= 2 %}710px{% else %}550px{% endif %},
+                        (min-width: 750px) {% if section.blocks.size == 1 %}710px{% else %}550px{% endif %},
+                        calc(100vw - 30px)"
+                      alt="{{ block.settings.image.alt }}"
+                      height="{{ block.settings.image.height }}"
+                      width="{{ block.settings.image.width }}"
+                      loading="lazy"
+                    >
+                  </div>
+                </div>
+              {%- endif -%}
+              {%- if block.settings.header_title != blank -%}
+              <div class="cta-img-card__info">
+                  <p class="h2 cta-img-card__info-header">{{ block.settings.header_title | escape }}</p>
+                {%- if block.settings.header_caption != blank -%}
+                  <div class="cta-img-card__info-caption">{{ block.settings.header_caption}}</div>
+                {%- endif -%}
+              </div>
+            {%- endif -%}
+              <div class="cta-img-card__button button">
+                  {%- if block.settings.title != blank -%}
+                    <p class="multi-column__font-weight-bold h2">{{ block.settings.title | escape }}</p>
+                  {%- endif -%}
+                  {%- if block.settings.text != blank -%}
+                    <div class="rte">{{ block.settings.text }}</div>
+                  {%- endif -%}
+                  {%- if block.settings.link_label != blank -%}
+                    <a class="animate-arrow" {% if block.settings.link == blank %}role="link" aria-disabled="true"{% else %}href="{{ block.settings.link }}"{% endif %}>{{ block.settings.link_label | escape }}</a>
+                  {%- endif -%}
+              </div>
+            </div>
+          </li>
+        {%- endfor -%}
+      </ul>
+
+      {%- if show_mobile_slider -%}
+        <div class="slider-buttons no-js-hidden medium-hide">
+          <button type="button" class="slider-button slider-button--prev" name="previous" aria-label="{{ 'general.slider.previous_slide' | t }}">{% render 'icon-caret' %}</button>
+          <div class="slider-counter caption">
+            <span class="slider-counter--current">1</span>
+            <span aria-hidden="true"> / </span>
+            <span class="visually-hidden">{{ 'general.slider.of' | t }}</span>
+            <span class="slider-counter--total">{{ section.blocks.size }}</span>
+          </div>
+          <button type="button" class="slider-button slider-button--next" name="next" aria-label="{{ 'general.slider.next_slide' | t }}">{% render 'icon-caret' %}</button>
+        </div>
+      {%- endif -%}
+    </slider-component>
+    <div class="center{% if show_mobile_slider %} small-hide medium-hide{% endif %}">
+    </div>
+  </div>
+</div>
+
+{% schema %}
+{
+  "name": "CTA Image Column",
+  "class": "section",
+  "tag": "section",
+  "settings": [
+    {
+      "type": "header",
+      "content": "Mobile layout"
+    },
+    {
+      "type": "checkbox",
+      "id": "swipe_on_mobile",
+      "default": false,
+      "label": "Enable swipe on mobile"
+    }
+  ],
+  "blocks": [
+    {
+      "type": "column",
+      "name": "t:sections.multicolumn.blocks.column.name",
+      "settings": [
+        {
+          "type": "header",
+          "content": "Media"
+        },
+        {
+          "type": "image_picker",
+          "id": "image",
+          "label": "Image",
+          "info": "Recommended image size 690 x 240px"
+        },
+        { 
+          "type": "header",
+          "content": "Title" 
+        },
+        { 
+          "type": "text",
+          "id": "header_title",
+          "label": "Header"
+        },
+        { 
+          "type": "richtext",
+          "id": "header_caption",
+          "label": "Caption"
+        },
+        {
+          "type": "header",
+          "content": "CTA Link"
+        },
+        {
+          "type": "text",
+          "id": "link_label",
+          "default": "Find out more",
+          "label": "Link header"
+        },
+        {
+          "type": "url",
+          "id": "link",
+          "label": "t:sections.multicolumn.blocks.column.settings.link.label"
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "t:sections.multicolumn.presets.name",
+      "blocks": [
+        {
+          "type": "column"
+        },
+        {
+          "type": "column"
+        },
+        {
+          "type": "column"
+        }
+      ]
+    }
+  ]
+}
+{% endschema %}

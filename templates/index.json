@@ -16,6 +16,34 @@
         "show_text_below": false
       }
     },
+    "cta_image_column": {
+      "type": "cta-image-column",
+      "blocks": {
+        "column1": {
+          "type": "column",
+          "settings": {
+            "link_label": "See more"
+          }
+        },
+        "column2": {
+          "type": "column",
+          "settings": {
+            "link_label": "See more"
+          }
+        },
+        "column3": {
+          "type": "column",
+          "settings": {
+            "link_label": "See more"
+          }
+        }
+      },
+      "block_order": [
+        "column1",
+        "column2",
+        "column3"
+      ]
+    },
     "rich_text": {
       "type": "rich-text",
       "blocks": {
@@ -209,6 +237,7 @@
   },
   "order": [
     "image_banner",
+    "cta_image_column",
     "rich_text",
     "featured_collection",
     "collage",
