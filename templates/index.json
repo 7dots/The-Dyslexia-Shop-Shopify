@@ -22,19 +22,31 @@
         "column1": {
           "type": "column",
           "settings": {
-            "link_label": "See more"
+            "image": "shopify:\/\/shop_images\/Stabilo.png",
+            "header_title": "",
+            "header_caption": "",
+            "link_label": "See more",
+            "link": ""
           }
         },
         "column2": {
           "type": "column",
           "settings": {
-            "link_label": "See more"
+            "image": "shopify:\/\/shop_images\/Robot.png",
+            "header_title": "",
+            "header_caption": "",
+            "link_label": "See more",
+            "link": ""
           }
         },
         "column3": {
           "type": "column",
           "settings": {
-            "link_label": "See more"
+            "image": "shopify:\/\/shop_images\/Note.png",
+            "header_title": "Exercise Books",
+            "header_caption": "<p>We stock a wide range of coloured paper exercise books<\/p>",
+            "link_label": "See more",
+            "link": ""
           }
         }
       },
@@ -42,7 +54,10 @@
         "column1",
         "column2",
         "column3"
-      ]
+      ],
+      "settings": {
+        "swipe_on_mobile": false
+      }
     },
     "rich_text": {
       "type": "rich-text",
