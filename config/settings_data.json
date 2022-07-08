@@ -132,7 +132,7 @@
         "settings": {
           "logo": "shopify:\/\/shop_images\/logo.jpg",
           "menu": "main-menu",
-          "menu_type_desktop": "dropdown",
+          "menu_type_desktop": "mega",
           "enable_sticky_header": true
         }
       },
