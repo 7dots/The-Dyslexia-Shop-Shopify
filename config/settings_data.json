@@ -200,7 +200,7 @@
             "type": "utility",
             "settings": {
               "text": "|  E: hello@thedyslexiashop.co.uk",
-              "utility_bar_link": ""
+              "utility_bar_link": "shopify:\/\/pages\/contact"
             }
           },
           "a2e739c0-9341-43d6-afaa-da9167ca9150": {
