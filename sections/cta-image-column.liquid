@@ -54,7 +54,7 @@ endif
           {%- endif -%}
 
           <li id="Slide-{{ section.id }}-{{ forloop.index }}" class="cta-img-list__item grid__item{% if section.settings.swipe_on_mobile %} slider__slide{% endif %} center {{ empty_column }}" {{ block.shopify_attributes }}>            
-            <div class="cta-img-card content-container">
+            <div class="cta-img-card {% if block.settings.image != blank %}-box-shadow {% endif %} content-container">
               {%- if block.settings.image != blank -%}
                 <div class="cta-img-card__image-wrapper cta-img-card-spacing">
                   <div class="media media--transparent" style="padding-bottom: {{ 1 | divided_by: highest_ratio | times: 100 }}%;">

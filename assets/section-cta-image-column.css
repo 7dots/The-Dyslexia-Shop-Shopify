@@ -22,7 +22,7 @@
 }
 
 .cta-img-list__item.center
-  .cta-img-card__image-wrapper:not(.cta-img-card__image-wrapper--full-width),
+.cta-img-card__image-wrapper:not(.cta-img-card__image-wrapper--full-width),
 .cta-img-list__item:only-child {
   width: 100%;
   margin-left: auto;
@@ -274,6 +274,12 @@
 .cta-img-card {
   position: relative;
   box-sizing: border-box;
+  min-height: 100px;
+}
+
+.cta-img-card,.-box-shadow{
+  -webkit-box-shadow: var(--box-shadow-primary); 
+  box-shadow: var(--box-shadow-primary);  
 }
 
 .cta-img.background-none .cta-img-card {
