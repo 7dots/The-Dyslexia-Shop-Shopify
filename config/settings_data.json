@@ -214,7 +214,7 @@
             "type": "utility",
             "settings": {
               "text": "Create an Account",
-              "utility_bar_link": ""
+              "utility_bar_link": "https:\/\/thedyslexiashop.myshopify.com\/account\/register"
             }
           }
         },
