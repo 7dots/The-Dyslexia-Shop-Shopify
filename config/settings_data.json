@@ -193,28 +193,28 @@
             "type": "utility",
             "settings": {
               "text": "Contact us: T +44 (0) 1394 7671 818",
-              "link": ""
+              "utility_bar_link": "shopify:\/\/pages\/contact"
             }
           },
           "22efa2b0-b58b-4b48-b3bf-e5c02f95cbbd": {
             "type": "utility",
             "settings": {
               "text": "|  E: hello@thedyslexiashop.co.uk",
-              "link": ""
+              "utility_bar_link": ""
             }
           },
           "a2e739c0-9341-43d6-afaa-da9167ca9150": {
             "type": "utility",
             "settings": {
               "text": "Blog",
-              "link": ""
+              "utility_bar_link": "shopify:\/\/blogs\/blog"
             }
           },
           "f41e79d9-cdaa-4828-ac97-d50a4dfbb1e8": {
             "type": "utility",
             "settings": {
               "text": "Create an Account",
-              "link": ""
+              "utility_bar_link": ""
             }
           }
         },
