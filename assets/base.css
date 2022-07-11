@@ -13,7 +13,15 @@
   --color-mid-grey: #707070;
   --color-light-grey: #EEEEEE;
   --color-light-green: #2AC632;
+  
+  
   --color-light-green-rgb: 42, 198, 50;
+  --color-black-rgb: 0, 0, 0;
+  --color-primary-rgb: 0, 138, 7;
+
+
+  /* background */
+  --color-base-background-1: var(--color-white);
 
 
   /* Line heights */
@@ -1410,7 +1418,6 @@ button.shopify-payment-button__button--unbranded {
 .shopify-challenge__button:hover::after,
 .customer button:hover::after,
 .shopify-payment-button__button--unbranded:hover::after {
-  --border-offset: 1.3px;
   box-shadow: 0 0 0 calc(2px + var(--border-offset)) var(--color-white),
     0 0 0 calc(var(--buttons-border-width) + 1px) var(--color-primary);
 }
@@ -2017,7 +2024,7 @@ input[type='checkbox'] {
   left: var(--inputs-border-width);
   border: 0.1rem solid transparent;
   border-radius: var(--inputs-radius);
-  box-shadow: 0 0 0 var(--inputs-border-width) rgba(var(--color-foreground), var(--inputs-border-opacity));
+  box-shadow: 0 0 0 var(--inputs-border-width) var(--color-dark-grey);
   transition: box-shadow var(--duration-short) ease;
   z-index: 1;
 }
@@ -2991,13 +2998,3 @@ details-disclosure > details {
   font-weight: var(--font-body-weight-bold);
 }
 
-
-/* buttons */
-.button--primary{
-  background-color: var(--color-primary);
-  color: var(--color-white);
-}
-
-.button--secondary:hover{
-  border: 2px solid var(--color-black);
-}
