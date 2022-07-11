@@ -6,7 +6,7 @@
 <div class="utility-bar" role="region" aria-label="Utility" {{ block.shopify_attributes }}>
   <div class="utility-bar__wrapper page-width">
     {%- for block in section.blocks -%}
-      <a href='{{- block.settings.url -}}'>{{- block.settings.text -}}</a>
+      <a href='{{- block.settings.utility_bar_link -}}'>{{- block.settings.text -}}</a>
     {%- endfor -%}  
     {%- if localization.available_countries.size > 1 -%}
       <noscript>
@@ -120,7 +120,7 @@
         },
         {
           "type": "url",
-          "id": "link",
+          "id": "utility_bar_link",
           "label": "Link"
         }
       ]
