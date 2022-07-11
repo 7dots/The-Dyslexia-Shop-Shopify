@@ -846,19 +846,17 @@ summary::-webkit-details-marker {
 }
 
 *:focus-visible {
-  outline: 0.2rem solid rgba(var(--color-foreground), 0.5);
+  outline: 0.2rem solid rgba(var(--color-black-rgb), 0.5);
   outline-offset: 0.3rem;
-  box-shadow: 0 0 0 0.3rem rgb(var(--color-background)),
-    0 0 0.5rem 0.4rem rgba(var(--color-foreground), 0.3);
+  box-shadow: 0 0 0 0.3rem rgb(var(--color-white)), 0 0 0.5rem 0.4rem rgb(var(--color-white), 0.3);
 }
 
 /* Fallback - for browsers that don't support :focus-visible, a fallback is set for :focus */
 .focused,
 .no-js *:focus {
-  outline: 0.2rem solid rgba(var(--color-foreground), 0.5);
+  outline: 0.2rem solid rgba(var(--color-black-rgb), 0.5);
   outline-offset: 0.3rem;
-  box-shadow: 0 0 0 0.3rem rgb(var(--color-background)),
-    0 0 0.5rem 0.4rem rgba(var(--color-foreground), 0.3);
+  box-shadow: 0 0 0 0.3rem rgb(var(--color-white)), 0 0 0.5rem 0.4rem rgb(var(--color-white), 0.3);
 }
 
 /* Negate the fallback side-effect for browsers that support :focus-visible */
@@ -1514,7 +1512,7 @@ button.shopify-payment-button__button--unbranded {
 }
 
 .button.loading > .loading-overlay__spinner .path {
-  stroke: rgb(var(--color-button-text));
+  stroke: var(--color-black);
 }
 
 
@@ -2087,13 +2085,13 @@ input[type='checkbox'] {
 
 .quantity__button:focus-visible,
 .quantity__input:focus-visible {
-  background-color: rgb(var(--color-background));
+  background-color: rgb(var(--color-dark-grey));
   z-index: 2;
 }
 
 .quantity__button:focus,
 .quantity__input:focus {
-  background-color: rgb(var(--color-background));
+  background-color: var(--color-white);
   z-index: 2;
 }
 
@@ -2106,8 +2104,8 @@ input[type='checkbox'] {
 .quantity__input:-webkit-autofill,
 .quantity__input:-webkit-autofill:hover,
 .quantity__input:-webkit-autofill:active {
-  box-shadow: 0 0 0 10rem rgb(var(--color-background)) inset !important;
-  -webkit-box-shadow: 0 0 0 10rem rgb(var(--color-background)) inset !important;
+  box-shadow: 0 0 0 10rem var(--color-mid-grey) inset !important;
+  -webkit-box-shadow: 0 0 0 10rem var(--color-mid-grey) inset !important;
 }
 
 .quantity__input::-webkit-outer-spin-button,
