@@ -711,7 +711,9 @@
     }
 
     addFacets(){
-      this.facetContainer.classList.add('-sticky');
+      if (this.facetContainer){
+        this.facetContainer.classList.add('-sticky');
+      }
     }
   }
 
