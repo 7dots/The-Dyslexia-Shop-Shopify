@@ -89,6 +89,11 @@
         "padding_bottom": 0
       }
     },
+    "homepage_recommendations": {
+      "type": "homepage-recommendations-slider",
+      "settings": {
+      }
+    },
     "featured_collection": {
       "type": "featured-collection",
       "settings": {
@@ -254,6 +259,7 @@
     "image_banner",
     "cta_image_column",
     "rich_text",
+    "homepage_recommendations",
     "featured_collection",
     "collage",
     "image-with-text",
