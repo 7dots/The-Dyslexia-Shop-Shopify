@@ -3,20 +3,6 @@
   grid-template-columns: repeat(2, auto);
   grid-template-rows: repeat(2, auto);
   padding-top: 1rem;
-
-}
-
-@media screen and (min-width: 750px){
-  .facets-container{
-    position: sticky;
-    align-self: center;
-  }
-  .facets-container:not(.-sticky){
-    top: 0;
-  }
-  .facets-container.-sticky{
-      top: 120px;
-  }
 }
 
 .active-facets-mobile {
