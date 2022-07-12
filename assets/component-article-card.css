@@ -13,7 +13,6 @@
   padding: 0;
 }
 
-
 .grid--peek .article-card {
   box-sizing: border-box;
 }
@@ -91,9 +90,6 @@
 
 .article-card__image--small .ratio::before {
   padding-bottom: 11rem;
-}
-.article-card__image--medium{
-  flex-direction: row;
 }
 
 .article-card__image--medium .ratio::before {

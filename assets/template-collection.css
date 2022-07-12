@@ -78,3 +78,10 @@
 .collection__view-all a:not(.link) {
   margin-top: 1rem;
 }
+
+.clerk-slider-nav {
+  background: #008a07 !important;
+}
+.clerk-design-component-1uS3AuyM > img {
+  height: 100%;
+}

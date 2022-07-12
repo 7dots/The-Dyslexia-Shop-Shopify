@@ -97,8 +97,7 @@
           {%- endif -%}
         </div>
       </div>
-      {%- if show_image == true and article.image -%}
-      <div class="card__content with image">
+      <div class="card__content">
         <div class="card__information">
           <h3 class="card__heading{% if show_excerpt %} h2{% endif %}">
             <a href="{{ article.url }}" class="full-unstyled-link">
@@ -136,7 +135,6 @@
           </div>
         {%- endif -%}  
       </div>
-      {%- endif -%}
     </div>
   </div>
 {%- endif -%}
