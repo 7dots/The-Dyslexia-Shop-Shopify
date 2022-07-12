@@ -632,13 +632,14 @@
       this.currentScrollTop = 0;
       this.preventReveal = false;
       this.predictiveSearch = this.querySelector('predictive-search');
+      this.facetContainer = document.querySelector('.facets-container');
 
       this.onScrollHandler = this.onScroll.bind(this);
       this.hideHeaderOnScrollUp = () => this.preventReveal = true;
 
       this.addEventListener('preventHeaderReveal', this.hideHeaderOnScrollUp);
       window.addEventListener('scroll', this.onScrollHandler, false);
-
+      this.addFacets();
       this.createObserver();
     }
 
@@ -707,6 +708,10 @@
     closeSearchModal() {
       this.searchModal = this.searchModal || this.header.querySelector('details-modal');
       this.searchModal.close(false);
+    }
+
+    addFacets(){
+      this.facetContainer.classList.add('-sticky');
     }
   }
 
