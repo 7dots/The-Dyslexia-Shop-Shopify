@@ -632,13 +632,14 @@
       this.currentScrollTop = 0;
       this.preventReveal = false;
       this.predictiveSearch = this.querySelector('predictive-search');
+      this.facetContainer = document.querySelector('.facets-container');
 
       this.onScrollHandler = this.onScroll.bind(this);
       this.hideHeaderOnScrollUp = () => this.preventReveal = true;
 
       this.addEventListener('preventHeaderReveal', this.hideHeaderOnScrollUp);
       window.addEventListener('scroll', this.onScrollHandler, false);
-
+      this.addFacets();
       this.createObserver();
     }
 
@@ -661,10 +662,10 @@
 
       if (this.predictiveSearch && this.predictiveSearch.isOpen) return;
 
-      if (scrollTop > this.currentScrollTop && scrollTop > this.headerBounds.bottom) {
+      if (scrollTop > this.currentScrollTop && scrollTop > this.headerBounds.top) {
         if (this.preventHide) return;
         requestAnimationFrame(this.hide.bind(this));
-      } else if (scrollTop < this.currentScrollTop && scrollTop > this.headerBounds.bottom) {
+      } else if (scrollTop < this.currentScrollTop && scrollTop > this.headerBounds.top) {
         if (!this.preventReveal) {
           requestAnimationFrame(this.reveal.bind(this));
         } else {
@@ -684,7 +685,8 @@
     }
 
     hide() {
-      this.header.classList.add('shopify-section-header-hidden', 'shopify-section-header-sticky');
+      //this.header.classList.add('shopify-section-header-hidden', 'shopify-section-header-sticky'); -- if you want nav to hide on scroll down
+      this.header.classList.add('shopify-section-header-sticky');
       this.closeMenuDisclosure();
       this.closeSearchModal();
     }
@@ -706,6 +708,12 @@
     closeSearchModal() {
       this.searchModal = this.searchModal || this.header.querySelector('details-modal');
       this.searchModal.close(false);
+    }
+
+    addFacets(){
+      if (this.facetContainer){
+        this.facetContainer.classList.add('-sticky');
+      }
     }
   }
 
