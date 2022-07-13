@@ -8,6 +8,7 @@
   --color-white: #fff;
   --color-black: #070707;
   
+  --color-white-2: #f8f8f8;
 
   --color-dark-grey: #333;
   --color-mid-grey: #707070;
@@ -2995,3 +2996,6 @@ details-disclosure > details {
   font-weight: var(--font-body-weight-bold);
 }
 
+.color-white-2{
+  background-color: var(--color-white-2);
+}
