@@ -11,6 +11,7 @@
     - show_author: {String} The setting either show the article author or not. If it's not included it will not show the author by default
     - show_badge: {String} The setting either show the blog badge or not.
     - lazy_load: {Boolean} Image should be lazy loaded. Default: true (optional)
+    - featured: {Boolean} The setting either show if the article is featured or not. If it is featured, a featured label will show next to the
 
     Usage:
     {% render 'article-card' blog: blog, article: article, show_image: section.settings.show_image %}
@@ -72,6 +73,9 @@
               {%- if show_author -%}
                 <span>{{ article.author }}</span>
               {%- endif -%}
+              {%- if featured -%}
+                <span>featured</span>
+              {%- endif -%}
             </div>
             {%- if show_excerpt -%}
               {%- if article.excerpt.size > 0 or article.content.size > 0 -%}
@@ -111,6 +115,9 @@
             {%- endif -%}
             {%- if show_author -%}
               <span>{{ article.author }}</span>
+            {%- endif -%}
+            {%- if featured -%}
+              <span>featured</span>
             {%- endif -%}
           </div>
           {%- if show_excerpt -%}

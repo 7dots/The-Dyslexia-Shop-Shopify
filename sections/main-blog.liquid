@@ -16,24 +16,50 @@
   }
 {%- endstyle -%}
 
+
+
 {%- paginate blog.articles by 6 -%}
   <div class="main-blog page-width section-{{ section.id }}-padding">
     <h1 class="title--primary">{{ blog.title | escape }}</h1>
 
-    <div class="blog-articles {% if section.settings.layout == 'collage' %}blog-articles--collage{% endif %}">
-      {%- for article in blog.articles -%}
-        <div class="blog-articles__article article">
-          {%- render 'article-card',
-            article: article,
-            media_height: section.settings.image_height,
-            media_aspect_ratio: article.image.aspect_ratio,
-            show_image: section.settings.show_image,
-            show_date: section.settings.show_date,
-            show_author: section.settings.show_author,
-            show_excerpt: true 
-          -%}
-        </div>
-      {%- endfor -%}
+    <div class="blog-articles__grid {% if section.settings.layout == 'collage' %}blog-articles--collage{% endif %}">
+      <div class="blog-articles__featured blog-articles__grid">
+        {%- for article in blog.articles -%}
+          {%- if article.metafields.custom.featured_article -%}
+          <div class="blog-articles__article article">
+            {%- render 'article-card',
+              article: article,
+              media_height: section.settings.image_height,
+              media_aspect_ratio: article.image.aspect_ratio,
+              show_image: section.settings.show_image,
+              show_date: section.settings.show_date,
+              show_author: section.settings.show_author,
+              show_excerpt: true,
+              featured: true 
+            -%}
+          </div>
+          {%- endif -%}
+        {%- endfor -%}
+      </div>  
+      <div class="blog-articles__article blog-articles__grid">
+        {%- for article in blog.articles -%}
+          {%- if article.metafields.custom.featured_article == null -%}
+          <div class="blog-articles__article article">
+            {{article.metafields.custom.featured_article}}
+            {%- render 'article-card',
+              article: article,
+              media_height: section.settings.image_height,
+              media_aspect_ratio: article.image.aspect_ratio,
+              show_image: section.settings.show_image,
+              show_date: section.settings.show_date,
+              show_author: section.settings.show_author,
+              show_excerpt: true,
+              featured: false 
+            -%}
+          </div>
+          {%- endif -%}
+        {%- endfor -%}
+      </div>
     </div>
 
     {%- if paginate.pages > 1 -%}
