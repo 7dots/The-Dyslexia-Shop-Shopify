@@ -553,6 +553,9 @@
     <script src="{{ 'media-gallery.js' | asset_url }}" defer="defer"></script>
   {%- endif -%}
 
+  <script src="{{ 'product-image-zoom.js' | asset_url}}" defer="defer"></script>
+
+
   {%- if first_3d_model -%}
     <script type="application/json" id="ProductJSON-{{ product.id }}">
       {{ product.media | where: 'media_type', 'model' | json }}
