@@ -750,7 +750,6 @@ li[data-address] > h2 {
   display: flex;
   padding-left: 16px;
   margin-top: 16px;
-  opacity: 0;
 }
 
 .checkbox-field label {
