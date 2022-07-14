@@ -1,8 +1,16 @@
+.clerk-design-component-1uS3AuyM {
+    height: auto;
+    aspect-ratio: 1/1;
+    display: flex;
+    justify-content: center;
+}
 .clerk-design-component-JXrbODx9 > div.clerk-slider .clerk-slider-nav {
     background: #008a07;
 }
 .clerk-design-component-1uS3AuyM > img {
-    height: 100%;
+    height: auto !important;
+    width: auto;
+    align-self: center;
 }
 .clerk-design-component-2vODKCQQ {
     cursor: pointer;

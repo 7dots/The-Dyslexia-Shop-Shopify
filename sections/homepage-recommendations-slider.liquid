@@ -1,7 +1,11 @@
 {{ 'clerk-design-component.css' | asset_url | stylesheet_tag }}
-<section class="page-width">
-    <h2 class="title h2">Recommendations</h2>
-    <span class="clerk"
-          data-template="@home-page-visitor-complementary">
-    </span>
+<section class="clerkio-homepage-recommendations">
+    <div class="collection__title title-wrapper title-wrapper--no-top-margin page-width">
+        <h2 class="title h2">Popular</h2>
+    </div>
+    <div class="page-width page-width-desktop">
+        <span class="clerk"
+              data-template="@home-page-visitor-complementary">
+        </span>
+    </div>
 </section>
