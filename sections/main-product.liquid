@@ -243,7 +243,7 @@
           {%- when 'description' -%}
             {%- if product.description != blank -%}
               <div class="product__description rte quick-add-hidden">
-                {{ product.description }}
+                {{ product.metafields.global.short_description }}
               </div>
             {%- endif -%}
           {%- when 'custom_liquid' -%}

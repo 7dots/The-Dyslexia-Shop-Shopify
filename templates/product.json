@@ -118,13 +118,13 @@
         "padding_bottom": 12
       }
     },
-    "image-with-text": {
-      "type": "image-with-text",
+    "product-image-text": {
+      "type": "product-image-text",
       "blocks": {
         "image-with-text-0": {
           "type": "heading",
           "settings": {
-            "heading": "Image with text",
+            "heading": "Product description",
             "heading_size": "h1"
           }
         },
@@ -194,7 +194,7 @@
   },
   "order": [
     "main",
-    "image-with-text",
+    "product-image-text",
     "multicolumn",
     "product-recommendations"
   ]
