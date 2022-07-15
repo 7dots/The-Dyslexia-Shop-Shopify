@@ -25,19 +25,7 @@
     }
   }
 {%- endstyle -%}
-
-<div class="clerkio-homepage-recommendations">
-  <div class="collection__title title-wrapper title-wrapper--no-top-margin page-width">
-    <h2 class="title h2">Popular</h2>
-  </div>
-  <div class="page-width">
-    <span class="clerk"
-          data-template="@category-page-popular"
-          data-category="{{ collection.id }}" >
-    </span>
-  </div>
-</div>
-
+{% render 'clark-recommendations' , collection : collection %}
 <div class="section-{{ section.id }}-padding color-white-2">
   {% comment %} Sort is the first tabbable element when filter type is vertical {% endcomment %}
   {%- if section.settings.enable_sorting and section.settings.filter_type == 'vertical' -%}
