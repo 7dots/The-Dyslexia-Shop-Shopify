@@ -16,45 +16,47 @@
 <div class="image-with-text page-width isolate">
   <div class="image-with-text__grid grid grid--gapless grid--1-col grid--3-col-tablet {{section.settings.block_background}}
     {% if section.settings.layout == 'text_first' %} image-with-text__grid--reverse{% endif %}">
-    <div class="image-with-text__media-item image-with-text__media-item--medium grid__item image-with-text__media-item--{{ section.settings.desktop_content_position }}">
-      <div class="image-with-text__media image-with-text__media--{{ section.settings.height }} global-media-settings {% if section.settings.image != blank %}media{% else %}image-with-text__media--placeholder placeholder{% endif %} {% if section.settings.content_ratio == '2:1'%}image-with-text__image-contained{% endif%} {% if section.settings.layout == 'text_first'%}-margin-right{% endif%}"
-        style="padding-bottom: {{ 1 | divided_by: section.settings.image.aspect_ratio | times: 100 }}%;"
-      >
-        {%- if section.settings.image != blank -%}
-          <img
-            srcset="{%- if section.settings.image.width >= 165 -%}{{ section.settings.image | image_url: width: 165 }} 165w,{%- endif -%}
-              {%- if section.settings.image.width >= 360 -%}{{ section.settings.image | image_url: width: 360 }} 360w,{%- endif -%}
-              {%- if section.settings.image.width >= 535 -%}{{ section.settings.image | image_url: width: 535 }} 535w,{%- endif -%}
-              {%- if section.settings.image.width >= 750 -%}{{ section.settings.image | image_url: width: 750 }} 750w,{%- endif -%}
-              {%- if section.settings.image.width >= 1070 -%}{{ section.settings.image | image_url: width: 1070 }} 1070w,{%- endif -%}
-              {%- if section.settings.image.width >= 1500 -%}{{ section.settings.image | image_url: width: 1500 }} 1500w,{%- endif -%}
-              {{ section.settings.image | image_url }} {{ section.settings.image.width }}w"
-            src="{{ section.settings.image | image_url: width: 1500 }}"
-            sizes="(min-width: {{ settings.page_width }}px) {{ settings.page_width | minus: 100 | divided_by: 2 }}px, (min-width: 750px) calc((100vw - 130px) / 2), calc((100vw - 50px) / 2)"
-            alt="{{ section.settings.image.alt | escape }}"
-            loading="lazy"
-            width="{{ section.settings.image.width }}"
-            height="{{ section.settings.image.height }}"
-            {% if section.settings.image_padding == true %}class="image-with-text__padding"{% endif %} 
-          
-          >
-        {%- else -%}
-          {{ 'image' | placeholder_svg_tag: 'placeholder-svg' }}
-        {%- endif -%}
+    {% if section.settings.image %}
+      <div class="image-with-text__media-item image-with-text__media-item--medium grid__item image-with-text__media-item--{{ section.settings.desktop_content_position }}">
+        <div class="image-with-text__media image-with-text__media--{{ section.settings.height }} global-media-settings {% if section.settings.image != blank %}media{% else %}image-with-text__media--placeholder placeholder{% endif %} {% if section.settings.content_ratio == '2:1'%}image-with-text__image-contained{% endif%} {% if section.settings.layout == 'text_first'%}-margin-right{% endif%}"
+          style="padding-bottom: {{ 1 | divided_by: section.settings.image.aspect_ratio | times: 100 }}%;"
+        >
+          {%- if section.settings.image != blank -%}
+            <img
+              srcset="{%- if section.settings.image.width >= 165 -%}{{ section.settings.image | image_url: width: 165 }} 165w,{%- endif -%}
+                {%- if section.settings.image.width >= 360 -%}{{ section.settings.image | image_url: width: 360 }} 360w,{%- endif -%}
+                {%- if section.settings.image.width >= 535 -%}{{ section.settings.image | image_url: width: 535 }} 535w,{%- endif -%}
+                {%- if section.settings.image.width >= 750 -%}{{ section.settings.image | image_url: width: 750 }} 750w,{%- endif -%}
+                {%- if section.settings.image.width >= 1070 -%}{{ section.settings.image | image_url: width: 1070 }} 1070w,{%- endif -%}
+                {%- if section.settings.image.width >= 1500 -%}{{ section.settings.image | image_url: width: 1500 }} 1500w,{%- endif -%}
+                {{ section.settings.image | image_url }} {{ section.settings.image.width }}w"
+              src="{{ section.settings.image | image_url: width: 1500 }}"
+              sizes="(min-width: {{ settings.page_width }}px) {{ settings.page_width | minus: 100 | divided_by: 2 }}px, (min-width: 750px) calc((100vw - 130px) / 2), calc((100vw - 50px) / 2)"
+              alt="{{ section.settings.image.alt | escape }}"
+              loading="lazy"
+              width="{{ section.settings.image.width }}"
+              height="{{ section.settings.image.height }}"
+              {% if section.settings.image_padding == true %}class="image-with-text__padding"{% endif %} 
+            
+            >
+          {%- else -%}
+            {{ 'image' | placeholder_svg_tag: 'placeholder-svg' }}
+          {%- endif -%}
+        </div>
       </div>
-    </div>
+    {% endif %}
     <div class="image-with-text__text-item grid__item">
       <div id="ImageWithText--{{ section.id }}" class="image-with-text__content image-with-text__content image-with-text__content--{{ section.settings.desktop_content_position }} image-with-text__content--desktop-left image-with-text__content--mobile-center content-container {% if section.settings.layout == 'image_first' and section.settings.content_ratio == '2:1' %}image-with-text__padding-0-desktop{% else %}{% endif %}">
         {%- for block in section.blocks -%}
           {% case block.type %}
             {%- when 'heading' -%}
-              <p class="image-with-text__heading {{ block.settings.heading_size }}{% if block.settings.heading_full_width == false %} image-with-text__heading-contained{% endif %}" {{ block.shopify_attributes }}>
+              <p class="image-with-text__heading {% if section.settings.image == null %}-increased-width{% endif %} {{ block.settings.heading_size }}{% if block.settings.heading_full_width == false %} image-with-text__heading-contained{% endif %}" {{ block.shopify_attributes }}>
                 {{ block.settings.heading | escape }}
               </p>
             {%- when 'caption' -%}
               <p class="image-with-text__text image-with-text__text--caption caption-with-letter-spacing caption-with-letter-spacing--{{ block.settings.text_size }} caption-with-letter-spacing" {{ block.shopify_attributes }}>{{ block.settings.caption | escape }}</p>
             {%- when 'text' -%}
-              <div class="image-with-text__text rte {{ block.settings.text_style }}" {{ block.shopify_attributes }}>{{ product.description }}</div>
+              <div class="image-with-text__text {% if section.settings.image == null %}-increased-width{% endif %} rte {{ block.settings.text_style }}" {{ block.shopify_attributes }}>{{ product.description }}</div>
             {%- when 'button' -%}
               {%- if block.settings.button_label != blank -%}
                 <a{% if block.settings.button_link == blank %} role="link" aria-disabled="true"{% else %} href="{{ block.settings.button_link }}"{% endif %} class="button{% if block.settings.button_style_secondary %} button--secondary{% else %} button--primary{% endif %}" {{ block.shopify_attributes }}>

@@ -326,13 +326,22 @@
   margin-bottom: 0;
 }
 
-.image-with-text__heading-contained{
+.image-with-text__heading-contained:not(.-increased-width){
   max-width: 235px;
 }
 
+.image-with-text__heading-contained.-increased-width{
+  width: 100%;
+  margin-top: 0;
+}
 
-.image-with-text__text{
+
+.image-with-text__text:not(.-increased-width){
   max-width: 450px;
+}
+
+.image-with-text__text.increased-width{
+  width: 100%;
 }
 
 .image-with-text__text p {
