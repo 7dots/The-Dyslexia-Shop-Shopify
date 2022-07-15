@@ -20,7 +20,7 @@
   <div class="main-blog page-width section-{{ section.id }}-padding">
     <h1 class="title--primary">{{ blog.title | escape }}</h1>
       <div class="blog-filters">
-          <p>Filter posts by tag:</p>
+          <p>Filter by:</p>
           <ul class="blog-filters__list">
               <li>
                 <a href="{{ blog.url }}">All</a>
@@ -30,6 +30,16 @@
                   <a href="{{ blog.url }}/tagged/{{ tag | handle }}">{{ tag }}</a>{% unless forloop.last %}, {% endunless %}
                 </li>
               {%- endfor -%}
+
+            {% for link in linklists.main.links %}
+              <a href="{{ link.url }}"
+                 {% if link.current %}aria-current="page" class="highlight"{% endif %}
+              >
+                {{ link.title }}
+              </a>
+            {% endfor %}
+
+
           </ul>
       </div>
         <div class="blog-articles__grid {% if section.settings.layout == 'collage' %}blog-articles--collage{% endif %}">
