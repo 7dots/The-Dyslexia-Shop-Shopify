@@ -2999,3 +2999,8 @@ details-disclosure > details {
 .color-white-2{
   background-color: var(--color-white-2);
 }
+
+.icon-caret-large{
+  height: 50px;
+  width: 50px;
+}
