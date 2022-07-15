@@ -633,6 +633,7 @@
       this.preventReveal = false;
       this.predictiveSearch = this.querySelector('predictive-search');
       this.facetContainer = document.querySelector('.facets-container');
+      this.productThumbnailSlider = document.querySelector('.product__media-gallery');
 
       this.onScrollHandler = this.onScroll.bind(this);
       this.hideHeaderOnScrollUp = () => this.preventReveal = true;
@@ -713,6 +714,9 @@
     addFacets(){
       if (this.facetContainer){
         this.facetContainer.classList.add('-sticky');
+      }
+      if (this.productThumbnailSlider){
+        this.productThumbnailSlider .classList.add('-sticky');
       }
     }
   }

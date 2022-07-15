@@ -28,8 +28,15 @@
     height: 640px;
     grid-template-rows: calc(100% - 140px) 140px;
     position: sticky;
-    top: 3rem;
     z-index: 2;
+  }
+
+  .product__media-gallery:not(.sticky){
+    top: 3rem;
+  }
+
+  .product__media-gallery.-sticky{
+    top: 120px;
   }
 
   .product--thumbnail .thumbnail-list {
@@ -54,6 +61,11 @@
     max-width: 65%;
     width: calc(65% - var(--grid-desktop-horizontal-spacing) / 2);
   }
+
+  .product__media-wrapper{
+    padding-bottom: 20px;
+  }
+
 
   .product--large:not(.product--no-media) .product__info-wrapper {
     padding-left: 4rem;
