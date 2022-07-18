@@ -37,9 +37,8 @@
 
   /* box shadow */
   --box-shadow-primary: 0px 6px 5px -1px rgba(0,0,0,0.06);
-
-
   --container-width: 1300px;
+
 }
 
 
@@ -608,6 +607,10 @@ table:not([class]) th {
 
 @media screen and (min-width: 990px) {
   .large-up-hide {
+    display: none !important;
+  }
+
+  .d-none{
     display: none !important;
   }
 }
