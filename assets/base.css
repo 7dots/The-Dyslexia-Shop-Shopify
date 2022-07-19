@@ -1206,6 +1206,22 @@ summary::-webkit-details-marker {
   }
 }
 
+/* grid layout modifyers */
+#product-grid.--layout-list .grid__item {
+  width: 100%;
+  max-width: 100%;
+}
+#product-grid.--layout-list .card--standard {
+  flex-direction: row;
+}
+#product-grid.--layout-list .grid__item .card__inner {
+  width: 30%
+}
+#product-grid.--layout-list .card--standard > .card__content {
+  width: 70%;
+}
+
+
 @media screen and (min-width: 750px) and (max-width: 989px) {
   .slider--tablet.grid--peek .grid__item {
     width: calc(25% - var(--grid-desktop-horizontal-spacing) - 3rem);
