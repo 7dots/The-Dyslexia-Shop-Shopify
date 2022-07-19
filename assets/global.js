@@ -553,7 +553,6 @@ class SliderComponent extends HTMLElement {
     this.totalPages = this.sliderItemsToShow.length - this.slidesPerPage + 1;
     this.update();
     this.updateHighlight(1);
-    this.bindHighlightThumbnailBtns();
   }
 
   resetPages() {
@@ -564,7 +563,7 @@ class SliderComponent extends HTMLElement {
   update() {
     const previousPage = this.currentPage;
     this.currentPage = Math.round(this.slider.scrollLeft / this.sliderItemOffset) + 1;
-
+    
     if (this.currentPageElement && this.pageTotalElement) {
       this.currentPageElement.textContent = this.currentPage;
       this.pageTotalElement.textContent = this.totalPages;
@@ -575,6 +574,7 @@ class SliderComponent extends HTMLElement {
         currentPage: this.currentPage,
         currentElement: this.sliderItemsToShow[this.currentPage - 1]
       }}));
+      this.updateHighlight(this.currentPage)
     }
 
     if (this.enableSliderLooping) return;
@@ -623,18 +623,6 @@ class SliderComponent extends HTMLElement {
     thumbnails.forEach(e => e.classList.remove('-highlighted'))
     thumbnails[page - 1].classList.add('-highlighted')
   }
-
-  bindHighlightThumbnailBtns(){
-    const thumbnailList = document.querySelector('.thumbnail-list')
-    const thumbnails = thumbnailList.querySelectorAll('.thumbnail-list__item')
-    
-    thumbnails.forEach(e => e.addEventListener('click', function(){
-       thumbnails.forEach(e => e.classList.remove('-highlighted'))
-       thumbnails[e.getAttribute('data-media-position') - 1].classList.add('-highlighted')
-    })) 
-  }
-
-
 }
 
 customElements.define('slider-component', SliderComponent);
