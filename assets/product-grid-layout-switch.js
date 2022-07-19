@@ -6,6 +6,7 @@ const productGridLayoutSwitch = () => {
     }
     productGridLayoutSwitch.addEventListener('click', () => {
         productGrid.classList.toggle('--layout-list')
+        productGridLayoutSwitch.classList.toggle('--list')
     })
 }
 productGridLayoutSwitch()
