@@ -219,6 +219,8 @@
                 </h2>
               </a>
             </div>
+            {% assign current_variant = product.selected_or_first_available_variant %}
+            <span class="product__sku">sku: {{ current_variant.sku }}</span>
           {%- when 'price' -%}
             <div class="no-js-hidden" id="price-{{ section.id }}" role="status" {{ block.shopify_attributes }}>
               {%- render 'price', product: product, use_variant: true, show_badges: true, price_class: 'price--large' -%}
