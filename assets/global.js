@@ -574,7 +574,9 @@ class SliderComponent extends HTMLElement {
         currentPage: this.currentPage,
         currentElement: this.sliderItemsToShow[this.currentPage - 1]
       }}));
-      this.updateHighlight(this.currentPage)
+      if (this.classList.contains('thumbnail-slider') == false){
+        this.updateHighlight(this.currentPage)
+      }
     }
 
     if (this.enableSliderLooping) return;
