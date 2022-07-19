@@ -2258,9 +2258,6 @@ input[type='checkbox'] {
   height: 100%;
   border-bottom: 0.1rem solid rgba(var(--color-foreground), 0.08);
   background-color: var(--color-light-grey);
-  -webkit-box-shadow: var(--box-shadow-primary); 
-  box-shadow: var(--box-shadow-primary);  
-  
 }
 
 .announcement-bar__wrapper{
