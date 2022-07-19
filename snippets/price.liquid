@@ -21,6 +21,7 @@
   assign price = target.price | default: 1999
   assign available = target.available | default: false
   assign money_price = price | money
+
   if settings.currency_code_enabled
     assign money_price = price | money_with_currency
   endif
@@ -48,6 +49,16 @@
         {{ money_price }}
       </span>
     </div>
+
+    <!--- start excl tax ---->
+    <div class="price__excl-tax">
+      <span class="visually-hidden visually-hidden--inline">{{ 'products.product.price.excl_tax' | t }}</span>
+      <span class="price-item price-item--excl-tax">
+        Excl.Tax: <strong>{{ product.price | divided_by: 1.2 | money }}</strong>
+      </span>
+    </div>
+    <!-- end excl tax -->
+
     <div class="price__sale">
       {%- unless product.price_varies == false and product.compare_at_price_varies %}
         <span class="visually-hidden visually-hidden--inline">{{ 'products.product.price.regular_price' | t }}</span>

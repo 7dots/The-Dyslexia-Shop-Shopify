@@ -93,3 +93,7 @@
   text-transform: uppercase;
   color: rgba(var(--color-foreground), 0.7);
 }
+.price__excl-tax {
+  font-size: 1.3rem;
+  margin-top: .4rem;
+}
