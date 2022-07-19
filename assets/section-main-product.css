@@ -1176,6 +1176,11 @@ a.product__text {
   position: relative;
 }
 
+.thumbnail-list__item.-highlighted{
+  -webkit-box-shadow: 0px 0px 0px 2px var(--color-dark-grey); 
+  box-shadow: 0px 0px 0px 2px var(--color-dark-grey);
+}
+
 .thumbnail-list__item::before {
   content: "";
   display: block;

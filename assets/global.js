@@ -530,6 +530,7 @@ class SliderComponent extends HTMLElement {
     this.prevButton = this.querySelector('button[name="previous"]');
     this.nextButton = this.querySelector('button[name="next"]');
     this.slideHighlighted = 1;
+    this.thumbnailSliders = this.querySelector('[id^="Slider-Thumbnails-"]');
 
     if (!this.slider || !this.nextButton) return;
 
@@ -544,11 +545,15 @@ class SliderComponent extends HTMLElement {
 
   initPages() {
     this.sliderItemsToShow = Array.from(this.sliderItems).filter(element => element.clientWidth > 0);
-    if (this.sliderItemsToShow.length < 2) return;
+    if (this.thumbnailSliders){    
+        this.thumbnailSlide = this.thumbnailSliders.children;
+    }
     this.sliderItemOffset = this.sliderItemsToShow[1].offsetLeft - this.sliderItemsToShow[0].offsetLeft;
     this.slidesPerPage = Math.floor((this.slider.clientWidth - this.sliderItemsToShow[0].offsetLeft) / this.sliderItemOffset);
     this.totalPages = this.sliderItemsToShow.length - this.slidesPerPage + 1;
     this.update();
+    this.updateHighlight(1);
+    this.bindHighlightThumbnailBtns();
   }
 
   resetPages() {
@@ -579,7 +584,6 @@ class SliderComponent extends HTMLElement {
     } else {
       this.prevButton.removeAttribute('disabled');
     }
-
     if (this.isSlideVisible(this.sliderItemsToShow[this.sliderItemsToShow.length - 1])) {
       this.nextButton.setAttribute('disabled', 'disabled');
     } else {
@@ -596,16 +600,40 @@ class SliderComponent extends HTMLElement {
     event.preventDefault();
     const step = event.currentTarget.dataset.step || 1;
     this.slideScrollPosition = event.currentTarget.name === 'next' ? this.slider.scrollLeft + (step * this.sliderItemOffset) : this.slider.scrollLeft - (step * this.sliderItemOffset);
-    event.currentTarget.name === 'next' ? this.slideHighlighted = this.slideHighlighted + step : this.slideHighlighted = this.slideHighlighted - step;
+
+    if (event.currentTarget.name == 'next' && (this.currentPage + step) <= this.sliderItemsToShow.length){
+      this.slideHighlighted = this.currentPage + step;
+    } else if(event.currentTarget.name == 'previous' && (this.currentPage - step) > 0 ) {
+      this.slideHighlighted = this.currentPage - step;
+    }
+
     this.slider.scrollTo({
       left: this.slideScrollPosition
     });
-    this.updateHighlighted(this.slideHighlighted)
+
+    if(this.prevButton.classList.contains('slider-button__highlight-trigger')){
+      this.updateHighlight(this.slideHighlighted);
+    }
   }
 
-  updateHighlighted(e){
-    console.log(e)
+  updateHighlight(page){
+    const thumbnailList = document.querySelector('.thumbnail-list')
+    const thumbnails = thumbnailList.querySelectorAll('.thumbnail-list__item')
+
+    thumbnails.forEach(e => e.classList.remove('-highlighted'))
+    thumbnails[page - 1].classList.add('-highlighted')
   }
+
+  bindHighlightThumbnailBtns(){
+    const thumbnailList = document.querySelector('.thumbnail-list')
+    const thumbnails = thumbnailList.querySelectorAll('.thumbnail-list__item')
+    
+    thumbnails.forEach(e => e.addEventListener('click', function(){
+       thumbnails.forEach(e => e.classList.remove('-highlighted'))
+       thumbnails[e.getAttribute('data-media-position') - 1].classList.add('-highlighted')
+    })) 
+  }
+
 
 }
 
