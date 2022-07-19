@@ -1013,6 +1013,7 @@ a.product__text {
   }
 }
 
+
 @media screen and (max-width: 749px) {
   .product__media-item {
     display: flex;
@@ -1041,6 +1042,10 @@ a.product__text {
 }
 
 @media screen and (min-width: 750px) {
+  .product__modal-opener-desktop {
+    width: 100%;
+  }
+
   .product--thumbnail_slider .thumbnail-slider {
     display: flex;
     align-items: center;
@@ -1114,7 +1119,6 @@ a.product__text {
 
 .thumbnail[aria-current]:focus:not(:focus-visible) {
   outline: 0;
-  box-shadow: 0 0 0 0.1rem rgb(var(--color-foreground));
 }
 
 .thumbnail img {
@@ -1170,6 +1174,11 @@ a.product__text {
 
 .thumbnail-list__item {
   position: relative;
+}
+
+.thumbnail-list__item.-highlighted{
+  -webkit-box-shadow: 0px 0px 0px 2px var(--color-dark-grey); 
+  box-shadow: 0px 0px 0px 2px var(--color-dark-grey);
 }
 
 .thumbnail-list__item::before {
