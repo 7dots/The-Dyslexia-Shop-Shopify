@@ -388,9 +388,9 @@
       </facet-filters-form>
     {%- endif -%}    
   {%- endif -%}
+  <button class="product-grid-layout-switch">switch layout</button>
   {% comment %}  Drawer and mobile filter {% endcomment %}
   <menu-drawer class="mobile-facets__wrapper{% if filter_type == 'horizontal' or filter_type == 'vertical' %} medium-hide large-up-hide{% endif %}" data-breakpoint="mobile">
-    <button class="product-grid-layout-switch">switch layout</button>
     <details class="mobile-facets__disclosure disclosure-has-popup">
       <summary class="mobile-facets__open-wrapper focus-offset">
         <span class="mobile-facets__open{% if filter_type == 'drawer' and enable_filtering == false %} medium-hide large-up-hide{% endif %}">
@@ -738,3 +738,4 @@
   {%- endif -%}
 </div>
 
+<script src="{{ 'product-grid-layout-switch.js' | asset_url }}" defer="defer"></script>
