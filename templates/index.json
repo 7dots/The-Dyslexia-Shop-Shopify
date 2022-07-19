@@ -147,9 +147,9 @@
         "image": "shopify:\/\/shop_images\/promotion-image_e06a9dd7-d6ac-422e-b6aa-8537e027494e.png",
         "image_padding": true,
         "layout": "image_first",
-        "content_ratio": "2:1",
+        "content_ratio": "1:1",
         "desktop_content_position": "top",
-        "block_background": "image-text__light-green"
+        "block_background": "image-text__white"
       }
     },
     "video": {
