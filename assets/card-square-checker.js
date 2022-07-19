@@ -14,5 +14,8 @@ class cardChecker {
     }
 }
 
-let productCard = new cardChecker('.card-product__image');
-productCard.applyImageSquare();
+
+window.addEventListener('load', (event) => {
+    let productCard = new cardChecker('.card-product__image');
+    productCard.applyImageSquare();
+});
