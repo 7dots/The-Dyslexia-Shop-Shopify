@@ -1235,9 +1235,9 @@ summary::-webkit-details-marker {
 
 @media screen and (min-width: 990px) {
   .product-grid-layout-switch {
-    width: 26px;
-    height: 26px;
-    top: 21px;
+    width: 16px;
+    height: 16px;
+    top: 18px;
   }
 }
 
