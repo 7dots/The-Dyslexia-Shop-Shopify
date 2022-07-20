@@ -1209,6 +1209,55 @@ summary::-webkit-details-marker {
   }
 }
 
+/* grid layout modifyers */
+.product-grid-layout-switch {
+  border: none;
+  width: 16px;
+  height: 100%;
+  position: relative;
+  cursor: pointer;
+  background-color: transparent;
+}
+.product-grid-layout-switch svg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.product-grid-layout-switch .product-grid-layout-switch__grid {
+  display: none;
+}
+.product-grid-layout-switch.--list .product-grid-layout-switch__grid {
+  display: block;
+}
+
+@media screen and (min-width: 990px) {
+  .product-grid-layout-switch {
+    width: 26px;
+    top: 21px
+  }
+}
+
+
+#product-grid.--layout-list .grid__item {
+  width: 100%;
+  max-width: 100%;
+  margin-bottom: 24px;
+}
+#product-grid.--layout-list .card--standard {
+  flex-direction: row;
+}
+#product-grid.--layout-list .grid__item .card__inner {
+  width: 30%;
+  max-width: 294px;
+}
+#product-grid.--layout-list .card--standard > .card__content {
+  width: 70%;
+}
+
+
 @media screen and (min-width: 750px) and (max-width: 989px) {
   .slider--tablet.grid--peek .grid__item {
     width: calc(25% - var(--grid-desktop-horizontal-spacing) - 3rem);
