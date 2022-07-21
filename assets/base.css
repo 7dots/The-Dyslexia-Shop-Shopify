@@ -3054,3 +3054,13 @@ details-disclosure > details {
   height: 50px;
   width: 50px;
 }
+
+.account-order-history__header-row{
+  -webkit-box-shadow: 0px 2px 0px 0px var(--color-light-grey); 
+  box-shadow: 0px 2px 0px 0px var(--color-light-grey);
+}
+
+.account-order-history__body-row{
+  -webkit-box-shadow: 0px 1px 0px 0px var(--color-light-grey); 
+  box-shadow: 0px 1px 0px 0px var(--color-light-grey);
+}
