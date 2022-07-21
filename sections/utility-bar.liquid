@@ -10,6 +10,8 @@
       <a href='{{- block.settings.utility_bar_link -}}'>{{- block.settings.text -}}</a>
       {%- elsif block.type =='telephone' -%}
       <a href='tel:{{- block.settings.utility_bar_link -}}'>{{- block.settings.text -}}</a>
+      {%- elsif block.type =='email' -%}
+      <a href='mailto:{{- block.settings.utility_bar_link -}}'>{{- block.settings.text -}}</a>
       {%- endif -%}  
     {%- endfor -%}  
     {%- if localization.available_countries.size > 1 -%}
@@ -137,13 +139,31 @@
           "type": "text",
           "id": "text",
           "default": "Welcome to our store",
-          "label": "Text"
+          "label": "Label text"
         },
         {
           "type": "text",
           "id": "phone-number",
           "default": "+44 (0) 1234 1122 123",
           "label": "Telephone Number"
+        }
+      ]
+    },
+    {
+      "type" : "email",
+      "name":  "Email",
+      "settings": [
+        {
+          "type": "text",
+          "id": "text",
+          "default": "|  E: hello@thedyslexiashop.co.uk",
+          "label": "Label text"
+        },
+        {
+          "type": "text",
+          "id": "email",
+          "default": "hello@thedyslexiashop.co.uk",
+          "label": "Email"
         }
       ]
     }
