@@ -198,11 +198,11 @@
               "phone-number": "+44 (0) 1394 7671 818"
             }
           },
-          "22efa2b0-b58b-4b48-b3bf-e5c02f95cbbd": {
-            "type": "utility",
+          "9c33b6ed-9f67-4db0-9f82-d67834ee4818": {
+            "type": "email",
             "settings": {
               "text": "|  E: hello@thedyslexiashop.co.uk",
-              "utility_bar_link": "shopify:\/\/pages\/contact"
+              "email": "hello@thedyslexiashop.co.uk"
             }
           },
           "a2e739c0-9341-43d6-afaa-da9167ca9150": {
@@ -222,7 +222,7 @@
         },
         "block_order": [
           "6cca7c57-2f6f-400f-a6b4-a264bee43fb1",
-          "22efa2b0-b58b-4b48-b3bf-e5c02f95cbbd",
+          "9c33b6ed-9f67-4db0-9f82-d67834ee4818",
           "a2e739c0-9341-43d6-afaa-da9167ca9150",
           "f41e79d9-cdaa-4828-ac97-d50a4dfbb1e8"
         ],
