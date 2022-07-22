@@ -82,13 +82,3 @@
 .clerk-slider-nav {
   background: #008a07 !important;
 }
-
-.clerk-design-component-1uS3AuyM {
-  height: 100%;
-  aspect-ratio: 1/1;
-  display: flex;
-  justify-content: center;
-}
-.clerk-design-component-JXrbODx9 > div.clerk-slider .clerk-slider-nav {
-  background: #008a07;
-}
