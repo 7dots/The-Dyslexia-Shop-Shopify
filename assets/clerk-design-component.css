@@ -1,17 +1,27 @@
+div[class^="clerk-design-component-"] > div.clerk-slider .clerk-slider-nav{
+    z-index: 2;
+}
+
 .clerk-design-component-1uS3AuyM {
-    height: auto;
+    height: 100%;
     aspect-ratio: 1/1;
     display: flex;
     justify-content: center;
 }
-.clerk-design-component-JXrbODx9 > div.clerk-slider .clerk-slider-nav {
+div[class^="clerk-design-component-"] > div.clerk-slider .clerk-slider-nav {
     background: #008a07;
 }
-.clerk-design-component-1uS3AuyM > img {
-    height: auto !important;
-    width: auto;
-    align-self: center;
+div[class^="clerk-design-component-"] > img {
+    object-fit: contain;
+    width: 100%;
 }
-.clerk-design-component-2vODKCQQ {
+div[class^="clerk-design-component-"] {
     cursor: pointer;
+}
+.clerk-design-component-MDN9yvoh{
+    padding: 16px;
+}
+
+.clerk-design-component-MDN9yvoh > div:first-child{
+    height: 100%;
 }
