@@ -2,19 +2,46 @@ div[class^="clerk-design-component-"] > div.clerk-slider .clerk-slider-nav{
     z-index: 2;
 }
 
+.clerkio-homepage-recommendations{
+    /* background-color: var(--color-white-2); */
+    padding-bottom: 40px;
+}
+
 .clerk-design-component-1uS3AuyM {
     height: 100%;
     aspect-ratio: 1/1;
     display: flex;
     justify-content: center;
 }
+
+.clerk-design-component-1uS3AuyM > img {
+    object-fit: contain;
+    width: 100%;
+    transition: transform var(--duration-long) ease;
+}
+
+.clerk-design-component-8VBNKXui:hover .clerk-design-component-1uS3AuyM > img {
+    transform: scale(1.03)
+}
+
+.clerk-design-component-2vODKCQQ{
+    -webkit-box-shadow: inset 0px 0px 0px 2px var(--color-background); 
+    box-shadow: inset 0px 0px 0px 2px var(--color-background);
+    cursor: pointer;
+}
+
+.clerk-design-component-2vODKCQQ:hover{
+    -webkit-box-shadow: none; 
+    box-shadow: none;
+}
+
+
 div[class^="clerk-design-component-"] > div.clerk-slider .clerk-slider-nav {
     background: #008a07;
 }
-div[class^="clerk-design-component-"] > img {
-    object-fit: contain;
-    width: 100%;
-}
+
+
+
 div[class^="clerk-design-component-"] {
     cursor: pointer;
 }
