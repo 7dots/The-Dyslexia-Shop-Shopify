@@ -308,4 +308,10 @@
   bottom: 20px;
   left: 45px;
   right: 45px;
+  text-decoration: none;
+}
+
+.cta-img-card__button > a {
+  text-decoration: none;
+  color: var(--color-white);
 }
