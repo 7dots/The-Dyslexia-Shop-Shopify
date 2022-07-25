@@ -116,6 +116,11 @@
 }
 
 
+.button--primary{
+  color: var(--color-white);
+  text-decoration: none;
+}
+
 
 .button--secondary {
   --color-button: var(--color-base-outline-button-labels);
@@ -1232,7 +1237,7 @@ summary::-webkit-details-marker {
   display: block;
 }
 
-@media screen and (min-width: 990px) {
+@media screen and (min-width: 750px) {
   .product-grid-layout-switch {
     width: 16px;
     height: 16px;
@@ -1801,7 +1806,7 @@ details[open] > .share-button__fallback {
 .field:after,
 .select:after,
 .customer .field:after,
-.customer select:after,
+.customer select:after
 {
   pointer-events: none;
   content: '';
@@ -1830,7 +1835,7 @@ details[open] > .share-button__fallback {
 .select__select:hover.select__select:after,
 .customer .field:hover.field:after,
 .customer select:hover.select:after {
-  box-shadow: 0 0 0 calc(0.1rem + var(--inputs-border-width)) rgba(var(--color-foreground),var(--inputs-border-opacity));
+  box-shadow: 0 0 0 calc(0.1rem + var(--inputs-border-width)) rgba(var(--color-g),var(--inputs-border-opacity));
   outline: 0;
   border-radius: var(--inputs-radius);
 }
@@ -1915,7 +1920,7 @@ details[open] > .share-button__fallback {
   pointer-events: none;
   position: absolute;
   transition: top var(--duration-short) ease,
-    font-size var(--duration-short) ease;
+  font-size var(--duration-short) ease;
   color: rgba(var(--color-foreground), 0.75);
   letter-spacing: 0.1rem;
   line-height: 1.5;

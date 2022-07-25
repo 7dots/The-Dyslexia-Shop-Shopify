@@ -2,20 +2,37 @@
   display: grid;
   grid-template-columns: repeat(2, auto);
   grid-template-rows: repeat(2, auto);
-  padding-top: 1rem;
+}
 
+@media screen and (min-width: 1300px){
+  .facets-container:not(.-sticky){
+    top: 0;
+  }
+  .facets-container.-sticky{
+      top: 120px;
+  }
+}
+
+@media screen and (min-width: 990px) and (max-width: 1299px){
+  .facets-container:not(.-sticky){
+    top: 0;
+  }
+  .facets-container.-sticky{
+      top: 160px;
+  }
+}
+
+@media screen and (min-width: 750px) and (max-width: 989px){
+  .facets-container.-sticky{
+    
+  }
+  top: 90px;
 }
 
 @media screen and (min-width: 750px){
   .facets-container{
     position: sticky;
     align-self: center;
-  }
-  .facets-container:not(.-sticky){
-    top: 0;
-  }
-  .facets-container.-sticky{
-      top: 120px;
   }
 }
 
@@ -38,7 +55,7 @@
   }
 }
 
-@media screen and (max-width: 989px) {
+@media screen and (max-width: 749px) {
   .facets-container {
     grid-template-columns: repeat(3, auto);
     column-gap: 2rem;
@@ -539,7 +556,7 @@ a.active-facets__button.focused .active-facets__button-inner,
   justify-content: space-between;
 }
 
-@media screen and (min-width: 990px) {
+@media screen and (min-width: 750px) {
   .facets-vertical .active-facets-vertical-filter {
     padding-left: 40px;
   }
@@ -1022,6 +1039,7 @@ input.mobile-facets__checkbox {
 
   .facets-vertical .product-grid-container {
     width: 100%;
+    padding-top: 15px;
   }
 
   .facets-vertical-form {
