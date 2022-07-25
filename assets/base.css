@@ -1230,6 +1230,14 @@ summary::-webkit-details-marker {
   height: 100%;
 }
 
+.product-grid-layout-switch.-horizontal{
+  align-items: flex-start;
+  display: flex;
+  grid-column: 2;
+  grid-row: 1;
+  top: 0;
+}
+
 .product-grid-layout-switch .product-grid-layout-switch__grid {
   display: none;
 }
