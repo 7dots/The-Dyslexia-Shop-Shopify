@@ -8,10 +8,11 @@ window.addEventListener('load', (event) => {
         backBtn = element.querySelector('.clerk-slider-nav-prev')
 
         const itemPerSlide = 4;
+
         const itemCount = clerkioSlider.children.length
 
-        //+2 is there because forward and backwards btns are in the .clerk-slider
-        if(itemCount < itemPerSlide + 2){
+        //+2 is there because forward and backwards btns are in the .clerk-slider  
+        if(itemCount < itemPerSlide + 3){
             forwardBtn.remove()
             backBtn.remove()
         }
