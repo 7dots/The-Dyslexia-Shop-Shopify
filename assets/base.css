@@ -142,8 +142,8 @@
 }
 
 .button--tertiary {
-  --color-button: var(--color-base-outline-button-labels);
-  --color-button-text: var(--color-base-outline-button-labels);
+  --color-button: var(--color-black);
+  --color-button-text: var(--color-black);
   --alpha-button-background: 0;
   --alpha-button-border: 0.2;
 }

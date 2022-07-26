@@ -269,14 +269,11 @@
               <button type="submit" class="facets__button-no-js button button--secondary">{{ 'products.facets.filter_button' | t }}</button>
             </noscript>
           </div>
-          {% comment %}Product grid/row switch button{% endcomment %}
-          {% if filter_type == 'horizontal' %}
-            {% render 'product-grid-layout-switch', 
-                layout: "horizontal"
-            %}
-          {% endif %}
           {% comment %} Pills after filtes on filter type horizontal {% endcomment %}
           {%- if filter_type == 'horizontal' -%}
+            {% render 'product-grid-layout-switch', 
+              layout: "horizontal"
+            %}
             <div class="active-facets active-facets-desktop">
               {%- for filter in results.filters -%}
                 {%- for value in filter.active_values -%}
