@@ -131,6 +131,9 @@
 
 .multicolumn-card__info {
   padding-top: 2.5rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 }
 
 /* might want to set this globally later  */

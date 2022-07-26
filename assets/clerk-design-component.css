@@ -39,12 +39,6 @@ div[class^="clerk-design-component-"] > div.clerk-slider .clerk-slider-nav{
 div[class^="clerk-design-component-"] > div.clerk-slider .clerk-slider-nav {
     background: #008a07;
 }
-
-
-
-div[class^="clerk-design-component-"] {
-    cursor: pointer;
-}
 .clerk-design-component-MDN9yvoh{
     padding: 16px;
 }
@@ -52,3 +46,17 @@ div[class^="clerk-design-component-"] {
 .clerk-design-component-MDN9yvoh > div:first-child{
     height: 100%;
 }
+
+.clerk-design-component-ksX8CB4I{
+    border: 2px solid var(--color-light-grey);
+    border-radius: 5px; 
+    cursor: pointer;
+}
+
+.clerk-slider-item{
+    padding-right: 10px;
+}
+
+.clerk-slider-item:last-of-type{
+    padding-right: 0px;
+} 
