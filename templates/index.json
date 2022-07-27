@@ -11,6 +11,7 @@
         "image": "shopify:\/\/shop_images\/banner.png",
         "banner_contained": true,
         "show_text_box": false,
+        "set_padding": true,
         "show_text_below": false
       }
     },
@@ -63,14 +64,14 @@
         "heading": {
           "type": "heading",
           "settings": {
-            "heading": "<p>Talk about your brand<\/p>",
+            "heading": "<p><strong>Specialist products for children and adults<\/strong><\/p>",
             "heading_size": "h1"
           }
         },
         "text": {
           "type": "text",
           "settings": {
-            "text": "<p>Share information about your brand with your customers. Describe a product, make announcements, or welcome customers to your store.<\/p>"
+            "text": "<p>The Dyslexia Shop stocks thousands of carefully selected products and teaching resources to help adults, children and infants with special educational needs \/ learning difficulties.<\/p>"
           }
         }
       },
@@ -124,6 +125,7 @@
         "image": "shopify:\/\/shop_images\/ezgif-3-40e455a66e.jpg",
         "banner_contained": true,
         "show_text_box": false,
+        "set_padding": true,
         "show_text_below": false
       }
     },
