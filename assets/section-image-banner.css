@@ -408,3 +408,7 @@
 .banner__box > * + .banner__buttons {
   margin-top: 2rem;
 }
+
+.image__banner-wrapper.-padding{
+  padding: 35px 0 35px 0;
+}

@@ -22,7 +22,9 @@
   }
   {%- endstyle -%}
 {%- endif -%}
-<div class="image__banner-wrapper {% if section.settings.banner_contained == true %}page-width-desktop{% endif%}">
+
+
+<div class="image__banner-wrapper {% if section.settings.banner_contained == true %}page-width-desktop{% endif%} {% if section.settings.set_padding == true %}-padding{% endif%}">
 <div id="Banner-{{ section.id }}" class="banner banner--{{ section.settings.image_height }}{% if section.settings.image != blank %} banner--adapt{% endif %}{% if section.settings.show_text_below %} banner--mobile-bottom{%- endif -%}{% if section.settings.show_text_box == false %} banner--desktop-transparent{% endif %}">
   <div class="banner__media -desktop media{% if section.settings.image == blank %} placeholder{% endif %}">
     {{ section.settings.image | image_url: width: 1500 | image_tag:
@@ -120,6 +122,13 @@
       "default": true,
       "label": "t:sections.image-banner.settings.show_text_box.label",
       "info": "Applies white background on banner text on desktop."
+    },
+    {
+      "type": "checkbox",
+      "id": "set_padding",
+      "default": true,
+      "label": "Set padding",
+      "info": "Set top and bottom padding."
     },
     {
       "type": "header",
