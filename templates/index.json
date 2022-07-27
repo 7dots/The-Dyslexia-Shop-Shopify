@@ -1,5 +1,10 @@
 {
   "sections": {
+    "latest_products": {
+      "type": "latest-products",
+      "settings": {
+      }
+    },
     "image_banner": {
       "type": "image-banner",
       "settings": {
@@ -207,6 +212,7 @@
     }
   },
   "order": [
+    "latest_products",
     "image_banner",
     "cta_image_column",
     "rich_text",
