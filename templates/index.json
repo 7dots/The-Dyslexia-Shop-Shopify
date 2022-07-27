@@ -1,5 +1,10 @@
 {
   "sections": {
+    "latest_products": {
+      "type": "latest-products",
+      "settings": {
+      }
+    },
     "image_banner": {
       "type": "image-banner",
       "settings": {
@@ -122,6 +127,11 @@
         "show_text_below": false
       }
     },
+    "trending_products": {
+      "type": "trending-products",
+      "settings": {
+      }
+    },
     "image_with_text": {
       "type": "image-with-text",
       "blocks": {
@@ -207,12 +217,14 @@
     }
   },
   "order": [
+    "latest_products",
     "image_banner",
     "cta_image_column",
     "rich_text",
     "homepage_recommendations",
     "featured_collection",
     "image_banner_contained",
+    "trending_products",
     "image_with_text",
     "multicolumn-icon"
   ]
