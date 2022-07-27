@@ -175,7 +175,7 @@
             "image": "shopify:\/\/shop_images\/Smiley_6b37bbeb-57fe-449d-8a0c-38045ab6606d.png",
             "title": "Expert Friendly Advice",
             "link_label": "Find out more",
-            "link": ""
+            "link": "shopify:\/\/pages\/about-us"
           }
         },
         "column2": {
@@ -184,7 +184,7 @@
             "image": "shopify:\/\/shop_images\/Arrow.png",
             "title": "No - Hassle   returns",
             "link_label": "Find out more",
-            "link": ""
+            "link": "shopify:\/\/pages\/return-information"
           }
         },
         "column3": {
@@ -193,7 +193,7 @@
             "image": "shopify:\/\/shop_images\/Pound.png",
             "title": "Flexible Payment Options",
             "link_label": "Find out more",
-            "link": ""
+            "link": "shopify:\/\/pages\/payment-options-1"
           }
         },
         "column4": {
