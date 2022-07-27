@@ -9,9 +9,9 @@
       {%- if block.type == 'utility' -%}
       <a href='{{- block.settings.utility_bar_link -}}'>{{- block.settings.text -}}</a>
       {%- elsif block.type =='telephone' -%}
-      <a href='tel:{{- block.settings.utility_bar_link -}}'>{{- block.settings.text -}}</a>
+      <a href='tel:{{- block.settings.phone-number -}}'>{{- block.settings.text -}}</a>
       {%- elsif block.type =='email' -%}
-      <a href='mailto:{{- block.settings.utility_bar_link -}}'>{{- block.settings.text -}}</a>
+      <a href='mailto:{{- block.settings.email -}}'>{{- block.settings.text -}}</a>
       {%- endif -%}  
     {%- endfor -%}  
     {%- if localization.available_countries.size > 1 -%}
