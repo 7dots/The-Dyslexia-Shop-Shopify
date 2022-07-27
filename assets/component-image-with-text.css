@@ -360,3 +360,7 @@
 .image-with-text__padding{
   padding: 25px 30px;
 }
+
+.image-with-text.-padding{
+  padding: 35px 0 35px 0;
+}

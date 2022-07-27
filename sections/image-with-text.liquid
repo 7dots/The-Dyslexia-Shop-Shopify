@@ -13,7 +13,7 @@
     }
   }
 {%- endstyle -%}
-<div class="image-with-text page-width-desktop isolate">
+<div class="image-with-text page-width-desktop isolate {% if section.settings.section_padding == true %}-padding{% endif %}">
   <div class="image-with-text__grid grid grid--gapless grid--1-col grid--3-col-tablet {{section.settings.block_background}}
     {% if section.settings.layout == 'text_first' %} image-with-text__grid--reverse{% endif %}">
     <div class="image-with-text__media-item image-with-text__media-item--medium grid__item image-with-text__media-item--{{ section.settings.desktop_content_position }}">
@@ -81,6 +81,12 @@
       "type": "image_picker",
       "id": "image",
       "label": "t:sections.image-with-text.settings.image.label"
+    },
+    {
+      "type": "checkbox",
+      "id": "section_padding",
+      "default": false,
+      "label": "Set section padding"
     },
     {
       "type": "checkbox",
