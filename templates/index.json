@@ -127,6 +127,11 @@
         "show_text_below": false
       }
     },
+    "trending_products": {
+      "type": "trending-products",
+      "settings": {
+      }
+    },
     "image_with_text": {
       "type": "image-with-text",
       "blocks": {
@@ -219,6 +224,7 @@
     "homepage_recommendations",
     "featured_collection",
     "image_banner_contained",
+    "trending_products",
     "image_with_text",
     "multicolumn-icon"
   ]
