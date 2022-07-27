@@ -20,8 +20,18 @@ div[class^="clerk-design-component-"] > div.clerk-slider .clerk-slider-nav{
     transition: transform var(--duration-long) ease;
 }
 
-.clerk-design-component-8VBNKXui:hover .clerk-design-component-1uS3AuyM > img {
+.clerk-design-component-ksX8CB4I:hover .clerk-design-component-1uS3AuyM > img {
     transform: scale(1.03)
+}
+
+.clerk-design-component-ksX8CB4I:hover .clerk-design-component-hFaMfM6a{
+    text-decoration: underline;
+}
+
+.clerk-design-component-hFaMfM6a{
+    text-underline-offset: 0.3rem;
+    text-decoration-color: var(--color-black);
+    color: var(--color-black);
 }
 
 .clerk-design-component-2vODKCQQ{
@@ -34,7 +44,6 @@ div[class^="clerk-design-component-"] > div.clerk-slider .clerk-slider-nav{
     -webkit-box-shadow: none; 
     box-shadow: none;
 }
-
 
 div[class^="clerk-design-component-"] > div.clerk-slider .clerk-slider-nav {
     background: #008a07;
