@@ -4,7 +4,7 @@
       "type": "image-banner",
       "settings": {
         "image": "shopify:\/\/shop_images\/banner.png",
-        "banner_contained": false,
+        "banner_contained": true,
         "show_text_box": false,
         "show_text_below": false
       }
