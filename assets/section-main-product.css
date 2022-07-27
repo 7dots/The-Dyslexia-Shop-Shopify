@@ -25,7 +25,6 @@
   .product--thumbnail_slider .product__media-gallery,
   .product--stacked .product__info-container--sticky {
     display: grid;
-    height: 640px;
     grid-template-rows: calc(100% - 140px) 140px;
     position: sticky;
     z-index: 2;
