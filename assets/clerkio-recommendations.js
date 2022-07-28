@@ -12,7 +12,7 @@ window.addEventListener('load', (event) => {
     clerkioSliderItems = clerkioSlider.querySelectorAll('.clerk-slider-item')
 
     ButtonCountCheck()
-    setHeightMax()
+    // setHeightMax()
 
     function ButtonCountCheck(){
         const itemPerSlide = 4;
