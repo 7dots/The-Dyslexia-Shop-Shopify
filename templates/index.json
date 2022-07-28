@@ -159,8 +159,8 @@
       ],
       "settings": {
         "image": "shopify:\/\/shop_images\/Note.png",
-        "section_padding": false,
-        "image_padding": true,
+        "section_padding": true,
+        "image_padding": false,
         "layout": "image_first",
         "content_ratio": "1:1",
         "desktop_content_position": "top",
