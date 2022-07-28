@@ -66,6 +66,10 @@ div[class^="clerk-design-component-"] > div.clerk-slider .clerk-slider-nav {
     padding-right: 10px;
 }
 
+.clerk-slider-item:nth-child(4n){
+    padding-right: 0px;
+} 
+
 .clerk-slider-item:last-of-type{
     padding-right: 0px;
 } 
