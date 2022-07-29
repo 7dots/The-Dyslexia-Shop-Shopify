@@ -84,7 +84,7 @@
         "image-with-text-0": {
           "type": "heading",
           "settings": {
-            "heading": "Product description !!",
+            "heading": "Product description",
             "heading_size": "h1",
             "heading_full_width": false
           }

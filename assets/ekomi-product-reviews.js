@@ -19,9 +19,18 @@ const getEkomiProductReviews = () => {
     };
     const baseEndPoint = baseCredentials.ekomiApi + '?interface_id=' + baseCredentials.apiid + '&interface_pw=' + baseCredentials.apiPass + '&type=csv&product=';
 
+
+    const productHasReviews = (reviews) => {
+        return (reviews.length > 0) ? true : false;
+    }
+
     const getArrayFromResults = (result) => {
 
-        console.log(result);
+        //console.log(result);
+
+        let hasReviews = productHasReviews(result);
+
+
 
         // Results come back as a single string - not json (not ideal) ... which needs to be split into a managable array.
         // String has comma seperated [timestamp, product code, sku code, text review]
@@ -36,7 +45,7 @@ const getEkomiProductReviews = () => {
             // split rating from review
             let _rating = r.split(',');
 
-            console.log('FIRST: '+ _rating[0] + ' SECOND: ' + _rating[1]);
+            //console.log('FIRST: '+ _rating[0] + ' SECOND: ' + _rating[1]);
 
             if(_rating[0] != '' && _rating[1] != '') {
                 let customerReview = `<p>${_rating[0]}/5 stars <span>${_rating[1]}</span></p>`;
@@ -44,8 +53,15 @@ const getEkomiProductReviews = () => {
             }
 
         })
+
+
+        console.log('product has Ekomi reviews ', hasReviews)
+
         // Add reviews to the page
-        reviewsHolder.innerHTML = reviewsMarkup;
+        if (hasReviews) {
+            // display reviews in tab
+            //reviewsHolder.innerHTML = reviewsMarkup;
+        }
     }
 
     fetch(baseEndPoint + productSKU, requestOptions)
