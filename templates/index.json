@@ -1,10 +1,5 @@
 {
   "sections": {
-    "latest_products": {
-      "type": "latest-products",
-      "settings": {
-      }
-    },
     "image_banner": {
       "type": "image-banner",
       "settings": {
@@ -88,6 +83,11 @@
         "padding_bottom": 0
       }
     },
+    "latest_products": {
+      "type": "latest-products",
+      "settings": {
+      }
+    },
     "homepage_recommendations": {
       "type": "homepage-recommendations-slider",
       "settings": {
@@ -95,6 +95,7 @@
     },
     "featured_collection": {
       "type": "featured-collection",
+      "disabled": true,
       "settings": {
         "title": "Featured products",
         "heading_size": "h2",
@@ -220,10 +221,10 @@
     }
   },
   "order": [
-    "latest_products",
     "image_banner",
     "cta_image_column",
     "rich_text",
+    "latest_products",
     "homepage_recommendations",
     "featured_collection",
     "image_banner_contained",
