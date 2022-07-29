@@ -12,7 +12,6 @@ window.addEventListener('load', (event) => {
     clerkioSliderItems = clerkioSlider.querySelectorAll('.clerk-slider-item')
 
     ButtonCountCheck()
-    // setHeightMax()
 
     function ButtonCountCheck(){
         const itemPerSlide = 4;
@@ -24,21 +23,6 @@ window.addEventListener('load', (event) => {
             backBtn.remove()
         }
     }
-
-    function setHeightMax(){
-        let itemHeight = 0
-        console.log(clerkioSliderItems)
-        clerkioSliderItems.forEach(e => {
-            if (e.clientHeight > itemHeight){
-                itemHeight = e.clientHeight
-                console.log('true')
-            }
-        })
-
-        clerkioSliderItems.forEach(e => {
-            e.style.height = itemHeight+'px';
-        })
-    }
-    });
-});
+    })
+})
 
