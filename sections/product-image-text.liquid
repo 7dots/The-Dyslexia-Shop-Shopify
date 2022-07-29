@@ -1,4 +1,5 @@
 {{ 'component-image-with-text.css' | asset_url | stylesheet_tag }}
+{{ 'ekomi-reviews.css' | asset_url | stylesheet_tag }}
 <script src="{{ 'ekomi-product-reviews.js' | asset_url  }}" defer="defer"></script>
 
 {%- style -%}
@@ -16,13 +17,10 @@
 {%- endstyle -%}
 <div class="image-with-text page-width isolate">
   {% assign current_variant = product.selected_or_first_available_variant %}
-  <div id="ekomi-product-reviews" data-sku="{{ current_variant.sku }}"></div>
   <div class="image-with-text__grid grid grid--gapless grid--1-col grid--3-col-tablet {{section.settings.block_background}}
     {% if section.settings.layout == 'text_first' %} image-with-text__grid--reverse{% endif %}">
     {% if section.settings.image %}
       <div class="image-with-text__media-item image-with-text__media-item--medium grid__item image-with-text__media-item--{{ section.settings.desktop_content_position }}">
-
-
         <div class="image-with-text__media image-with-text__media--{{ section.settings.height }} global-media-settings {% if section.settings.image != blank %}media{% else %}image-with-text__media--placeholder placeholder{% endif %} {% if section.settings.content_ratio == '2:1'%}image-with-text__image-contained{% endif%} {% if section.settings.layout == 'text_first'%}-margin-right{% endif%}"
           style="padding-bottom: {{ 1 | divided_by: section.settings.image.aspect_ratio | times: 100 }}%;"
         >
@@ -70,6 +68,10 @@
               {%- endif -%}
           {%- endcase -%}
         {%- endfor -%}
+        <div class="ekomi-product-reviews-outer">
+          <h2 class="h1">Product reviews</h2>
+          <div id="ekomi-product-reviews" data-sku="{{ current_variant.sku }}"></div>
+        </div>
       </div>
     </div>
   </div>
