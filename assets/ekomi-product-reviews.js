@@ -25,42 +25,27 @@ const getEkomiProductReviews = () => {
     }
 
     const getArrayFromResults = (result) => {
-
-        //console.log(result);
-
         let hasReviews = productHasReviews(result);
-
-
-
         // Results come back as a single string - not json (not ideal) ... which needs to be split into a managable array.
         // String has comma seperated [timestamp, product code, sku code, text review]
-
-        // TODO: FIX FOR THIS FORMAT
-        // 1415625910,100022331,MS010-Aqua,4,"Matched requirements"
         let productCodes = /[0-9]+[,][0-9]+[,][A-Za-z0-9-]+[,]/g;
         const resultAsArr = result.split(productCodes);
         // save up out markup to spit on the page
-        var reviewsMarkup = '';
+        var reviewsMarkup = '<ul>';
         resultAsArr.forEach((r) => {
             // split rating from review
             let _rating = r.split(',');
-
             //console.log('FIRST: '+ _rating[0] + ' SECOND: ' + _rating[1]);
-
             if(_rating[0] != '' && _rating[1] != '') {
-                let customerReview = `<p>${_rating[0]}/5 stars <span>${_rating[1]}</span></p>`;
+                let customerReview = `<li><em>${_rating[0]}/5 stars </em><span>${_rating[1]}</span></li>`;
                 reviewsMarkup += customerReview;
             }
-
         })
-
-
         console.log('product has Ekomi reviews ', hasReviews)
-
         // Add reviews to the page
         if (hasReviews) {
             // display reviews in tab
-            //reviewsHolder.innerHTML = reviewsMarkup;
+            reviewsHolder.innerHTML = reviewsMarkup + '</ul>';
         }
     }
 
