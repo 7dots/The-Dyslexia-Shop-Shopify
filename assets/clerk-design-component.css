@@ -63,14 +63,33 @@ div[class^="clerk-design-component-"] > div.clerk-slider .clerk-slider-nav {
     height: 100%;
 }
 
-.clerk-slider-item{
-    padding-right: 10px;
+.clerk-slider{
+    display: flex;
+    column-gap: 10px;
+}
+
+@media screen and (max-width: 449px){
+    .clerk-slider-item{
+        min-width: 100%;
+    }
+}
+
+@media screen and (min-width: 450px) and (max-width: 979px){
+    .clerk-slider-item{
+        min-width: calc(50% - 5px);
+    }
+}
+
+@media screen and (min-width: 980px){
+    .clerk-slider-item{
+        min-width: calc(25% - 7.5px);
+    }
 }
 
 .clerk-slider-item:nth-child(4n){
     padding-right: 0px;
 } 
 
-.clerk-slider-item:last-of-type
+.clerk-slider-item:last-of-type{
     padding-right: 0px;
 } 
