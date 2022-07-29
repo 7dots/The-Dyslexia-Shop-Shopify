@@ -1494,6 +1494,11 @@ button.shopify-payment-button__button--unbranded {
   --border-opacity: var(--buttons-border-opacity);
 }
 
+.button--primary:hover{
+  -webkit-box-shadow: 0px 0px 1px 1px var(--color-primary); 
+  box-shadow: 0px 0px 1px 1px var(--color-primary);  
+}
+
 .button--secondary:hover{
   -webkit-box-shadow: 0px 0px 1px 1px var(--color-black); 
   box-shadow: 0px 0px 1px 1px var(--color-black);  
