@@ -15,7 +15,8 @@
   }
 {%- endstyle -%}
 <div class="image-with-text page-width isolate">
-  <div id="ekomi-product-reviews" ></div>
+  {% assign current_variant = product.selected_or_first_available_variant %}
+  <div id="ekomi-product-reviews" data-sku="{{ current_variant.sku }}"></div>
   <div class="image-with-text__grid grid grid--gapless grid--1-col grid--3-col-tablet {{section.settings.block_background}}
     {% if section.settings.layout == 'text_first' %} image-with-text__grid--reverse{% endif %}">
     {% if section.settings.image %}
