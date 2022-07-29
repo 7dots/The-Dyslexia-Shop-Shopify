@@ -763,3 +763,7 @@ li[data-address] > h2 {
 .checkbox-field label {
   margin-left: 16px;
 }
+
+.customer__address-btn{
+  border: 0;
+}
