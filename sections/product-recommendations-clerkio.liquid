@@ -1,0 +1,11 @@
+{{ 'clerk-design-component.css' | asset_url | stylesheet_tag }}
+<section class="clerkio-homepage-recommendations">
+    <div class="collection__title title-wrapper page-width">
+        <h2 class="title h2">What other customers bought</h2>
+    </div>
+    <div class="page-width page-width-desktop">
+        <span class="clerk"
+              data-template="@power-step-others-also-bought"
+              data-products="[{{ product.id }}]"></span>
+    </div>
+</section>
