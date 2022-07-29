@@ -1,0 +1,15 @@
+#ekomi-product-reviews ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+#ekomi-product-reviews li {
+    padding: 12px 0;
+    border-bottom: 1px solid #d4cece;
+}
+
+#ekomi-product-reviews em {
+    font-weight: 600;
+    font-style: normal;
+    margin-right: 4px;
+}
