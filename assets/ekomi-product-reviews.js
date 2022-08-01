@@ -37,7 +37,7 @@ const getEkomiProductReviews = () => {
             let _rating = r.split(',');
             //console.log('FIRST: '+ _rating[0] + ' SECOND: ' + _rating[1]);
             if(_rating[0] != '' && _rating[1] != '') {
-                let customerReview = `<li><span class="stars-sm stars-sm-${_rating[0]}"></span><div><span>${_rating[1]}</span></div></li>`;
+                let customerReview = `<li><span class="ekomi-review__stars stars-sm stars-sm-${_rating[0]}"></span><div><span>${_rating[1]}</span></div></li>`;
                 reviewsMarkup += customerReview;
             }
         })

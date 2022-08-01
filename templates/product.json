@@ -78,8 +78,8 @@
         "padding_bottom": 12
       }
     },
-    "product-image-text": {
-      "type": "product-image-text",
+    "product-review": {
+      "type": "product-review",
       "blocks": {
         "image-with-text-0": {
           "type": "heading",
@@ -106,7 +106,7 @@
         "layout": "text_first",
         "content_ratio": "1:1",
         "desktop_content_position": "top",
-        "block_background": "image-text__light-grey"
+        "block_background": "grey"
       }
     },
     "multicolumn": {
@@ -156,7 +156,7 @@
   },
   "order": [
     "main",
-    "product-image-text",
+    "product-review",
     "multicolumn",
     "product-recommendations-clerkio"
   ]

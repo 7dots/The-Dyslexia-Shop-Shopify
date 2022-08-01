@@ -3098,6 +3098,11 @@ details-disclosure > details {
   width: 90px;
 }
 
+.ekomi-review__stars{
+  margin-bottom: 16px;
+  margin-top: 10px;
+}
+
 /* Stars Small - Positions */
 
 .stars-sm-0 {

@@ -4,8 +4,8 @@
 }
 
 #ekomi-product-reviews li {
-    padding: 12px 0;
-    border-bottom: 1px solid #e3e3e3;
+    padding: 12px 0 24px 0;
+    border-bottom: 2px solid var(--color-light-grey);
     display: flex;
     flex-direction: column;
 }

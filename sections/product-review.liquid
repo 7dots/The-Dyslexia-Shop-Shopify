@@ -1,0 +1,68 @@
+{{ 'component-product-review.css' | asset_url | stylesheet_tag }}
+{{ 'ekomi-reviews.css' | asset_url | stylesheet_tag }}
+<script src="{{ 'ekomi-product-reviews.js' | asset_url  }}" defer="defer"></script>
+<script src={{ 'product-image.js' | asset_url }}" defer="defer"></script>
+{%- style -%}
+  .section-{{ section.id }}-padding {
+    padding-top: 35px;
+    padding-bottom: 35px;
+  }
+
+  @media screen and (min-width: 750px) {
+    .section-{{ section.id }}-padding {
+      padding-top: 35px;
+      padding-bottom: 35px;
+    }
+  }
+{%- endstyle -%}
+<div class="product-review page-width isolate tabs">
+  {% assign current_variant = product.selected_or_first_available_variant %}
+  <div role="tablist" aria-label="Sample Tabs" class="product-review__tabs-list">
+    <button role="tab" aria-selected="true" aria-controls="panel-1" id="tab-1" tabindex="0">Details</button>
+    <button role="tab" aria-selected="false" aria-controls="panel-2" id="tab-2" tabindex="-1">Reviews</button>
+  </div>
+  <div class="product-review__tabs-tab product-review__grid grid grid--gapless grid--1-col grid--3-col-tablet {{section.settings.block_background}}
+    {% if section.settings.layout == 'text_first' %} product-review__grid--reverse{% endif %}">
+    <div class="product-review__text-item grid__item" id="panel-1" role="tabpanel" tabindex="0" aria-labelledby="tab-1">
+      <div id="ImageWithText--{{ section.id }}" class="product-review__content product-review__content product-review__content--centre product-review__content--desktop-left product-review__content--mobile-center content-container">
+        <p class="product-review__heading {% if section.settings.image == null %}-increased-width{% endif %} {{ block.settings.heading_size }} product-review__heading-contained" {{ block.shopify_attributes }}>
+          <h2 class="h1">Product Description</h2>
+        </p>
+        <div class="product-review__text {% if section.settings.image == null %}-increased-width{% endif %} rte {{ block.settings.text_style }}" {{ block.shopify_attributes }}>{{ product.description }}</div>
+      </div>
+    </div>
+    <div id="panel-2" role="tabpanel" tabindex="0" hidden="true" aria-labelledby="tab-2" class="ekomi-product-reviews-outer product-review__tabs-tab">
+      <h2 class="h1">Product reviews</h2>
+      <div id="ekomi-product-reviews" data-sku="{{ current_variant.sku }}"></div>
+    </div>
+  </div>
+</div>
+
+{% schema %}
+{
+  "name": "Product review",
+  "class": "section",
+  "settings": [
+    {
+      "type": "header",
+      "content": "Colour options"
+    },
+    {
+      "type": "select",
+      "id": "block_background",
+      "options": [
+        {
+          "value": "grey",
+          "label": "Grey"
+        },
+        {
+          "value": "white",
+          "label": "White"
+        }
+      ],
+      "default": "grey",
+      "label": "Background Colour"
+    }
+  ]
+}
+{% endschema %}

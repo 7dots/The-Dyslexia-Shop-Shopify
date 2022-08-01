@@ -382,12 +382,27 @@
   border-radius: 0;
   height: 40px;
   border: none;
+  background-color: var(--color-white);
   padding: 0 35px 0 35px;
   color: var(--color-black);
+  -webkit-box-shadow: 0px 2px 0px 0px var(--color-white); 
+  box-shadow: 0px 2px 0px 0px var(--color-white);
+  position: relative;
+}
+
+.image-with-text__tabs-list > button[aria-selected="true"]{
+  border-top: 1px solid var(--color-light-grey);
+  border-left: 1px solid var(--color-light-grey);
+  border-right: 1px solid var(--color-light-grey);
 }
 
 .image-with-text__tabs-list >button[aria-selected="false"]{
   cursor: pointer;
   background-color: var(--color-white-2);
   color: var(--color-dark-grey);
+  border-top: 1px 1px 0 1px solid var(--color-light-grey);
+}
+
+.image-with-text__tabs-tab{
+  border: 1px solid var(--color-light-grey);
 }
