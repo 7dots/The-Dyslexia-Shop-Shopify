@@ -1369,7 +1369,7 @@ summary::-webkit-details-marker {
 }
 
 deferred-media {
-  display: block;
+display: block;
 }
 
 /* component-button */
@@ -1399,6 +1399,12 @@ button.shopify-payment-button__button--unbranded,
 button.shopify-payment-button__button--unbranded {
   min-width: calc(12rem + var(--buttons-border-width) * 2);
   min-height: calc(4.5rem + var(--buttons-border-width) * 2);
+}
+
+
+.shopify-payment-button__button:hover{
+  -webkit-box-shadow: 0px 0px 0px 1px var(--color-primary); 
+  box-shadow: 0px 0px 0px 1px var(--color-primary);  
 }
 
 .shopify-payment-button__button--branded {
@@ -1437,7 +1443,9 @@ button.shopify-payment-button__button--unbranded {
 .customer button{
   background-color: var(--color-primary);
   color: var(--color-white);
+  border: 0;
 }
+
 
 .button--secondary{
   color: var(--color-black);
@@ -1464,7 +1472,6 @@ button.shopify-payment-button__button--unbranded {
   left: 0;
   z-index: -1;
   border-radius: 1px;
-  box-shadow: var(--shadow-horizontal-offset) var(--shadow-vertical-offset) var(--shadow-blur-radius) rgba(var(--color-shadow), var(--shadow-opacity));
 }
 
 .shopify-challenge__button:after,

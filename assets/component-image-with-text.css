@@ -364,3 +364,12 @@
 .image-with-text.-padding{
   padding: 35px 0 35px 0;
 }
+
+.image-with-text__tab-btn{
+  height: 40px;
+  background-color: var(--color-white);
+}
+
+.image-with-text__tabs-tab{
+  width: 100%;
+}

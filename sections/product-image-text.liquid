@@ -1,7 +1,7 @@
 {{ 'component-image-with-text.css' | asset_url | stylesheet_tag }}
 {{ 'ekomi-reviews.css' | asset_url | stylesheet_tag }}
 <script src="{{ 'ekomi-product-reviews.js' | asset_url  }}" defer="defer"></script>
-
+<script src={{ 'product-image.js' | asset_url }}" defer="defer"></script>
 {%- style -%}
   .section-{{ section.id }}-padding {
     padding-top: 35px;
@@ -15,9 +15,13 @@
     }
   }
 {%- endstyle -%}
-<div class="image-with-text page-width isolate">
+<div class="image-with-text page-width isolate tabs">
   {% assign current_variant = product.selected_or_first_available_variant %}
-  <div class="image-with-text__grid grid grid--gapless grid--1-col grid--3-col-tablet {{section.settings.block_background}}
+  <div role="tablist" aria-label="Sample Tabs">
+    <button role="tab" aria-selected="true" aria-controls="panel-1" id="tab-1" tabindex="0">Details</button>
+    <button role="tab" aria-selected="false" aria-controls="panel-2" id="tab-2" tabindex="-1">Reviews</button>
+  </div>
+  <div class="image-with-text__tabs-tab image-with-text__grid grid grid--gapless grid--1-col grid--3-col-tablet {{section.settings.block_background}}
     {% if section.settings.layout == 'text_first' %} image-with-text__grid--reverse{% endif %}">
     {% if section.settings.image %}
       <div class="image-with-text__media-item image-with-text__media-item--medium grid__item image-with-text__media-item--{{ section.settings.desktop_content_position }}">
@@ -48,7 +52,7 @@
         </div>
       </div>
     {% endif %}
-    <div class="image-with-text__text-item grid__item">
+    <div class="image-with-text__text-item grid__item" id="panel-1" role="tabpanel" tabindex="0" aria-labelledby="tab-1">
       <div id="ImageWithText--{{ section.id }}" class="image-with-text__content image-with-text__content image-with-text__content--{{ section.settings.desktop_content_position }} image-with-text__content--desktop-left image-with-text__content--mobile-center content-container {% if section.settings.layout == 'image_first' and section.settings.content_ratio == '2:1' %}image-with-text__padding-0-desktop{% else %}{% endif %}">
         {%- for block in section.blocks -%}
           {% case block.type %}
@@ -68,11 +72,11 @@
               {%- endif -%}
           {%- endcase -%}
         {%- endfor -%}
-        <div class="ekomi-product-reviews-outer">
-          <h2 class="h1">Product reviews</h2>
-          <div id="ekomi-product-reviews" data-sku="{{ current_variant.sku }}"></div>
-        </div>
       </div>
+    </div>
+    <div id="panel-2" role="tabpanel" tabindex="0" hidden="true" aria-labelledby="tab-2" class="ekomi-product-reviews-outer image-with-text__tabs-tab">
+      <h2 class="h1">Product reviews</h2>
+      <div id="ekomi-product-reviews" data-sku="{{ current_variant.sku }}"></div>
     </div>
   </div>
 </div>
