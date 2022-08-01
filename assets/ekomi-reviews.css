@@ -6,6 +6,8 @@
 #ekomi-product-reviews li {
     padding: 12px 0;
     border-bottom: 1px solid #d4cece;
+    display: flex;
+    flex-direction: column;
 }
 
 #ekomi-product-reviews em {

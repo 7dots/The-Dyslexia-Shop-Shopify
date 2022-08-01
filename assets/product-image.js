@@ -42,8 +42,8 @@ window.addEventListener('DOMContentLoaded', () => {
 
     //scrolls into view
     const yOffset = -180; 
-    const y = parent.getBoundingClientRect().top + window.pageYOffset + yOffset;
-    window.scrollTo({top: y, behavior: 'smooth'})
+    const productReviewYOffset = parent.getBoundingClientRect().top + window.pageYOffset + yOffset;
+    window.scrollTo({top: productReviewYOffset , behavior: 'smooth'})
   
     // Remove all current selected tabs
     parent
