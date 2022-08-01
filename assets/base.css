@@ -3091,3 +3091,46 @@ details-disclosure > details {
   z-index: 3 !important;
 }
 
+/* Stars sprite */
+.stars-sm {
+  background-image: url("media/stars_sm.gif");
+  background-repeat: no-repeat;
+  height: 16px;
+  width: 82px;
+}
+
+/* Stars Small - Positions */
+
+.stars-sm-0 {
+  background-position: 0 0;
+}
+.stars-sm-0h {
+  background-position: 0 -18px;
+}
+.stars-sm-1 {
+  background-position: 0 -36px;
+}
+.stars-sm-1h {
+  background-position: 0 -54px;
+}
+.stars-sm-2 {
+  background-position: 0 -72px;
+}
+.stars-sm-2h {
+  background-position: 0 -90px;
+}
+.stars-sm-3 {
+  background-position: 0 -108px;
+}
+.stars-sm-3h {
+  background-position: 0 -126px;
+}
+.stars-sm-4 {
+  background-position: 0 -144px;
+}
+.stars-sm-4h {
+  background-position: 0 -162px;
+}
+.stars-sm-5 {
+  background-position: 0 -180px;
+}
