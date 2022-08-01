@@ -373,3 +373,21 @@
 .image-with-text__tabs-tab{
   width: 100%;
 }
+
+.image-with-text__tabs-list{
+  font-size: 0;
+}
+
+.image-with-text__tabs-list >button{
+  border-radius: 0;
+  height: 40px;
+  border: none;
+  padding: 0 35px 0 35px;
+  color: var(--color-black);
+}
+
+.image-with-text__tabs-list >button[aria-selected="false"]{
+  cursor: pointer;
+  background-color: var(--color-white-2);
+  color: var(--color-dark-grey);
+}

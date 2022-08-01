@@ -42,10 +42,20 @@ const getEkomiProductReviews = () => {
             }
         })
         console.log('product has Ekomi reviews ', hasReviews)
+
+
+        addReview()
+
+        function addReview(){
         // Add reviews to the page
         if (hasReviews) {
             // display reviews in tab
             reviewsHolder.innerHTML = reviewsMarkup + '</ul>';
+        } else {
+            let customerReview = `<li class="ekomi-produc-review__placeholder">There aren't any reviews for this product yet!</li>`;
+            reviewsMarkup += customerReview;
+            reviewsHolder.innerHTML = reviewsMarkup + '</ul>';
+        }
         }
     }
 
