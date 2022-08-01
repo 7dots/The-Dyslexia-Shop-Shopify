@@ -3093,7 +3093,7 @@ details-disclosure > details {
 
 /* Stars sprite */
 .stars-sm {
-  background-image: url("media/stars_sm.gif");
+  background-image: url("stars_sm.gif");
   background-repeat: no-repeat;
   height: 16px;
   width: 82px;
