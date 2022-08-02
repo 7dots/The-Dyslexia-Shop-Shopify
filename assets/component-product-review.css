@@ -123,7 +123,6 @@
     cursor: pointer;
     background-color: var(--color-white-2);
     color: var(--color-dark-grey);
-    border-top: 1px 1px 0 1px solid var(--color-light-grey);
 }
 
 .product-review__tabs-tab{
@@ -131,6 +130,7 @@
 }
 
 .product-review__tabs-tab.-grey{
+    border: none;
     background-color: var(--color-light-grey);
 }
 
@@ -140,7 +140,10 @@
 }
 
 .product-review__tabs-list > button[aria-selected="false"]{
-    background-color: var(--color-white);
+    background-color: var(--color-white-2);
+    border-top: 1px solid var(--color-light-grey);
+    border-left: 1px solid var(--color-light-grey);
+    border-right: 1px solid var(--color-light-grey);
 }
 
 .product-review__tabs-list > button[aria-selected="true"]{
