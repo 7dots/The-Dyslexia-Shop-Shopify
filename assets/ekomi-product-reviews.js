@@ -26,7 +26,7 @@ const getEkomiProductReviews = () => {
         }
         return false;
     }
-    
+
     const getArrayFromResults = (result) => {
         let hasReviews = productHasReviews(result);
         // Results come back as a single string - not json (not ideal) ... which needs to be split into a managable array.
