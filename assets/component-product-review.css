@@ -101,6 +101,14 @@
     font-size: 0;
 }
 
+.product-review__tabs-list button{
+    display: none;
+}
+
+.product-review__tabs-list.-show button{
+    display: inline-block;
+}
+
 .product-review__tabs-list >button{
     border-radius: 0;
     height: 40px;

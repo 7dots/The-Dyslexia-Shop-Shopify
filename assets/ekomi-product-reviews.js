@@ -37,6 +37,10 @@ const getEkomiProductReviews = () => {
         }
     }
 
+    const displayTabs = () => {
+        return document.querySelector('.product-review__tabs-list').classList.add('-show');
+    }
+
     const getArrayFromResults = (result) => {
         let hasReviews = productHasReviews(result);
         // Results come back as a single string - not json (not ideal) ... which needs to be split into a managable array.
@@ -63,6 +67,7 @@ const getEkomiProductReviews = () => {
 
         if(hasReviews){
             addReview()
+            displayTabs()
         }
 
         function addReview(){

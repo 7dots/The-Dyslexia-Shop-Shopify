@@ -1,7 +1,7 @@
 {{ 'component-product-review.css' | asset_url | stylesheet_tag }}
 {{ 'ekomi-reviews.css' | asset_url | stylesheet_tag }}
-<script src="{{ 'ekomi-product-reviews.js' | asset_url  }}" defer="defer"></script>
-<script src={{ 'product-image.js' | asset_url }}" defer="defer"></script>
+<script src="{{ 'ekomi-product-reviews.js' | asset_url  }}" defer></script>
+<script src={{ 'product-image.js' | asset_url }}" defer></script>
 {%- style -%}
   .section-{{ section.id }}-padding {
     padding-top: 35px;
@@ -17,7 +17,7 @@
 {%- endstyle -%}
 <div class="product-review page-width isolate tabs">
   {% assign current_variant = product.selected_or_first_available_variant %}
-  <div role="tablist" aria-label="Sample Tabs" class="product-review__tabs-list {% if section.settings.block_background == "grey" %}-grey{% endif %}">
+  <div role="tablist" aria-label="Product reviews and details tabs" class="product-review__tabs-list {% if section.settings.block_background == "grey" %}-grey{% endif %}">
     <button role="tab" aria-selected="true" aria-controls="panel-1" id="tab-1" tabindex="0">Details</button>
     <button role="tab" aria-selected="false" aria-controls="panel-2" id="tab-2" tabindex="-1">Reviews</button>
   </div>
