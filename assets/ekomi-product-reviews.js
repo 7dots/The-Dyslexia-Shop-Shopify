@@ -14,10 +14,6 @@ const getEkomiProductReviews = () => {
         apiid: '52635',
         apiPass: '7918dcccc263ae30ca8f2aa0d'
     }
-    const requestOptions = {
-        method: 'GET',
-        redirect: 'follow',
-    };
 
     const productHasReviews = (reviews) => {
         let json = JSON.parse(reviews);
@@ -25,6 +21,20 @@ const getEkomiProductReviews = () => {
             return true;
         }
         return false;
+    }
+
+    const santitiseString = (review) => {
+        if(review){
+            let _review;
+            _review = review.replace('\\n', '');
+            let __review;
+            __review = _review.replace('\\', '');
+            let ___review;
+            ___review = __review.replace('\\"', '');
+            let ____review;
+            ____review = ___review.replace('"', '');
+            return ____review;
+        }
     }
 
     const getArrayFromResults = (result) => {
@@ -35,13 +45,18 @@ const getEkomiProductReviews = () => {
         const resultAsArr = result.split(productCodes);
         // save up out markup to spit on the page
         var reviewsMarkup = '<ul>';
-        resultAsArr.forEach((r) => {
+        resultAsArr.forEach((r, i) => {
             // split rating from review
             let _rating = r.split(',');
+            let review = santitiseString(_rating[1]);
             //console.log('FIRST: '+ _rating[0] + ' SECOND: ' + _rating[1]);
             if(_rating[0] != '' && _rating[1] != '') {
-                let customerReview = `<li><span class="ekomi-review__stars stars-sm stars-sm-${_rating[0]}"></span><div><span>${_rating[1]}</span></div></li>`;
-                reviewsMarkup += customerReview;
+                let customerReview = `<li><span class="ekomi-review__stars stars-sm stars-sm-${_rating[0]}"></span><div><span>${review}</span></div></li>`;
+                console.log('review: ', i);
+                if(i != 0){
+                    reviewsMarkup += customerReview;
+                }
+
             }
         })
         console.log('product has Ekomi reviews ', hasReviews)
