@@ -1,11 +1,5 @@
 
 const productDetailsReviewsTabs = () => {
-  const hasReviews = document.querySelector('.-show-tabs');
-
-  if(!hasReviews){
-    return;
-  }
-
   const tabs = document.querySelectorAll('[role="tab"]');
   const tabList = document.querySelector('[role="tablist"]');
 
