@@ -19,10 +19,10 @@
   margin: 4rem 0 1.5rem;
 }
 
-.customer button:hover{
+/* .customer button:hover{
   -webkit-box-shadow: 0px 0px 0px 1px var(--color-primary); 
   box-shadow: 0px 0px 0px 1px var(--color-primary);  
-}
+} */
 
 .customer ul {
   line-height: calc(1 + 0.6 / var(--font-body-scale));
