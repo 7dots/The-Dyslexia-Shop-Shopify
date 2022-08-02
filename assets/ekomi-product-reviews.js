@@ -11,7 +11,7 @@ const getEkomiProductReviews = () => {
     const baseCredentials = {
         //ekomiApi:'https://api.ekomi.de/get_productfeedback.php',
         // Use app proxy to avoid cors issues
-        ekomiApi:'apps/ekomi-api',
+        ekomiApi:'https://thedyslexiashop.myshopify.com/apps/ekomi-api',
         apiid: '52635',
         apiPass: '7918dcccc263ae30ca8f2aa0d'
     }
