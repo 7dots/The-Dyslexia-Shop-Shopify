@@ -38,7 +38,7 @@ const getEkomiProductReviews = () => {
     }
 
     const displayTabs = () => {
-        return document.querySelector('.product-review__tabs-list').classList.add('-show');
+        return document.querySelector('.product-review__tabs-list').classList.add('-show-tabs');
     }
 
     const getArrayFromResults = (result) => {
