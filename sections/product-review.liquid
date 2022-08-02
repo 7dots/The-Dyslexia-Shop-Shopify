@@ -17,11 +17,11 @@
 {%- endstyle -%}
 <div class="product-review page-width isolate tabs">
   {% assign current_variant = product.selected_or_first_available_variant %}
-  <div role="tablist" aria-label="Sample Tabs" class="product-review__tabs-list">
+  <div role="tablist" aria-label="Sample Tabs" class="product-review__tabs-list {% if section.settings.block_background == "grey" %}-grey{% endif %}">
     <button role="tab" aria-selected="true" aria-controls="panel-1" id="tab-1" tabindex="0">Details</button>
     <button role="tab" aria-selected="false" aria-controls="panel-2" id="tab-2" tabindex="-1">Reviews</button>
   </div>
-  <div class="product-review__tabs-tab product-review__grid grid grid--gapless grid--1-col grid--3-col-tablet {{section.settings.block_background}}
+  <div class="product-review__tabs-tab product-review__grid grid grid--gapless grid--1-col grid--3-col-tablet {% if section.settings.block_background == "grey" %}-grey{% endif %}
     {% if section.settings.layout == 'text_first' %} product-review__grid--reverse{% endif %}">
     <div class="product-review__text-item grid__item" id="panel-1" role="tabpanel" tabindex="0" aria-labelledby="tab-1">
       <div id="ImageWithText--{{ section.id }}" class="product-review__content product-review__content product-review__content--centre product-review__content--desktop-left product-review__content--mobile-center content-container">

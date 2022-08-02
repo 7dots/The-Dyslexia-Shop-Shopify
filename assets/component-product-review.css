@@ -129,3 +129,22 @@
 .product-review__tabs-tab{
     border: 1px solid var(--color-light-grey);
 }
+
+.product-review__tabs-tab.-grey{
+    background-color: var(--color-light-grey);
+}
+
+.product-review__tabs-list.-grey > button{
+    background-color: var(--color-light-grey);
+    box-shadow: none;
+}
+
+.product-review__tabs-list > button[aria-selected="false"]{
+    background-color: var(--color-white);
+}
+
+.product-review__tabs-list > button[aria-selected="true"]{
+    border-top: 1px solid var(--color-light-grey);
+    border-left: 1px solid var(--color-light-grey);
+    border-right: 1px solid var(--color-light-grey);
+}
