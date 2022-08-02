@@ -9,9 +9,9 @@ const getEkomiProductReviews = () => {
     const reviewsHolder = document.getElementById('ekomi-product-reviews');
     const productSKU = reviewsHolder.getAttribute('data-sku');
     const baseCredentials = {
-        //ekomiApi:'https://api.ekomi.de/get_productfeedback.php',
+        ekomiApi:'http://api.allorigins.win/get?url=http://api.ekomi.de/get_productfeedback.php',
         // Use app proxy to avoid cors issues
-        ekomiApi:'https://thedyslexiashop.myshopify.com/apps/ekomi-reviews-api-proxy',
+        //ekomiApi:'https://thedyslexiashop.myshopify.com/apps/ekomi-reviews-api-proxy/get_productfeedback.php',
         apiid: '52635',
         apiPass: '7918dcccc263ae30ca8f2aa0d'
     }
@@ -19,8 +19,6 @@ const getEkomiProductReviews = () => {
         method: 'GET',
         redirect: 'follow',
     };
-    const baseEndPoint = baseCredentials.ekomiApi + '?interface_id=' + baseCredentials.apiid + '&interface_pw=' + baseCredentials.apiPass + '&type=csv&product=';
-
 
     const productHasReviews = (reviews) => {
         return (reviews.length > 0) ? true : false;
@@ -45,23 +43,22 @@ const getEkomiProductReviews = () => {
         })
         console.log('product has Ekomi reviews ', hasReviews)
 
-
         addReview()
 
         function addReview(){
-        // Add reviews to the page
-        if (hasReviews) {
-            // display reviews in tab
-            reviewsHolder.innerHTML = reviewsMarkup + '</ul>';
-        } else {
-            let customerReview = `<li class="ekomi-produc-review__placeholder">There aren't any reviews for this product yet!</li>`;
-            reviewsMarkup += customerReview;
-            reviewsHolder.innerHTML = reviewsMarkup + '</ul>';
-        }
+            // Add reviews to the page
+            if (hasReviews) {
+                // display reviews in tab
+                reviewsHolder.innerHTML = reviewsMarkup + '</ul>';
+            } else {
+                let customerReview = `<li class="ekomi-produc-review__placeholder">There aren't any reviews for this product yet!</li>`;
+                reviewsMarkup += customerReview;
+                reviewsHolder.innerHTML = reviewsMarkup + '</ul>';
+            }
         }
     }
 
-    fetch(baseEndPoint + productSKU, requestOptions)
+        fetch(`https://api.allorigins.win/get?url=${encodeURIComponent('http://api.ekomi.de/get_productfeedback.php?interface_id='+baseCredentials.apiid+'&interface_pw='+baseCredentials.apiPass+'&type=csv&product=' + productSKU)}`)
         .then(response => response.text())
         .then(result => getArrayFromResults(result))
         .catch(error => console.log('error', error));
