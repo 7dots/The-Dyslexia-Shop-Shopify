@@ -9,9 +9,8 @@ const getEkomiProductReviews = () => {
     const reviewsHolder = document.getElementById('ekomi-product-reviews');
     const productSKU = reviewsHolder.getAttribute('data-sku');
     const baseCredentials = {
-        ekomiApi:'http://api.allorigins.win/get?url=http://api.ekomi.de/get_productfeedback.php',
         // Use app proxy to avoid cors issues
-        //ekomiApi:'https://thedyslexiashop.myshopify.com/apps/ekomi-reviews-api-proxy/get_productfeedback.php',
+        ekomiApi:'http://api.allorigins.win/get?url=http://api.ekomi.de/get_productfeedback.php',
         apiid: '52635',
         apiPass: '7918dcccc263ae30ca8f2aa0d'
     }
@@ -21,9 +20,13 @@ const getEkomiProductReviews = () => {
     };
 
     const productHasReviews = (reviews) => {
-        return (reviews.length > 0) ? true : false;
+        let json = JSON.parse(reviews);
+        if(json['contents'] != ""){
+            return true;
+        }
+        return false;
     }
-
+    
     const getArrayFromResults = (result) => {
         let hasReviews = productHasReviews(result);
         // Results come back as a single string - not json (not ideal) ... which needs to be split into a managable array.
@@ -43,7 +46,9 @@ const getEkomiProductReviews = () => {
         })
         console.log('product has Ekomi reviews ', hasReviews)
 
-        addReview()
+        if(hasReviews){
+            addReview()
+        }
 
         function addReview(){
             // Add reviews to the page
