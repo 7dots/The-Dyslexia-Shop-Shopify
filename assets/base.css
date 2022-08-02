@@ -123,8 +123,8 @@
 }
 
 .addresses form button[type]:hover{
-  -webkit-box-shadow: 0px 0px 0px 1px var(--color-black); 
-  box-shadow: 0px 0px 0px 1px var(--color-black); 
+  -webkit-box-shadow: 0px 0px 0px 2px var(--color-black); 
+  box-shadow: 0px 0px 0px 2px var(--color-black); 
 }
 
 
