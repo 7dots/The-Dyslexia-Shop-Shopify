@@ -15,6 +15,11 @@
           "settings": {
           }
         },
+        "f02aae05-8933-4b86-b3b5-b34032b34357": {
+          "type": "rating",
+          "settings": {
+          }
+        },
         "caption": {
           "type": "text",
           "settings": {
@@ -59,6 +64,7 @@
       "block_order": [
         "vendor",
         "title",
+        "f02aae05-8933-4b86-b3b5-b34032b34357",
         "caption",
         "price",
         "variant_picker",
