@@ -59,7 +59,7 @@ const getEkomiProductReviews = () => {
 
 
         //still a lengthy function requires further refactoring
-        function addReviews(resultAsArr = getResultsArray()){
+        function populateReviewMarkup (resultAsArr = getResultsArray()){
 
             //trimmed results
             const resultDatesTrimmed = resultDatesAsArr.map((el) => {
@@ -86,12 +86,15 @@ const getEkomiProductReviews = () => {
                     }
                 }
             })
+
+            return reviewsMarkup;
         }
 
         if(hasReviews){
             getResultsArray()
-            addReviews()
+            populateReviewMarkup()
             displayTabs()
+            addReview()
             populateAggregateReview()
         } else {
             hideProductRating()
