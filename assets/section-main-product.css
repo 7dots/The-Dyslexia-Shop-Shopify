@@ -1214,18 +1214,17 @@ a.product__text {
   object-fit: contain;
 }
 
-.main-product__rating{
+#main-product__rating{
   height: 100%;
   width: 100%;
 }
-.main-product__rating > span {
+#main-product__rating > span {
   height: 18px;
   width: 100%;
   display: inline-block;
   margin-bottom: 5px;
 }
-
-.main-product__rating > a {
+#main-product__rating > a {
   text-decoration: none;
   color: var(--color-black);
 }

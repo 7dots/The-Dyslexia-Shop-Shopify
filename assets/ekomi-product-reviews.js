@@ -78,7 +78,41 @@ const getEkomiProductReviews = () => {
         if(hasReviews){
             addReview()
             displayTabs()
+            populateAggregateReview()
         }
+
+        
+        function populateAggregateReview(){
+            average = calculateAggregateReviewAverage()
+            mainProductStar = document.getElementById('main-product__rating-stars')
+            mainProductAverage = document.getElementById('main-product__rating-average')
+
+            //average 2 rounded d.p
+            const roundedAverageDecimal = Math.round((average + Number.EPSILON) * 100) / 100
+            
+            //round to nearest .5
+            const roundedAverageHalf = Math.round(average/5)*5
+
+            mainProductStar.classList.add(`stars-sm-${roundedAverageHalf}`)
+            mainProductAverage.innerHTML += `(${roundedAverageDecimal}/5)`
+        }
+
+
+        //gets average of reviews
+        function calculateAggregateReviewAverage(data = resultAsArr){
+            let ratings = []
+            data.forEach((r, i)=> {
+                let _rating = r.split(',')
+                //array has to be integer not an string.... Javascript
+                ratings.push(Number(_rating[0]))
+            }) 
+            //first item in an array is NAN
+            ratings.shift()
+            //calculate average 
+            const averageRatings = ratings.reduce((a,b) => (a+b)) / ratings.length
+            return averageRatings
+        }
+
 
         function addReview(){
             // Add reviews to the page
