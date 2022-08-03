@@ -1218,6 +1218,9 @@ a.product__text {
   height: 100%;
   width: 100%;
 }
+.main-product__rating-hidden{
+  display: none;
+}
 #main-product__rating > span {
   height: 18px;
   width: 100%;
@@ -1227,4 +1230,5 @@ a.product__text {
 #main-product__rating > a {
   text-decoration: none;
   color: var(--color-black);
+  font-weight: 600;
 }

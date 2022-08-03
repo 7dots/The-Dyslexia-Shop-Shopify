@@ -84,6 +84,7 @@ const getEkomiProductReviews = () => {
         
         function populateAggregateReview(){
             average = calculateAggregateReviewAverage()
+            mainProductRating = document.getElementById('main-product__rating')
             mainProductStar = document.getElementById('main-product__rating-stars')
             mainProductAverage = document.getElementById('main-product__rating-average')
 
@@ -93,6 +94,10 @@ const getEkomiProductReviews = () => {
             //round to nearest .5
             const roundedAverageHalf = Math.round(average/5)*5
 
+
+            //remove hidden
+            mainProductRating.classList.remove('main-product__rating-hidden')
+            //Add
             mainProductStar.classList.add(`stars-sm-${roundedAverageHalf}`)
             mainProductAverage.innerHTML += `(${roundedAverageDecimal}/5)`
         }
