@@ -1217,13 +1217,16 @@ a.product__text {
 #main-product__rating{
   height: 100%;
   width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-items: center;
+  align-items: center;
 }
 .main-product__rating-hidden{
   display: none;
 }
 #main-product__rating > span {
   height: 18px;
-  width: 100%;
   display: inline-block;
   margin-bottom: 5px;
 }
@@ -1231,4 +1234,9 @@ a.product__text {
   text-decoration: none;
   color: var(--color-black);
   font-weight: 600;
+  display: inline-block;
+  height: 100%;
+  font-size: 16px;
+  padding-top: 5px;
+  margin-left: 5px;
 }
