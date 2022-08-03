@@ -3117,6 +3117,8 @@ details-disclosure > details {
   background-repeat: no-repeat;
   height: 18px;
   position: absolute;
+  width: 0;
+  transition: width 400ms ease-in-out;
 }
 
 .stars-sm-background {

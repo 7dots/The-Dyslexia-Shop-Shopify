@@ -7,6 +7,7 @@
 const getEkomiProductReviews = () => {
 
     const reviewsHolder = document.getElementById('ekomi-product-reviews');
+    const mainProductRating = document.getElementById('main-product__rating')
     const productSKU = reviewsHolder.getAttribute('data-sku');
     const baseCredentials = {
         // Use app proxy to avoid cors issues
@@ -41,62 +42,83 @@ const getEkomiProductReviews = () => {
         return document.querySelector('.product-review__tabs-list').classList.add('-show-tabs');
     }
 
-    const getArrayFromResults = (result) => {
+    const populateResults = (result) => {
         let hasReviews = productHasReviews(result);
-        // Results come back as a single string - not json (not ideal) ... which needs to be split into a managable array.
-        // String has comma seperated [timestamp, product code, sku code, text review]
         let productCodes = /[0-9]+[,][0-9]+[,][A-Za-z0-9-]+[,]/g;
-        const resultAsArr = result.split(productCodes);
-
-        // DEAL WITH DATES
         const resultDatesAsArr = result.match(productCodes);
-        //console.log('DATES ', resultDatesAsArr);
-        const resultDatesTrimmed = resultDatesAsArr.map((el) => {
-            let date = /[,][0-9]+[,][A-Za-z0-9-]+[,]/g;
-            return el.split(date);
-        })
-        const resultDatesFormatted = (el) => {
-            //console.log('RESULT FORMATTED ', el);
-            var options = { year: 'numeric', month: 'long', day: 'numeric' };
-            return new Date(el * 1000).toLocaleString("en-GB", options);
-        }
-
         // save up out markup to spit on the page
         var reviewsMarkup = '<ul>';
-        resultAsArr.forEach((r, i) => {
-            // split rating from review
-            let _rating = r.split(',');
-            let review = santitiseString(_rating[1]);
-            if(_rating[0] != '' && _rating[1] != '') {
-                let reviewDate = resultDatesFormatted(resultDatesTrimmed[i]?.[0]) != 'Invalid Date' ? resultDatesFormatted(resultDatesTrimmed[i]?.[0]) : '';
-                let customerReview = `<li><span class="ekomi-review__stars stars-sm stars-sm-${_rating[0]}"></span><em>${reviewDate}</em><div><span>${review}</span></div></li>`;
-                if(i != 0){
-                    reviewsMarkup += customerReview;
-                }
-            }
-        })
-        if(hasReviews){
-            addReview()
-            displayTabs()
-            populateAggregateReview()
+
+
+        function getResultsArray(){
+            // Results come back as a single string - not json (not ideal) ... which needs to be split into a managable array.
+            // String has comma seperated [timestamp, product code, sku code, text review]
+            const resultAsArr = result.split(productCodes);
+            return resultAsArr
         }
 
+
+        //still a lengthy function requires further refactoring
+        function addReviews(resultAsArr = getResultsArray()){
+
+            //trimmed results
+            const resultDatesTrimmed = resultDatesAsArr.map((el) => {
+                let date = /[,][0-9]+[,][A-Za-z0-9-]+[,]/g;
+                return el.split(date);
+            })
+
+            //formatted results 
+            const resultDatesFormatted = (el) => {
+                //console.log('RESULT FORMATTED ', el);
+                var options = { year: 'numeric', month: 'long', day: 'numeric' };
+                return new Date(el * 1000).toLocaleString("en-GB", options);
+            }
+
+            resultAsArr.forEach((r, i) => {
+                // split rating from review
+                let _rating = r.split(',');
+                let review = santitiseString(_rating[1]);
+                if(_rating[0] != '' && _rating[1] != '') {
+                    let reviewDate = resultDatesFormatted(resultDatesTrimmed[i]?.[0]) != 'Invalid Date' ? resultDatesFormatted(resultDatesTrimmed[i]?.[0]) : '';
+                    let customerReview = `<li><span class="ekomi-review__stars stars-sm stars-sm-${_rating[0]}"></span><em>${reviewDate}</em><div><span>${review}</span></div></li>`;
+                    if(i != 0){
+                        reviewsMarkup += customerReview;
+                    }
+                }
+            })
+        }
+
+        if(hasReviews){
+            getResultsArray()
+            addReviews()
+            displayTabs()
+            populateAggregateReview()
+        } else {
+            hideProductRating()
+        }
+
+        function hideProductRating(){
+            //add hidden
+            mainProductRating.classList.add('main-product__rating-hidden')
+        }
         
         function populateAggregateReview(){
             const average = calculateAggregateReviewAverage()
-            const mainProductRating = document.getElementById('main-product__rating')
+       
             const mainProductStar = document.getElementById('main-product__rating-foreground')
             const mainProductAverage = document.getElementById('main-product__rating-average')
+
+            // error handling 
+            if (mainProductRating == null){
+                hideProductRating()
+                return
+            }
 
             //average 2 rounded d.p
             const roundedAverageDecimal = Math.round((average + Number.EPSILON) * 100) / 100
             
             //round to nearest .5
             const roundedAverageHalf = Math.round(average/5)*5
-
-
-            //remove hidden
-            mainProductRating.classList.remove('main-product__rating-hidden')
 
             //Add
             // mainProductStar.classList.add(`stars-sm-${roundedAverageHalf}`)
@@ -109,7 +131,7 @@ const getEkomiProductReviews = () => {
 
 
         //gets average of reviews
-        function calculateAggregateReviewAverage(data = resultAsArr){
+        function calculateAggregateReviewAverage(data = getResultsArray()){
             let ratings = []
             data.forEach((r, i)=> {
                 let _rating = r.split(',')
@@ -139,7 +161,7 @@ const getEkomiProductReviews = () => {
 
         fetch(`https://api.allorigins.win/get?url=${encodeURIComponent('http://api.ekomi.de/get_productfeedback.php?interface_id='+baseCredentials.apiid+'&interface_pw='+baseCredentials.apiPass+'&type=csv&product=' + productSKU)}`)
         .then(response => response.text())
-        .then(result => getArrayFromResults(result))
+        .then(result => populateResults(result))
         .catch(error => console.log('error', error));
 
 }
