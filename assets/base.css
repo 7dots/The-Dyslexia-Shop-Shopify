@@ -3112,6 +3112,20 @@ details-disclosure > details {
   width: 90px;
 }
 
+.stars-sm-full {
+  background-image: url("stars_full.png");
+  background-repeat: no-repeat;
+  height: 18px;
+  position: absolute;
+}
+
+.stars-sm-background {
+  background-image: url("stars_backgound.png");
+  background-repeat: no-repeat;
+  height: 18px;
+  width: 90px;
+}
+
 .ekomi-review__stars{
   margin-bottom: 16px;
   margin-top: 10px;
