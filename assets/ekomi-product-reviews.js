@@ -47,24 +47,34 @@ const getEkomiProductReviews = () => {
         // String has comma seperated [timestamp, product code, sku code, text review]
         let productCodes = /[0-9]+[,][0-9]+[,][A-Za-z0-9-]+[,]/g;
         const resultAsArr = result.split(productCodes);
+
+        // DEAL WITH DATES
+        const resultDatesAsArr = result.match(productCodes);
+        //console.log('DATES ', resultDatesAsArr);
+        const resultDatesTrimmed = resultDatesAsArr.map((el) => {
+            let date = /[,][0-9]+[,][A-Za-z0-9-]+[,]/g;
+            return el.split(date);
+        })
+        const resultDatesFormatted = (el) => {
+            //console.log('RESULT FORMATTED ', el);
+            var options = { year: 'numeric', month: 'long', day: 'numeric' };
+            return new Date(el * 1000).toLocaleString("en-GB", options);
+        }
+
         // save up out markup to spit on the page
         var reviewsMarkup = '<ul>';
         resultAsArr.forEach((r, i) => {
             // split rating from review
             let _rating = r.split(',');
             let review = santitiseString(_rating[1]);
-            //console.log('FIRST: '+ _rating[0] + ' SECOND: ' + _rating[1]);
             if(_rating[0] != '' && _rating[1] != '') {
-                let customerReview = `<li><span class="ekomi-review__stars stars-sm stars-sm-${_rating[0]}"></span><div><span>${review}</span></div></li>`;
-                console.log('review: ', i);
+                let reviewDate = resultDatesFormatted(resultDatesTrimmed[i]?.[0]) != 'Invalid Date' ? resultDatesFormatted(resultDatesTrimmed[i]?.[0]) : '';
+                let customerReview = `<li><span class="ekomi-review__stars stars-sm stars-sm-${_rating[0]}"></span><em>${reviewDate}</em><div><span>${review}</span></div></li>`;
                 if(i != 0){
                     reviewsMarkup += customerReview;
                 }
-
             }
         })
-        console.log('product has Ekomi reviews ', hasReviews)
-
         if(hasReviews){
             addReview()
             displayTabs()
