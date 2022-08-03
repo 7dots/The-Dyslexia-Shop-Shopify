@@ -86,6 +86,7 @@
     "favicon": "shopify:\/\/shop_images\/TDS_favicon.png",
     "currency_code_enabled": true,
     "cart_type": "notification",
+    "checkout_logo_image": "shopify:\/\/shop_images\/logo.jpg",
     "colors_solid_button_labels": "#ffffff",
     "colors_accent_1": "#121212",
     "gradient_accent_1": "",
