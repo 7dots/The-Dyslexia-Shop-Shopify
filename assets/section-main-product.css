@@ -1213,3 +1213,19 @@ a.product__text {
 .product__media-list .media > .product__media-img{
   object-fit: contain;
 }
+
+.main-product__rating{
+  height: 100%;
+  width: 100%;
+}
+.main-product__rating > span {
+  height: 18px;
+  width: 100%;
+  display: inline-block;
+  margin-bottom: 5px;
+}
+
+.main-product__rating > a {
+  text-decoration: none;
+  color: var(--color-black);
+}
