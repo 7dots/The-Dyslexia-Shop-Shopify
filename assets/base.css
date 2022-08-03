@@ -1444,6 +1444,14 @@ button.shopify-payment-button__button--unbranded {
 .shopify-challenge__button{
   background-color: transparent;
   color: var(--color-black);
+  border: 1px solid var(--color-black);
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+.shopify-challenge__button:hover{
+  -webkit-box-shadow: 0px 0px 1px 1px var(--color-black); 
+  box-shadow: 0px 0px 1px 1px var(--color-black);  
 }
 .customer button{
   background-color: var(--color-primary);
