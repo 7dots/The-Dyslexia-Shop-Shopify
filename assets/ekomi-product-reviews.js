@@ -137,17 +137,8 @@ const getEkomiProductReviews = () => {
 
         function aggregateReviewClickScroll(){
             mainProductAverage.addEventListener('click', function (){
-                scrollToReview()
                 switchTabToReview()
             })
-        }
-
-        function scrollToReview(){
-            const reviewSection = document.getElementById('product-review');
-            //scrolls into view
-            const yOffset = -180;
-            const productReviewYOffset = reviewSection.getBoundingClientRect().top + window.pageYOffset + yOffset;
-            window.scrollTo({top: productReviewYOffset , behavior: 'smooth'})
         }
 
         function switchTabToReview(){
