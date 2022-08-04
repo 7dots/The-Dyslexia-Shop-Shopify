@@ -25,9 +25,6 @@
     {% if section.settings.layout == 'text_first' %} product-review__grid--reverse{% endif %}">
     <div class="product-review__text-item grid__item" id="panel-1" role="tabpanel" tabindex="0" aria-labelledby="tab-1">
       <div id="ImageWithText--{{ section.id }}" class="product-review__content product-review__content product-review__content--centre product-review__content--desktop-left product-review__content--mobile-center content-container">
-        <p class="product-review__heading {% if section.settings.image == null %}-increased-width{% endif %} {{ block.settings.heading_size }} product-review__heading-contained" {{ block.shopify_attributes }}>
-          <h2 class="h1">Product Description</h2>
-        </p>
         <div class="product-review__text {% if section.settings.image == null %}-increased-width{% endif %} rte {{ block.settings.text_style }}" {{ block.shopify_attributes }}>{{ product.description }}</div>
       </div>
     </div>

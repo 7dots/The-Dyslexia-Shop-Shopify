@@ -55,17 +55,10 @@
     margin-top: 2rem;
 }
 
-
-.product-review__content :last-child:is(.product-review__heading),
 .product-review__text--caption {
     margin-bottom: 0;
 }
 
-
-.product-review__heading {
-    word-break: break-word;
-    margin-bottom: 0;
-}
 
 .product-review__text p {
     word-break: break-word;
