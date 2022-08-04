@@ -2305,7 +2305,7 @@ input[type='checkbox'] {
 
 /* section-utility-bar */
 #shopify-section-utility-bar {
-  z-index: 4;
+  z-index: 31;
   height: 38px;
 }
 
