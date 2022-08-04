@@ -87,7 +87,6 @@
             displayTabs()
             populateAggregateReview(resultAsArr)
         }
-
         
         function populateAggregateReview(resultArray){
             const average = calculateAggregateReviewAverage(resultArray)
@@ -112,6 +111,8 @@
             //add star width [gap between stars] + amount of stars filled
             starWidth = (Math.floor(average)*4) + (average/5)* 70 +"px";
             mainProductStar.style.width = starWidth;
+
+            addReviewClickScroll()
         }
 
 
@@ -129,6 +130,38 @@
             const averageRatings = ratings.reduce((a,b) => (a+b)) / ratings.length
             return averageRatings
         }
+
+        function addReviewClickScroll(){
+            const mainProductAverage = document.getElementById('main-product__rating-average')
+            
+            mainProductAverage.addEventListener('click', function switchTabToReview () {
+                const reviewSection = document.getElementById('product-review');
+                const tabList = document.querySelector('[role="tablist"]');
+                const tabs = document.querySelectorAll('[role="tab"]');
+                const reviewTab = document.getElementById('tab-2');
+    
+                const tabPanels = document.querySelectorAll('[role="tabpanel"]')
+                const reviewPanel = document.getElementById('panel-2')
+    
+                //aria selected tabs for all tabs
+                tabs.forEach((e) => {
+                    e.setAttribute('aria-selected', false);
+                });
+    
+                //aria-selected true for review tab
+                reviewTab.setAttribute('aria-selected', true);
+    
+    
+                //hides all tab panels
+                tabPanels.forEach((e) => {
+                    e.setAttribute('hidden', true);
+                })
+    
+                //show review tab
+                reviewPanel.removeAttribute('hidden');
+            })
+        }
+
 
 
         function addReview(){
