@@ -1241,3 +1241,7 @@ a.product__text {
   padding-top: 5px;
   margin-left: 5px;
 }
+
+#main-product__rating-average{
+  cursor: pointer;
+}

@@ -15,7 +15,7 @@
     }
   }
 {%- endstyle -%}
-<div class="product-review page-width isolate tabs">
+<div class="product-review page-width isolate tabs" id="product-review">
   {% assign current_variant = product.selected_or_first_available_variant %}
   <div role="tablist" aria-label="Product reviews and details tabs" class="product-review__tabs-list {% if section.settings.block_background == "grey" %}-grey{% endif %}">
     <button role="tab" aria-selected="true" aria-controls="panel-1" id="tab-1" tabindex="0">Details</button>

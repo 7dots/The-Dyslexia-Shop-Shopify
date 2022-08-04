@@ -9,6 +9,8 @@ const getEkomiProductReviews = () => {
     const reviewsHolder = document.getElementById('ekomi-product-reviews');
     const mainProductRating = document.getElementById('main-product__rating')
     const productSKU = reviewsHolder.getAttribute('data-sku');
+    const mainProductAverage = document.getElementById('main-product__rating-average')
+    
     const baseCredentials = {
         // Use app proxy to avoid cors issues
         ekomiApi:'http://api.allorigins.win/get?url=http://api.ekomi.de/get_productfeedback.php',
@@ -109,7 +111,6 @@ const getEkomiProductReviews = () => {
             const average = calculateAggregateReviewAverage()
        
             const mainProductStar = document.getElementById('main-product__rating-foreground')
-            const mainProductAverage = document.getElementById('main-product__rating-average')
 
             // error handling 
             if (mainProductRating == null){
@@ -130,6 +131,50 @@ const getEkomiProductReviews = () => {
             //add star width [gap between stars] + amount of stars filled
             starWidth = (Math.floor(average)*4) + (average/5)* 70 +"px";
             mainProductStar.style.width = starWidth;
+
+            aggregateReviewClickScroll()
+        }
+
+        function aggregateReviewClickScroll(){
+            mainProductAverage.addEventListener('click', function (){
+                scrollToReview()
+                switchTabToReview()
+            })
+        }
+
+        function scrollToReview(){
+            const reviewSection = document.getElementById('product-review');
+            //scrolls into view
+            const yOffset = -180;
+            const productReviewYOffset = reviewSection.getBoundingClientRect().top + window.pageYOffset + yOffset;
+            window.scrollTo({top: productReviewYOffset , behavior: 'smooth'})
+        }
+
+        function switchTabToReview(){
+            const reviewSection = document.getElementById('product-review');
+            const tabList = document.querySelector('[role="tablist"]');
+            const tabs = document.querySelectorAll('[role="tab"]');
+            const reviewTab = document.getElementById('tab-2');
+
+            const tabPanels = document.querySelectorAll('[role="tabpanel"]')
+            const reviewPanel = document.getElementById('panel-2')
+
+            //aria selected tabs for all tabs
+            tabs.forEach((e) => {
+                e.setAttribute('aria-selected', false);
+            });
+
+            //aria-selected true for review tab
+            reviewTab.setAttribute('aria-selected', true);
+
+
+            //hides all tab panels
+            tabPanels.forEach((e) => {
+                e.setAttribute('hidden', true);
+            })
+
+            //show review tab
+            reviewPanel.removeAttribute('hidden');
         }
 
 
