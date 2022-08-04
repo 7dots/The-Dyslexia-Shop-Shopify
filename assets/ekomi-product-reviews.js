@@ -4,13 +4,10 @@
  * @author Jon Warde 7dots.co.uk
  * @type {{redirect: string, method: string}}
  */
-const getEkomiProductReviews = () => {
+ const getEkomiProductReviews = () => {
 
     const reviewsHolder = document.getElementById('ekomi-product-reviews');
-    const mainProductRating = document.getElementById('main-product__rating')
     const productSKU = reviewsHolder.getAttribute('data-sku');
-    const mainProductAverage = document.getElementById('main-product__rating-average')
-    
     const baseCredentials = {
         // Use app proxy to avoid cors issues
         ekomiApi:'http://api.allorigins.win/get?url=http://api.ekomi.de/get_productfeedback.php',
@@ -44,85 +41,62 @@ const getEkomiProductReviews = () => {
         return document.querySelector('.product-review__tabs-list').classList.add('-show-tabs');
     }
 
-    const populateResults = (result) => {
+    const getArrayFromResults = (result) => {
         let hasReviews = productHasReviews(result);
+        // Results come back as a single string - not json (not ideal) ... which needs to be split into a managable array.
+        // String has comma seperated [timestamp, product code, sku code, text review]
         let productCodes = /[0-9]+[,][0-9]+[,][A-Za-z0-9-]+[,]/g;
+        const resultAsArr = result.split(productCodes);
+
+        // DEAL WITH DATES
         const resultDatesAsArr = result.match(productCodes);
+        //console.log('DATES ', resultDatesAsArr);
+        const resultDatesTrimmed = resultDatesAsArr.map((el) => {
+            let date = /[,][0-9]+[,][A-Za-z0-9-]+[,]/g;
+            return el.split(date);
+        })
+        const resultDatesFormatted = (el) => {
+            //console.log('RESULT FORMATTED ', el);
+            var options = { year: 'numeric', month: 'long', day: 'numeric' };
+            return new Date(el * 1000).toLocaleString("en-GB", options);
+        }
+
         // save up out markup to spit on the page
         var reviewsMarkup = '<ul>';
-
-
-        function getResultsArray(){
-            // Results come back as a single string - not json (not ideal) ... which needs to be split into a managable array.
-            // String has comma seperated [timestamp, product code, sku code, text review]
-            const resultAsArr = result.split(productCodes);
-            return resultAsArr
-        }
-
-
-        //still a lengthy function requires further refactoring
-        function populateReviewMarkup (resultAsArr = getResultsArray()){
-
-            //trimmed results
-            const resultDatesTrimmed = resultDatesAsArr.map((el) => {
-                let date = /[,][0-9]+[,][A-Za-z0-9-]+[,]/g;
-                return el.split(date);
-            })
-
-            //formatted results 
-            const resultDatesFormatted = (el) => {
-                //console.log('RESULT FORMATTED ', el);
-                var options = { year: 'numeric', month: 'long', day: 'numeric' };
-                return new Date(el * 1000).toLocaleString("en-GB", options);
-            }
-
-            resultAsArr.forEach((r, i) => {
-                // split rating from review
-                let _rating = r.split(',');
-                let review = santitiseString(_rating[1]);
-                if(_rating[0] != '' && _rating[1] != '') {
-                    let reviewDate = resultDatesFormatted(resultDatesTrimmed[i]?.[0]) != 'Invalid Date' ? resultDatesFormatted(resultDatesTrimmed[i]?.[0]) : '';
-                    let customerReview = `<li><span class="ekomi-review__stars stars-sm stars-sm-${_rating[0]}"></span><em>${reviewDate}</em><div><span>${review}</span></div></li>`;
-                    if(i != 0){
-                        reviewsMarkup += customerReview;
-                    }
+        resultAsArr.forEach((r, i) => {
+            // split rating from review
+            let _rating = r.split(',');
+            let review = santitiseString(_rating[1]);
+            if(_rating[0] != '' && _rating[1] != '') {
+                let reviewDate = resultDatesFormatted(resultDatesTrimmed[i]?.[0]) != 'Invalid Date' ? resultDatesFormatted(resultDatesTrimmed[i]?.[0]) : '';
+                let customerReview = `<li><span class="ekomi-review__stars stars-sm stars-sm-${_rating[0]}"></span><em>${reviewDate}</em><div><span>${review}</span></div></li>`;
+                if(i != 0){
+                    reviewsMarkup += customerReview;
                 }
-            })
-
-            return reviewsMarkup;
-        }
-
+            }
+        })
         if(hasReviews){
-            getResultsArray()
-            populateReviewMarkup()
-            displayTabs()
             addReview()
+            displayTabs()
             populateAggregateReview()
-        } else {
-            hideProductRating()
         }
 
-        function hideProductRating(){
-            //add hidden
-            mainProductRating.classList.add('main-product__rating-hidden')
-        }
         
         function populateAggregateReview(){
             const average = calculateAggregateReviewAverage()
-       
+            const mainProductRating = document.getElementById('main-product__rating')
             const mainProductStar = document.getElementById('main-product__rating-foreground')
-
-            // error handling 
-            if (mainProductRating == null){
-                hideProductRating()
-                return
-            }
+            const mainProductAverage = document.getElementById('main-product__rating-average')
 
             //average 2 rounded d.p
             const roundedAverageDecimal = Math.round((average + Number.EPSILON) * 100) / 100
             
             //round to nearest .5
             const roundedAverageHalf = Math.round(average/5)*5
+
+
+            //remove hidden
+            mainProductRating.classList.remove('main-product__rating-hidden')
 
             //Add
             // mainProductStar.classList.add(`stars-sm-${roundedAverageHalf}`)
@@ -131,46 +105,11 @@ const getEkomiProductReviews = () => {
             //add star width [gap between stars] + amount of stars filled
             starWidth = (Math.floor(average)*4) + (average/5)* 70 +"px";
             mainProductStar.style.width = starWidth;
-
-            aggregateReviewClickScroll()
-        }
-
-        function aggregateReviewClickScroll(){
-            mainProductAverage.addEventListener('click', function (){
-                switchTabToReview()
-            })
-        }
-
-        function switchTabToReview(){
-            const reviewSection = document.getElementById('product-review');
-            const tabList = document.querySelector('[role="tablist"]');
-            const tabs = document.querySelectorAll('[role="tab"]');
-            const reviewTab = document.getElementById('tab-2');
-
-            const tabPanels = document.querySelectorAll('[role="tabpanel"]')
-            const reviewPanel = document.getElementById('panel-2')
-
-            //aria selected tabs for all tabs
-            tabs.forEach((e) => {
-                e.setAttribute('aria-selected', false);
-            });
-
-            //aria-selected true for review tab
-            reviewTab.setAttribute('aria-selected', true);
-
-
-            //hides all tab panels
-            tabPanels.forEach((e) => {
-                e.setAttribute('hidden', true);
-            })
-
-            //show review tab
-            reviewPanel.removeAttribute('hidden');
         }
 
 
         //gets average of reviews
-        function calculateAggregateReviewAverage(data = getResultsArray()){
+        function calculateAggregateReviewAverage(data = resultAsArr){
             let ratings = []
             data.forEach((r, i)=> {
                 let _rating = r.split(',')
@@ -200,7 +139,7 @@ const getEkomiProductReviews = () => {
 
         fetch(`https://api.allorigins.win/get?url=${encodeURIComponent('http://api.ekomi.de/get_productfeedback.php?interface_id='+baseCredentials.apiid+'&interface_pw='+baseCredentials.apiPass+'&type=csv&product=' + productSKU)}`)
         .then(response => response.text())
-        .then(result => populateResults(result))
+        .then(result => getArrayFromResults(result))
         .catch(error => console.log('error', error));
 
 }
