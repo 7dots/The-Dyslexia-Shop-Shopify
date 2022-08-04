@@ -42,7 +42,13 @@
     }
 
     const getArrayFromResults = (result) => {
+
         let hasReviews = productHasReviews(result);
+
+        if(!hasReviews){
+            return
+        }
+
         // Results come back as a single string - not json (not ideal) ... which needs to be split into a managable array.
         // String has comma seperated [timestamp, product code, sku code, text review]
         let productCodes = /[0-9]+[,][0-9]+[,][A-Za-z0-9-]+[,]/g;
@@ -75,15 +81,16 @@
                 }
             }
         })
+
         if(hasReviews){
             addReview()
             displayTabs()
-            populateAggregateReview()
+            populateAggregateReview(resultAsArr)
         }
 
         
-        function populateAggregateReview(){
-            const average = calculateAggregateReviewAverage()
+        function populateAggregateReview(resultArray){
+            const average = calculateAggregateReviewAverage(resultArray)
             const mainProductRating = document.getElementById('main-product__rating')
             const mainProductStar = document.getElementById('main-product__rating-foreground')
             const mainProductAverage = document.getElementById('main-product__rating-average')
@@ -109,7 +116,7 @@
 
 
         //gets average of reviews
-        function calculateAggregateReviewAverage(data = resultAsArr){
+        function calculateAggregateReviewAverage(data){
             let ratings = []
             data.forEach((r, i)=> {
                 let _rating = r.split(',')
