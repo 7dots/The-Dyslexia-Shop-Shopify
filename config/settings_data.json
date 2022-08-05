@@ -87,6 +87,8 @@
     "currency_code_enabled": true,
     "cart_type": "notification",
     "checkout_logo_image": "shopify:\/\/shop_images\/logo.jpg",
+    "checkout_accent_color": "#333333",
+    "checkout_button_color": "#008a07",
     "colors_solid_button_labels": "#ffffff",
     "colors_accent_1": "#121212",
     "gradient_accent_1": "",
