@@ -476,12 +476,12 @@
 
             <script src="{{ 'pickup-availability.js' | asset_url }}" defer="defer"></script>
           {%- when 'rating' -%}
-              <div id='main-product__rating' class="main-product__rating-hidden">
+              <a id='main-product__rating' class="main-product__rating-hidden" href="#tab-2">
                 <span id='main-product__rating-background' class="ekomi-review__stars stars-sm-background">
                   <span id='main-product__rating-foreground' class="stars-sm-full"></span>
                 </span>  
-                <a id='main-product__rating-average' href="#tab-2"></a>
-              </div>
+                <span id='main-product__rating-average'></span>
+              </a>
           {%- endcase -%}
         {%- endfor -%}
         <a href="{{ product.url }}" class="link product__view-details animate-arrow">

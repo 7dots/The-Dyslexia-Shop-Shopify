@@ -1221,6 +1221,8 @@ a.product__text {
   flex-direction: row;
   justify-items: center;
   align-items: center;
+  text-decoration: none;
+  color: var(--color-black);
 }
 
 .main-product__rating-hidden{

@@ -132,7 +132,7 @@
         }
 
         function addReviewClickScroll(){
-            const mainProductAverage = document.getElementById('main-product__rating-average')
+            const mainProductAverage = document.getElementById('main-product__rating')
             
             mainProductAverage.addEventListener('click', function switchTabToReview () {
                 const reviewSection = document.getElementById('product-review');
