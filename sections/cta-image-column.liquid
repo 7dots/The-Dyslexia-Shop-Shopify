@@ -54,7 +54,7 @@ endif
           {%- endif -%}
 
           <li id="Slide-{{ section.id }}-{{ forloop.index }}" class="cta-img-list__item grid__item{% if section.settings.swipe_on_mobile %} slider__slide{% endif %} center {{ empty_column }}" {{ block.shopify_attributes }}>            
-            <div class="cta-img-card {% if block.settings.image != blank %}-box-shadow {% endif %} content-container">
+            <a class="cta-img-card {% if block.settings.image != blank %}-box-shadow {% endif %} content-container" href="{{block.settings.link}}">
               {%- if block.settings.image != blank -%}
                 <div class="cta-img-card__image-wrapper cta-img-card-spacing">
                   <div class="media media--transparent" style="padding-bottom: {{ 1 | divided_by: highest_ratio | times: 100 }}%;">
@@ -78,13 +78,13 @@ endif
                 </div>
               {%- endif -%}
               {%- if block.settings.header_title != blank -%}
-              <div class="cta-img-card__info">
-                  <p class="h2 cta-img-card__info-header">{{ block.settings.header_title | escape }}</p>
-                {%- if block.settings.header_caption != blank -%}
-                  <div class="cta-img-card__info-caption">{{ block.settings.header_caption}}</div>
-                {%- endif -%}
-              </div>
-            {%- endif -%}
+                <div class="cta-img-card__info">
+                    <p class="h2 cta-img-card__info-header">{{ block.settings.header_title | escape }}</p>
+                  {%- if block.settings.header_caption != blank -%}
+                    <div class="cta-img-card__info-caption">{{ block.settings.header_caption}}</div>
+                  {%- endif -%}
+                </div>
+              {%- endif -%}
               <div class="cta-img-card__button button button--primary">
                   {%- if block.settings.title != blank -%}
                     <p class="multi-column__font-weight-bold h2">{{ block.settings.title | escape }}</p>
@@ -96,7 +96,7 @@ endif
                     <a class="animate-arrow" {% if block.settings.link == blank %}role="link" aria-disabled="true"{% else %}href="{{ block.settings.link }}"{% endif %}>{{ block.settings.link_label | escape }}</a>
                   {%- endif -%}
               </div>
-            </div>
+            </a>
           </li>
         {%- endfor -%}
       </ul>

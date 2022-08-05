@@ -103,6 +103,9 @@
   }
 }
 
+.cta-img-list__item{
+  position: relative;
+}
 
 @media screen and (min-width: 750px) {
   .cta-img-list.slider,
