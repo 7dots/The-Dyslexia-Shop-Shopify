@@ -3175,3 +3175,7 @@ details-disclosure > details {
 .stars-sm-5 {
   background-position: 0 -180px;
 }
+
+.login-form__link{
+  display: inline;
+}

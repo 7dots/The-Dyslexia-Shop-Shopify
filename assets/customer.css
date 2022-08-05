@@ -656,6 +656,10 @@
   font-size: 1.3rem;
 }
 
+#login-form__link{
+  display: inline;
+}
+
 /* Addresses */
 .addresses li > button {
   margin-left: 0.5rem;
