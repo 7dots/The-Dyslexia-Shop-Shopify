@@ -55,7 +55,6 @@
   <h1 id="login" tabindex="-1">
     {{ 'customer.login_page.title' | t }}
   </h1>
-  <p>We have launched a new website! If you're an existing user please <a id="login-form__link" href="https://thedyslexiashop.myshopify.com/account/login#recover"><b>click here</b></a> to reset your password.</p>
   <div>
     {%- if recover_success == true -%}
       <h3 class="form__message" tabindex="-1" autofocus>
@@ -68,6 +67,7 @@
       </h3>
     {%- endif -%}
     {%- form 'customer_login', novalidate: 'novalidate' -%}
+      <p>We have launched a new website! If you're an existing user please <a id="login-form__link" href="#recover" ><b>click here</b></a> to reset your password.</p>
       {%- if form.errors -%}
         <h2 class="form__message" tabindex="-1" autofocus>
           <span class="visually-hidden">{{ 'accessibility.error' | t }} </span>
