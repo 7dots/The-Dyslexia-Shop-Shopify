@@ -1,11 +1,13 @@
   
-      <div class="announcement-bar" role="region" aria-label="{{ 'sections.header.announcement' | t }}" {{ block.shopify_attributes }}>
-        <div class="announcement-bar__wrapper page-width">
-          {%- for block in section.blocks -%}
-            <div>{{- block.settings.text -}}</div>
-          {%- endfor -%}  
-        </div>
-      </div>
+{{ 'announcement-bar.css' | asset_url | stylesheet_tag }}
+
+<div class="announcement-bar" role="region" aria-label="{{ 'sections.header.announcement' | t }}" {{ block.shopify_attributes }}>
+  <div class="announcement-bar__wrapper page-width">
+    {%- for block in section.blocks -%}
+      <a class="announcement-bar__link" href="{{block.settings.link}}">{{- block.settings.text -}}</a>
+    {%- endfor -%}  
+  </div>
+</div>
 
 {% schema %}
 {
@@ -21,6 +23,11 @@
           "id": "text",
           "default": "<p>Welcome to our store</p>",
           "label": "t:sections.announcement-bar.blocks.announcement.settings.text.label"
+        },
+        {
+          "type": "url",
+          "id": "link",
+          "label": "Link"
         }
       ]
     }

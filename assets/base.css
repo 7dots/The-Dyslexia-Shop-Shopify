@@ -2352,6 +2352,11 @@ input[type='checkbox'] {
   background-color: var(--color-light-grey);
 }
 
+.announcement-bar__link{
+  text-decoration: none;
+  color: var(--color-black);
+}
+
 .announcement-bar__wrapper{
   display: flex;
   flex-direction: row;
