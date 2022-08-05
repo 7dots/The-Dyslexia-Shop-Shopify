@@ -107,7 +107,7 @@
             "type": "announcement",
             "settings": {
               "text": "<p><strong>Free Shipping <\/strong>Over £100 to UK<\/p>",
-              "link": ""
+              "link": "shopify:\/\/pages\/return-information"
             }
           },
           "3e976f9b-1d85-4d63-82d5-93b3b22e9404": {
