@@ -33,7 +33,11 @@
             ___review = __review.replace('\\"', '');
             let ____review;
             ____review = ___review.replace('"', '');
-            return ____review;
+            let _____review;
+            _____review = ____review.replace(/(\r\n|\\n|\r)/gm, "");
+            let ______review;
+            ______review= _____review.replaceAll('\\' , " ");
+            return ______review;
         }
     }
 
