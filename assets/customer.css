@@ -662,7 +662,7 @@
   position: absolute;
   left: 0;
   width: 100%;
-  height: 1.5em; /* don't forget to set the height! */
+  height: 40px; /* don't forget to set the height! */
 }
 
 #login-form__link{
