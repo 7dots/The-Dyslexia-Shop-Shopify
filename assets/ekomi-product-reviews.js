@@ -76,7 +76,6 @@
 
         // save up out markup to spit on the page
         var reviewsMarkup = '<ul>';
-        
 
         resultAsArr.forEach((r, i) => {
             
