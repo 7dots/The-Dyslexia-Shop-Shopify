@@ -78,7 +78,7 @@
             let _rating = r.split(',');
             let review = santitiseString(_rating[1]);
             if(_rating[0] != '' && _rating[1] != '') {
-                let reviewDate = resultDatesFormatted(resultDatesTrimmed[i]?.[0]) != 'Invalid Date' ? resultDatesFormatted(resultDatesTrimmed[i]?.[0]) : '';
+                let reviewDate = resultDatesFormatted(resultDatesTrimmed[i - 1 ]?.[0]) != 'Invalid Date' ? resultDatesFormatted(resultDatesTrimmed[i - 1]?.[0]) : '';
                 let customerReview = `<li><span class="ekomi-review__stars stars-sm stars-sm-${_rating[0]}"></span><em>${reviewDate}</em><div><span>${review}</span></div></li>`;
                 if(i != 0){
                     reviewsMarkup += customerReview;
