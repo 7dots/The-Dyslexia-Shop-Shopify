@@ -665,6 +665,12 @@
   height: 40px; /* don't forget to set the height! */
 }
 
+@media screen and (max-width: 749px){
+  .order-row__link:before{
+    height: 180px;
+  }
+}
+
 #login-form__link{
   display: inline;
 }
