@@ -23,28 +23,21 @@
   {%- endstyle -%}
 {%- endif -%}
 
-
 <div class="image__banner-wrapper {% if section.settings.banner_contained == true %}page-width-desktop{% endif%} {% if section.settings.set_padding == true %}-padding{% endif%}">
-  <div id="Banner-{{ section.id }}" class="banner banner--{{ section.settings.image_height }}{% if section.settings.image != blank %} banner--adapt{% endif %}{% if section.settings.show_text_below %} banner--mobile-bottom{%- endif -%}{% if section.settings.show_text_box == false %} banner--desktop-transparent{% endif %}">
+  <a {% if section.settings.link %}href="{{section.settings.link}}"{% endif %} id="Banner-{{ section.id }}" class="banner banner--{{ section.settings.image_height }}{% if section.settings.image != blank %} banner--adapt{% endif %}{% if section.settings.show_text_below %} banner--mobile-bottom{%- endif -%}{% if section.settings.show_text_box == false %} banner--desktop-transparent{% endif %}">
     <div class="banner__media -desktop media{% if section.settings.image == blank %} placeholder{% endif %}">
       {{ section.settings.image | image_url: width: 1500 | image_tag:
         loading: 'lazy',
         width: section.settings.image.width,
-        height: image_height,
-        class: image_class,
-        sizes: sizes,
         widths: '750, 1100, 1500, 1780, 2000, 3000, 3840',
         alt: section.settings.image.alt | escape
       }}
     </div>
-   <div class="banner__media -mobile media{% if section.settings.image_mobile == blank and section.settings.image_desktop == blank %} placeholder{% endif %}">
+    <div class="banner__media -mobile media{% if section.settings.image_mobile == blank and section.settings.image_desktop == blank %} placeholder{% endif %}">
       {%- if section.settings.image_mobile -%}
       {{ section.settings.image_mobile | image_url: width: 750 | image_tag:
         loading: 'lazy',
         width: section.settings.image_mobile.width,
-        height: image_height,
-        class: image_class,
-        sizes: sizes,
         widths: '320, 350, 420, 600, 749',
         alt: section.settings.image_mobile.alt | escape
       }}
@@ -52,19 +45,16 @@
         {{ section.settings.image | image_url: width: 1500 | image_tag:
           loading: 'lazy',
           width: section.settings.image.width,
-          height: image_height,
-          class: image_class,
-          sizes: sizes,
           widths: '750, 1100, 1500, 1780, 2000, 3000, 3840',
           alt: section.settings.image.alt | escape
         }}
       {% endif %}
     </div>
-  {% if section.settings.image_mobile == blank %}
-    <div class="banner__media media placeholder">
-      {{ 'lifestyle-2' | placeholder_svg_tag: 'placeholder-svg' }}
-    </div>
-  {% endif %}
+    {% if section.settings.image_mobile == blank %}
+      <div class="banner__media media placeholder">
+        {{ 'lifestyle-2' | placeholder_svg_tag: 'placeholder-svg' }}
+      </div>
+    {% endif %}
     <div class="banner__content page-width">
       <div class="banner__box content-container content-container--full-width-mobile color-{{ section.settings.color_scheme }} gradient">
         {%- for block in section.blocks -%}
@@ -90,6 +80,7 @@
         {%- endfor -%}
       </div>
     </div>
+  </a>
 </div>
 
 {% schema %}
@@ -129,6 +120,15 @@
       "default": true,
       "label": "Set padding",
       "info": "Sets section padding of 35px on top and bottom"
+    },
+    {
+      "type": "header",
+      "content": "Link"
+    },
+    {
+      "type": "url",
+      "id": "link",
+      "label": "Link"
     },
     {
       "type": "header",
