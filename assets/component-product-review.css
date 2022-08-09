@@ -96,6 +96,7 @@
 
 .product-review__tabs-list button{
     display: none;
+    font-size: 16px;
 }
 
 .product-review__tabs-list.-show-tabs button{

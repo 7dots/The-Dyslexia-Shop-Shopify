@@ -3179,3 +3179,7 @@ details-disclosure > details {
 .login-form__link{
   display: inline;
 }
+
+button{
+  font-family:  Assistant, sans-serif
+}

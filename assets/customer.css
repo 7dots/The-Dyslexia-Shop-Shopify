@@ -656,6 +656,21 @@
   font-size: 1.3rem;
 }
 
+.order-row__link:before{
+  content: "";
+  display: block;
+  position: absolute;
+  left: 0;
+  width: 100%;
+  height: 40px; /* don't forget to set the height! */
+}
+
+@media screen and (max-width: 749px){
+  .order-row__link:before{
+    height: 180px;
+  }
+}
+
 #login-form__link{
   display: inline;
 }

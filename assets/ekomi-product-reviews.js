@@ -56,10 +56,13 @@
         // Results come back as a single string - not json (not ideal) ... which needs to be split into a managable array.
         // String has comma seperated [timestamp, product code, sku code, text review]
         let productCodes = /[0-9]+[,][0-9]+[,][A-Za-z0-9-]+[,]/g;
-        const resultAsArr = result.split(productCodes);
+        const resultAsArr = result.split(productCodes).reverse();
+
+        //Last item is not a review, and array is then shifted because later it is checked from index 1 
+        resultAsArr.pop()
 
         // DEAL WITH DATES
-        const resultDatesAsArr = result.match(productCodes);
+        const resultDatesAsArr = result.match(productCodes).reverse();
         //console.log('DATES ', resultDatesAsArr);
         const resultDatesTrimmed = resultDatesAsArr.map((el) => {
             let date = /[,][0-9]+[,][A-Za-z0-9-]+[,]/g;
@@ -73,16 +76,16 @@
 
         // save up out markup to spit on the page
         var reviewsMarkup = '<ul>';
+
         resultAsArr.forEach((r, i) => {
+            
             // split rating from review
             let _rating = r.split(',');
             let review = santitiseString(_rating[1]);
             if(_rating[0] != '' && _rating[1] != '') {
-                let reviewDate = resultDatesFormatted(resultDatesTrimmed[i - 1 ]?.[0]) != 'Invalid Date' ? resultDatesFormatted(resultDatesTrimmed[i - 1]?.[0]) : '';
+                let reviewDate = resultDatesFormatted(resultDatesTrimmed[i]?.[0]) != 'Invalid Date' ? resultDatesFormatted(resultDatesTrimmed[i]?.[0]) : '';
                 let customerReview = `<li><span class="ekomi-review__stars stars-sm stars-sm-${_rating[0]}"></span><em>${reviewDate}</em><div><span>${review}</span></div></li>`;
-                if(i != 0){
-                    reviewsMarkup += customerReview;
-                }
+                reviewsMarkup += customerReview;
             }
         })
 
@@ -128,8 +131,8 @@
                 //array has to be integer not an string.... Javascript
                 ratings.push(Number(_rating[0]))
             }) 
-            //first item in an array is NAN
-            ratings.shift()
+            //last item in array is nan
+            ratings.pop()
             //calculate average 
             const averageRatings = ratings.reduce((a,b) => (a+b)) / ratings.length
             return averageRatings
