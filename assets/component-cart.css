@@ -89,7 +89,8 @@ cart-items {
   height: fit-content;
 }
 
-.cart__note label {
+.cart__note label,
+.cart__po-number label {
   display: flex;
   align-items: flex-end;
   position: absolute;
@@ -99,7 +100,8 @@ cart-items {
   color: rgba(var(--color-foreground), 0.75);
 }
 
-.cart__note .field__input {
+.cart__note .field__input,
+.cart__po-number .field__input {
   height: 100%;
   position: relative;
   border-radius: var(--inputs-radius);
@@ -111,9 +113,13 @@ cart-items {
 }
 
 .cart__note:after, .cart__note:hover.cart__note:after,
+.cart__po-number:after, .cart__po-number:hover.cart__po-number:after,
 .cart__note:before, .cart__note:hover.cart__note:before,
+.cart__po-number:before, .cart__po-number:hover.cart__po-number:before,
 .cart__note .field__input:focus,
-.cart__note .field__input {
+.cart__po-number .field__input:focus,
+.cart__note .field__input,
+.cart__po-number .field__input {
   border-bottom-right-radius: 0;
 }
 
@@ -135,6 +141,7 @@ cart-items {
   .cart__footer {
     display: flex;
     justify-content: space-between;
+    align-items: flex-start;
     border: 0;
   }
 
@@ -201,6 +208,15 @@ cart-items {
 
 .cart__ctas {
   text-align: center;
+}
+
+.cart__po-number {
+  flex-wrap: wrap;
+}
+
+.cart__po-number .field__input {
+  height: auto;
+  min-height: auto;
 }
 
 @media screen and (min-width: 750px) {

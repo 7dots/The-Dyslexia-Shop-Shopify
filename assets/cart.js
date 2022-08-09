@@ -167,3 +167,16 @@ if (!customElements.get('cart-note')) {
     }
   });
 };
+
+if (!customElements.get('cart-po-number')) {
+  customElements.define('cart-po-number', class CarPoNumber extends HTMLElement {
+    constructor() {
+      super();
+
+      this.addEventListener('change', debounce((event) => {
+        const body = JSON.stringify({ attributes: { "Purchase Order Number": event.target.value } });
+        fetch(`${routes.cart_update_url}`, {...fetchConfig(), ...{ body }});
+      }, 300))
+    }
+  });
+};

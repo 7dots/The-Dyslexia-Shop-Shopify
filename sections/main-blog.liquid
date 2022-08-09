@@ -65,7 +65,7 @@
             {%- for article in blog.articles -%}
               {%- if article.metafields.custom.featured_article == null -%}
               <div class="blog-articles__article article">
-                {{article.metafields.custom.featured_article}}
+                {{ article.metafields.custom.featured_article }}
                 {%- render 'article-card',
                   article: article,
                   media_height: section.settings.image_height,
