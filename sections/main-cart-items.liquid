@@ -122,7 +122,7 @@
                               </div>
                             {%- endfor -%}
                           {%- endif -%}
-<div class='hulkapps-reminder' data-key='{{item.key}}'></div>
+                          <div class='hulkapps-reminder' data-key='{{ item.key }}'></div>
 
                         {%- for property in item.properties -%}
                           {%- assign property_first_char = property.first | slice: 0 -%}
