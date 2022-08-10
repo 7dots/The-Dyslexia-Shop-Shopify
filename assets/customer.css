@@ -117,6 +117,7 @@
 }
 
 .customer thead tr {
+  -webkit-appearance: none;
   -webkit-box-shadow: 0px 2px 0px 0px var(--color-light-grey); 
   box-shadow: 0px 2px 0px 0px var(--color-light-grey);
 }
