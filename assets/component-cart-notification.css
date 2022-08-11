@@ -193,3 +193,8 @@ body.cart-notification-active:before {
 .cart-notification__related-products .clerk-slider-item {
   min-width: calc(50% - 5px);
 }
+
+.cart-notifications__po-number {
+  width: 100%;
+  margin: 0;
+}

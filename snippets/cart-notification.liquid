@@ -20,6 +20,9 @@
         </div>
         <div id="cart-notification-product" class="cart-notification-product"></div>
         <div class="cart-notification__links">
+          {% if settings.cart_drawer_po_number_description %}
+            <h5 class="cart-notifications__po-number">{{ settings.cart_drawer_po_number_description }}</h4>
+          {% endif %}
           <a href="{{ routes.cart_url }}" id="cart-notification-button" class="button button--secondary button--full-width"></a>
           <form action="{{ routes.cart_url }}" method="post" id="cart-notification-form">
             <button class="button button--primary button--full-width" name="checkout">{{ 'sections.cart.checkout' | t }}</button>

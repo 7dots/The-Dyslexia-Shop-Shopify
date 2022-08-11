@@ -1099,6 +1099,11 @@
         "id": "cart_drawer_collection",
         "label": "t:settings_schema.cart.settings.cart_drawer.collection.label",
         "info": "t:settings_schema.cart.settings.cart_drawer.collection.info"
+      },
+      {
+        "type": "text",
+        "id": "cart_drawer_po_number_description",
+        "label": "PO Number Description"
       }
     ]
   }
