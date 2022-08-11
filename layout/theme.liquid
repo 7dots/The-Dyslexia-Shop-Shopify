@@ -233,7 +233,8 @@
         formatters: {
           currency_converter: function(price) {
             var converted_price = (price*Shopify.currency.rate);
-            return (converted_price).toString();
+            var converted_price_rounded = Math.round((converted_price + Number.EPSILON) * 100) / 100
+            return (converted_price_rounded).toString();
           }
         },
         globals: {
