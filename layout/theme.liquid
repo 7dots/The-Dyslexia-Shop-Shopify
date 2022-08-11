@@ -24,7 +24,7 @@
     </title>
 
     {% if page_description %}
-      <meta name="description" content="{{ page_description | escape }}">
+      <meta name="description" content="{{ page_description | escape | truncate: 160, "" }}">
     {% endif %}
 
     {% render 'meta-tags' %}
