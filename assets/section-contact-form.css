@@ -24,6 +24,15 @@
   margin-top: 3rem;
 }
 
+.contact__button button{
+  border: none;
+}
+
+.contact__button button:hover{
+  -webkit-box-shadow: 0px 0px 0px 1px var(--color-primary); 
+  box-shadow: 0px 0px 0px 1px var(--color-primary);  
+}
+
 @media screen and (min-width: 750px) {
   .contact__button {
     margin-top: 4rem;
