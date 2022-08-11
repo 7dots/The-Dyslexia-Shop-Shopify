@@ -234,7 +234,7 @@
           currency_converter: function(price) {
             var converted_price = (price*Shopify.currency.rate);
             var converted_price_rounded = Math.round((converted_price + Number.EPSILON) * 100) / 100
-            return (converted_price_rounded).toString();
+            return (converted_price_rounded).toLocaleString('en-US', { minimumFractionDigits: 2 });
           }
         },
         globals: {
