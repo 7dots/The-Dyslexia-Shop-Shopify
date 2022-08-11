@@ -2936,6 +2936,7 @@ details-disclosure > details {
   border-color: rgba(var(--color-badge-border), var(--alpha-badge-border));
   color: var(--color-white);
   word-break: break-word;
+  border: none;
 }
 
 .gradient {
