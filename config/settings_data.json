@@ -85,7 +85,7 @@
     "predictive_search_show_price": false,
     "favicon": "shopify:\/\/shop_images\/TDS_favicon.png",
     "currency_code_enabled": true,
-    "cart_type": "notification",
+    "cart_type": "drawer",
     "cart_drawer_po_number_description": "If paying by PO please view your basket to input number.",
     "checkout_logo_image": "shopify:\/\/shop_images\/logo.jpg",
     "checkout_accent_color": "#333333",
