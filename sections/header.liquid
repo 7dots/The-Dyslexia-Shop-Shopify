@@ -57,6 +57,12 @@
     flex-wrap: wrap;
   }
 
+  .list-menu--inline li > a:focus-visible{
+    -webkit-box-shadow: 0px 0px 0px 3px var(--color-black); 
+    box-shadow: 0px 0px 0px 3px var(--color-black);
+  }
+
+
   summary.list-menu__item {
     padding-right: 2.7rem;
   }
@@ -525,7 +531,7 @@
                   <header-menu>
                     <details id="Details-HeaderMenu-{{ forloop.index }}">
                       <summary class="header__menu-item list-menu__item link focus-inset">
-                        <span tabindex="0" class="header__menu-item-link{%- if link.child_active %} header__active-menu-item{% endif %}">{{ link.title | escape }}</span>
+                        <span tabindex="-1" class="header__menu-item-link{%- if link.child_active %} header__active-menu-item{% endif %}">{{ link.title | escape }}</span>
                         {% render 'icon-caret-white' %}
                       </summary>
                       <ul id="HeaderMenu-MenuList-{{ forloop.index }}" class="header__submenu list-menu list-menu--disclosure gradient caption-large motion-reduce global-settings-popup" role="list" tabindex="-1">
