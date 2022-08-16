@@ -161,11 +161,11 @@
     border-top: 1px solid var(--color-light-grey);
     border-left: 1px solid var(--color-light-grey);
     border-right: 1px solid var(--color-light-grey);
-    font-weight: bold;
 }
 
 .product-review__tabs-list > button[aria-selected="true"]{
     border-top: 1px solid var(--color-light-grey);
     border-left: 1px solid var(--color-light-grey);
     border-right: 1px solid var(--color-light-grey);
+    font-weight: bold;
 }
