@@ -93,6 +93,7 @@
             addReview()
             displayTabs()
             populateAggregateReview(resultAsArr)
+            addAggregateToStructuredData(resultAsArr)
         }
         
         function populateAggregateReview(resultArray){
@@ -181,6 +182,21 @@
                 reviewsMarkup += customerReview;
                 reviewsHolder.innerHTML = reviewsMarkup + '</ul>';
             }
+        }
+
+        //appending structured data
+        function addAggregateToStructuredData(resultArray){
+            const average = calculateAggregateReviewAverage(resultArray)
+            const structuredData = document.getElementById('main-product_structured-data')
+            const structuredDataContent = JSON.parse(structuredData.textContent);
+
+            structuredDataContent['aggregateRating'] = {
+                 "type": "AggregateRating",
+                 "ratingValue": average,
+                 "ratingCount": 12   
+            }
+
+            console.log(structuredDataContent)
         }
     }
 
