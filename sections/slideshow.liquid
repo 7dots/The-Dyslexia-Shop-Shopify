@@ -105,7 +105,7 @@
               sizes="100vw"
               src="{{ block.settings.image | image_url: width: 1500 }}"
               loading="lazy"
-              alt="{{ block.settings.image.alt | escape }}"
+              alt="{{ block.settings.image.alt | truncate: 100 }}"
               width="{{ block.settings.image.width }}"
               height="{{ block.settings.image.width | divided_by: block.settings.image.aspect_ratio | round }}"
             >
