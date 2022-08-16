@@ -108,7 +108,7 @@
       {% unless lazy_load == false %}loading="lazy"{% endunless %}
       width="973"
       height="{{ 973 | divided_by: media.preview_image.aspect_ratio | ceil }}"
-      alt="{% if media.preview_image.alt == null %}{{ media.preview_image.alt | escape }}{% else %}{{title}} image-{{position}}{% endif %}"
+      alt="{% if media.preview_image.alt == null %}{{ media.preview_image.alt | truncate: 100 }}{% else %}{{title | truncate: 100}}{% endif %}"
       class="product__media-img"
     >
   </div>
