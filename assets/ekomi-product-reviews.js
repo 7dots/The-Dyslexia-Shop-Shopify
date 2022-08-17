@@ -187,16 +187,27 @@
         //appending structured data
         function addAggregateToStructuredData(resultArray){
             const average = calculateAggregateReviewAverage(resultArray)
-            const structuredData = document.getElementById('main-product_structured-data')
+            const total = getResultCount(resultArray)
+
+            //gets the structured data
+            var structuredData = document.getElementById('main-product_structured-data')
             const structuredDataContent = JSON.parse(structuredData.textContent);
 
+            structuredData.innerHTML = '';
+
+
+            //injects new rating    
             structuredDataContent['aggregateRating'] = {
                  "type": "AggregateRating",
                  "ratingValue": average,
-                 "ratingCount": 12   
-            }
+                 "ratingCount": total   
+            }  
+            structuredData.innerHTML += JSON.stringify(structuredDataContent)
+        }
 
-            console.log(structuredDataContent)
+        //get number of reviews
+        function getResultCount(resultArray){
+            return resultArray.length
         }
     }
 
