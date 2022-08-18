@@ -93,3 +93,22 @@ div[class^="clerk-design-component-"] > div.clerk-slider .clerk-slider-nav {
 .clerk-slider-item:last-of-type{
     padding-right: 0px;
 } 
+
+.clerk-design-component-wpRHdQIQ:focus-visible{
+    -webkit-box-shadow: 0px 0px 0px 3px var(--color-black); 
+    box-shadow: 0px 0px 0px 3px var(--color-black);
+}
+
+.clerk-design-component-wpRHdQIQ::before{
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    top: 0;
+    left: 0;
+    content: '';
+}
+
+.clerk-design-component-wpRHdQIQ:not(:focus-visible){
+    box-shadow: none;
+    -webkit-box-shadow: none;
+}
