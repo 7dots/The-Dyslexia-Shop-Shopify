@@ -136,6 +136,11 @@
     border-right: 1px solid var(--color-light-grey);
 }
 
+.product-review__tabs-list > button:focus-visible{
+    -webkit-box-shadow: 0px 0px 0px 3px var(--color-black); 
+    box-shadow: 0px 0px 0px 3px var(--color-black);
+}
+
 .product-review__tabs-list > button > .product-review__button-anchor{
     display: block;
     position: relative;

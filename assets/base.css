@@ -921,10 +921,8 @@ button:focus-visible {
 }
 
 .focus-offset:focus-visible {
-  outline: 0.2rem solid rgba(var(--color-foreground), 0.5);
-  outline-offset: 1rem;
-  box-shadow: 0 0 0 1rem rgb(var(--color-background)),
-    0 0 0.2rem 1.2rem rgba(var(--color-foreground), 0.3);
+  -webkit-box-shadow: 0px 0px 0px 3px var(--color-black); 
+  box-shadow: 0px 0px 0px 3px var(--color-black);
 }
 
 .focus-offset.focused,
@@ -1531,10 +1529,8 @@ button.shopify-payment-button__button--unbranded {
 .shopify-payment-button [role="button"]:focus-visible,
 .shopify-payment-button__button--unbranded:focus,
 .shopify-payment-button [role="button"]:focus {
-  outline: 0;
-  box-shadow: 0 0 0 0.3rem rgb(var(--color-background)),
-    0 0 0 0.5rem rgba(var(--color-foreground), 0.5),
-    0 0 0.5rem 0.4rem rgba(var(--color-foreground), 0.3);
+  -webkit-box-shadow: 0px 0px 0px 3px var(--color-black); 
+  box-shadow: 0px 0px 0px 3px var(--color-black);
 }
 
 .button:focus:not(:focus-visible):not(.focused),
@@ -1734,7 +1730,8 @@ details[open] > .share-button__fallback {
 
 .share-button__copy:focus-visible,
 .share-button__close:focus-visible {
-  background-color: rgb(var(--color-background));
+  -webkit-box-shadow: 0px 0px 0px 3px var(--color-black); 
+  box-shadow: 0px 0px 0px 3px var(--color-black);
   z-index: 2;
 }
 
@@ -1885,9 +1882,8 @@ details[open] > .share-button__fallback {
 .select__select:focus-visible,
 .customer .field input:focus-visible,
 .customer select:focus-visible {
-  box-shadow: 0 0 0 calc(0.1rem + var(--inputs-border-width)) rgba(var(--color-foreground));
-  outline: 0;
-  border-radius: var(--inputs-radius);
+  -webkit-box-shadow: 0px 0px 0px 3px var(--color-black); 
+  box-shadow: 0px 0px 0px 3px var(--color-black);
 }
 
 .field__input:focus,
@@ -2187,8 +2183,8 @@ input[type='checkbox'] {
 
 .quantity__button:focus-visible,
 .quantity__input:focus-visible {
-  background-color: rgb(var(--color-dark-grey));
-  z-index: 2;
+  -webkit-box-shadow: 0px 0px 0px 3px var(--color-black); 
+  box-shadow: 0px 0px 0px 3px var(--color-black);
 }
 
 .quantity__button:focus,
