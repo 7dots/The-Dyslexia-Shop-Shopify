@@ -137,7 +137,7 @@ predictive-search[loading] .predictive-search__results-list:first-child {
 
 .predictive-search__item .price {
   color: rgba(var(--color-foreground), 0.7);
-  font-size: 1.2rem;
+  font-size: 16px;
 }
 
 .predictive-search__item-vendor + .predictive-search__item-heading,

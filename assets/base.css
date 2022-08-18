@@ -550,7 +550,7 @@ font-size: 16px;
 
 @media screen and (min-width: 750px) {
   .caption {
-    font-size: 1.2rem;
+    font-size: 16px;
   }
 }
 
@@ -562,7 +562,7 @@ font-size: 16px;
 }
 
 .caption-with-letter-spacing--medium {
-  font-size: 1.2rem;
+  font-size: 16px;
   letter-spacing: .16rem;
 }
 
@@ -1115,7 +1115,7 @@ button:focus-visible {
   width: calc(50% - var(--grid-mobile-horizontal-spacing) / 2);
 }
 
-@media screen and (min-width: 750px) {
+@media screen and (min-width: 990px) {
   .grid--2-col .grid__item {
     width: calc(50% - var(--grid-desktop-horizontal-spacing) / 2);
   }
@@ -1555,7 +1555,7 @@ button.shopify-payment-button__button--unbranded {
 }
 
 .button--tertiary {
-  font-size: 1.2rem;
+  font-size: 16px;
   padding: 1rem 1.5rem;
   min-width: calc(9rem + var(--buttons-border-width) * 2);
   min-height: calc(3.5rem + var(--buttons-border-width) * 2);
@@ -1863,7 +1863,7 @@ details[open] > .share-button__fallback {
   font-family: var(--font-body-family);
   font-style: var(--font-body-style);
   font-weight: var(--font-body-weight);
-  font-size: 1.2rem;
+  font-size: 16px;
   color: rgba(var(--color-foreground), 0.75);
 }
 
@@ -2952,7 +2952,7 @@ details-disclosure > details {
   border: 1px solid transparent;
   border-radius: var(--badge-corner-radius);
   display: inline-block;
-  font-size: 1.2rem;
+  font-size: 16px;
   letter-spacing: 0.1rem;
   line-height: 1;
   padding: 0.5rem 1.3rem 0.6rem 1.3rem;
@@ -3208,4 +3208,8 @@ details-disclosure > details {
 
 button{
   font-family:  Assistant, sans-serif
+}
+
+.rich-text__text{
+  font-size: 16px;
 }
