@@ -18,7 +18,7 @@
 <div class="product-review page-width isolate tabs" id="product-review">
   {% assign current_variant = product.selected_or_first_available_variant %}
   <div role="tablist" aria-label="Product reviews and details tabs" class="product-review__tabs-list {% if section.settings.block_background == "grey" %}-grey{% endif %}">
-    <button role="tab" aria-selected="true" aria-controls="panel-1" id="tab-1" tabindex="0">Details</button>
+    <button role="tab" aria-selected="true" aria-controls="panel-1" id="tab-1" tabindex="0"><span class="product-review__button-anchor" id="review-tab__anchor"></span>Details</button>
     <button role="tab" aria-selected="false" aria-controls="panel-2" id="tab-2" tabindex="-1">Reviews</button>
   </div>
   <div class="product-review__tabs-tab product-review__grid grid grid--gapless grid--1-col grid--3-col-tablet {% if section.settings.block_background == "grey" %}-grey{% endif %}

@@ -543,7 +543,7 @@ blockquote {
 }
 
 .caption {
-  font-size: 1rem;
+font-size: 16px;
   letter-spacing: 0.07rem;
   line-height: calc(1 + 0.7 / var(--font-body-scale));
 }
@@ -555,7 +555,7 @@ blockquote {
 }
 
 .caption-with-letter-spacing {
-  font-size: 1rem;
+font-size: 16px;
   letter-spacing: 0.13rem;
   line-height: calc(1 + 0.2 / var(--font-body-scale));
   text-transform: uppercase;
@@ -1046,7 +1046,7 @@ button:focus-visible {
 }
 
 .subtitle--medium {
-  font-size: 1.6rem;
+  font-size: 16px;
   letter-spacing: 0.08rem;
 }
 
@@ -1810,7 +1810,7 @@ details[open] > .share-button__fallback {
   appearance: none;
   background-color:var(--color-white);
   color: rgb(var(--color-foreground));
-  font-size: 1.6rem;
+  font-size: 16px;
   width: 100%;
   box-sizing: border-box;
   transition: box-shadow var(--duration-short) ease;
@@ -1954,7 +1954,7 @@ details[open] > .share-button__fallback {
 
 .field__label,
 .customer .field label {
-  font-size: 1.6rem;
+  font-size: 16px;
   left: calc(var(--inputs-border-width) + 2rem);
   top: calc(1rem + var(--inputs-border-width));
   margin-bottom: 0;
@@ -1973,7 +1973,7 @@ details[open] > .share-button__fallback {
 .customer .field input:focus ~ label,
 .customer .field input:not(:placeholder-shown) ~ label,
 .customer .field input:-webkit-autofill ~ label {
-  font-size: 1rem;
+font-size: 16px;
   top: calc(var(--inputs-border-width) + 0.5rem);
   left: calc(var(--inputs-border-width) + 2rem);
   letter-spacing: 0.04rem;
@@ -2059,7 +2059,7 @@ input[type='checkbox'] {
 }
 
 .form__message--large {
-  font-size: 1.6rem;
+  font-size: 16px;
 }
 
 .customer .field .form__message {
@@ -2088,7 +2088,7 @@ input[type='checkbox'] {
 
 .form-status {
   margin: 0;
-  font-size: 1.6rem;
+  font-size: 16px;
 }
 
 .form-status-list {

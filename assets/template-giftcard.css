@@ -44,7 +44,7 @@ body {
 
 @media only screen and (min-width: 750px) {
   body {
-    font-size: 1.6rem;
+    font-size: 16px;
     line-height: calc(1 + 0.8 / var(--font-body-scale));
     padding: 0 5rem;
   }
@@ -98,6 +98,8 @@ h2,
   clip: auto;
 }
 
+
+
 .link {
   cursor: pointer;
   display: inline-block;
@@ -105,7 +107,7 @@ h2,
   box-shadow: none;
   background-color: transparent;
   padding: 0.4rem;
-  font-size: 1.6rem;
+  font-size: 16px;
   line-height: 1;
   text-decoration: underline;
   color: rgb(var(--color-base-outline-button-labels));
@@ -210,7 +212,7 @@ h2,
   display: flex;
   align-items: center;
   justify-content: center;
-  font-size: 1.6rem;
+  font-size: 16px;
   font-weight: 400;
   letter-spacing: 1px;
   line-height: calc(1 + 0.5 / var(--font-body-scale));
