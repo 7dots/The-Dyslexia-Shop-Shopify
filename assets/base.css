@@ -2368,6 +2368,7 @@ input[type='checkbox'] {
   margin-top: 3px;
   text-decoration: none;
   color: var(--color-black);
+  font-size: 16px;
 }
 
 .announcement-bar__wrapper{
