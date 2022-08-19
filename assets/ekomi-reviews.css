@@ -5,9 +5,14 @@
 
 #ekomi-product-reviews li {
     padding: 12px 0 24px 0;
-    border-bottom: 2px solid var(--color-light-grey);
+    border-bottom: 2px solid #3D3D3D;
     display: flex;
     flex-direction: column;
+    max-width: 750px;
+}
+
+#ekomi-product-reviews li:last-child{
+    border-bottom: none;
 }
 
 #ekomi-product-reviews em {
