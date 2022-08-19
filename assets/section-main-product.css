@@ -334,6 +334,11 @@ a.product__text {
 
 .product__sku{
   text-transform: uppercase;
+  text-align: center;
+}
+
+.product__sku.-inline{
+  display: inline;
 }
 
 .product__title > * {
@@ -700,6 +705,7 @@ a.product__text {
   display: flex;
   align-items: center;
   height: 100vh;
+  background-color: var(--color-white);
 }
 
 .product-media-modal__content {
