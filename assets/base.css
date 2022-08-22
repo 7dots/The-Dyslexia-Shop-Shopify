@@ -2036,7 +2036,8 @@ font-size: 10px;
 input[type='checkbox'] {
   display: inline-block;
   width: auto;
-  margin-right: 0.5rem;
+  margin-right: 0.5rem; 
+  accent-color: var(--color-black);
 }
 
 /* Form global */
