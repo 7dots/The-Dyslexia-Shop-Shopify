@@ -30,7 +30,7 @@ body.cart-notification-active .cart-notification-wrapper:before {
 }
 
 body.cart-notification-active:before {
-  height: 38px;
+  height: 42px;
   position: absolute;
 }
 

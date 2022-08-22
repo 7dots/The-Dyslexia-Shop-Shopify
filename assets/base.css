@@ -2503,7 +2503,7 @@ input[type='checkbox'] {
   word-break: break-word;
   height: 50px;
   width: 174px;
-  margin-bottom: 15px;
+  margin-bottom: 0;
 }
 
 .header__heading-link:focus-visible{
