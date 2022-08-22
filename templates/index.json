@@ -126,7 +126,7 @@
       "type": "image-banner",
       "settings": {
         "image": "shopify:\/\/shop_images\/Banner2_2.png",
-        "image_mobile": "shopify:\/\/shop_images\/Mobile2.png",
+        "image_mobile": "shopify:\/\/shop_images\/Mobile2_2.png",
         "banner_contained": true,
         "show_text_box": false,
         "set_padding": true,
