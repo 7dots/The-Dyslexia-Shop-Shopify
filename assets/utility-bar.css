@@ -60,7 +60,6 @@ padding: 1rem;
 .localization_form-select {
 border-radius: var(--inputs-radius-outset);
 position: relative;
-margin-bottom: 1.5rem;
 padding-left: 1rem;
 text-align: left;
 min-height: calc(4rem + var(--inputs-border-width) * 2);
@@ -70,6 +69,7 @@ min-width: calc(7rem + var(--inputs-border-width) * 2);
 .disclosure__button.localization_form-select {
 padding: calc(2rem + var(--inputs-border-width));
 background: rgb(var(--color-background));
+padding-left: 0;
 }
 
 noscript .localization_form-select {
