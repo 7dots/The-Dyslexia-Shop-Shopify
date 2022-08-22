@@ -49,6 +49,11 @@
   top: 0;
   height: 100%;
   z-index: 2;
+  transition: transform 200ms ease-in-out;
+}
+
+.newsletter-form__button:hover{
+ transform: translateX(3px);
 }
 
 .newsletter-form__button:focus-visible {
