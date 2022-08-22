@@ -242,13 +242,6 @@
               return (converted_price_rounded).toString()+'.00';
             }  
           },
-          link_region: function(link){
-              if (Shopify.country == 'US'){
-                return '/en-us'+link;
-              } else {
-                return link;
-              }
-          },
         },
         globals: {
           currency_iso: "{{ cart.currency.iso_code }}",
