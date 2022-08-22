@@ -2378,9 +2378,17 @@ input[type='checkbox'] {
 
 .announcement-bar__link{
   margin-top: 3px;
+  margin-bottom: 3px;
   text-decoration: none;
   color: var(--color-black);
   font-size: 16px;
+}
+
+button.announcement-bar__link {
+  appearance: none;
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
 }
 
 .announcement-bar__link > p {
