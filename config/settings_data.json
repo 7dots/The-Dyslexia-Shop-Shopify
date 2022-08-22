@@ -110,21 +110,24 @@
             "type": "announcement",
             "settings": {
               "text": "<p><strong>Free Shipping <\/strong>Over £100 to UK<\/p>",
-              "link": "shopify:\/\/pages\/deliveryinfo"
+              "link": "shopify:\/\/pages\/deliveryinfo",
+              "popup_trigger": false
             }
           },
           "3e976f9b-1d85-4d63-82d5-93b3b22e9404": {
             "type": "announcement",
             "settings": {
               "text": "<p><strong>30 Day Credit <\/strong>Accounts for Schools and Organisations<\/p>",
-              "link": "shopify:\/\/pages\/payment-options"
+              "link": "shopify:\/\/pages\/payment-options",
+              "popup_trigger": false
             }
           },
           "5caced54-1786-4d65-9afe-cb39dbd6efaf": {
             "type": "announcement",
             "settings": {
               "text": "<p>Sign Up to our <strong>Newsletter for offers<\/strong><\/p>",
-              "link": "#NewsletterForm--footer"
+              "link": "#NewsletterForm--footer",
+              "popup_trigger": true
             }
           }
         },
@@ -208,7 +211,7 @@
           "9c33b6ed-9f67-4db0-9f82-d67834ee4818": {
             "type": "email",
             "settings": {
-              "text": "| E: hello@thedyslexiashop.co.uk",
+              "text": "E: hello@thedyslexiashop.co.uk",
               "email": "hello@thedyslexiashop.co.uk"
             }
           },
