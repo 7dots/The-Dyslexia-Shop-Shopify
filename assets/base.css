@@ -1137,6 +1137,10 @@ button:focus-visible {
   .grid--1-col-tablet-down .grid__item {
     width: 100%;
     max-width: 100%;
+    
+  }
+  .multicolumn-list{
+    column-gap: 0;
   }
 
   .slider--tablet.grid--peek {
@@ -1147,6 +1151,19 @@ button:focus-visible {
   .slider--tablet.grid--peek .grid__item {
     box-sizing: content-box;
     margin: 0;
+  }
+}
+
+@media screen and (max-width: 989px) and (min-width: 450px){
+  .multicolumn-list{
+    column-gap: 0;
+    justify-content: space-around;
+    row-gap: 20px;
+  }
+
+  .multicolumn-list > .multicolumn-list__item{
+    max-width: 220px;
+    width: 100%;
   }
 }
 
