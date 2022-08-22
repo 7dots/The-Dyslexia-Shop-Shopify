@@ -87,6 +87,7 @@
     },
     "latest_products": {
       "type": "latest-products",
+      "disabled": true,
       "settings": {
       }
     },
