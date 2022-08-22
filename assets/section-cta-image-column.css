@@ -318,3 +318,12 @@
   text-decoration: none;
   color: var(--color-white);
 }
+
+.cta-img-card__button > a:before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+}
