@@ -61,7 +61,20 @@ div[class^="clerk-design-component-"] > div.clerk-slider .clerk-slider-nav {
     border-radius: 5px; 
     cursor: pointer;
     height: 100%;
+    display: flex;
+    flex-direction: column;
 }
+
+.clerk-design-component-ksX8CB4I > div:first-child, .clerk-design-component-8VBNKXui > div:first-child{
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+.clerk-design-component-8VBNKXui > div:first-child{
+    justify-content: space-between;
+}
+
 
 .clerk-slider{
     display: flex;
