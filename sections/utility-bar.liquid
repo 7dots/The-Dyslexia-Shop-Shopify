@@ -11,7 +11,7 @@
       {%- elsif block.type =='telephone' -%}
       <a href='tel:{{- block.settings.phone-number -}}'>{{- block.settings.text -}}</a>
       {%- elsif block.type =='email' -%}
-      <a href='mailto:{{- block.settings.email -}}'>{{- block.settings.text -}}</a>
+      <a href='mailto:{{- block.settings.email -}}?subject=Customer enquiry'>{{- block.settings.text -}}</a>
       {%- endif -%}  
     {%- endfor -%}  
     {%- if localization.available_countries.size > 1 -%}
