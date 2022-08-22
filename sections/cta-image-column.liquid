@@ -60,15 +60,16 @@ endif
                   <div class="media media--transparent" style="padding-bottom: {{ 1 | divided_by: highest_ratio | times: 100 }}%;">
                     <img
                       class="cta-img-card__image"
-                      srcset="{%- if block.settings.image.width >= 275 -%}{{ block.settings.image | image_url: width: 275 }} 275w,{%- endif -%}
-                        {%- if block.settings.image.width >= 550 -%}{{ block.settings.image | image_url: width: 550 }} 550w,{%- endif -%}
-                        {%- if block.settings.image.width >= 710 -%}{{ block.settings.image | image_url: width: 710 }} 710w,{%- endif -%}
-                        {%- if block.settings.image.width >= 1420 -%}{{ block.settings.image | image_url: width: 1420 }} 1420w,{%- endif -%}
-                        {{ block.settings.image | image_url }} {{ block.settings.image.width }}w"
+                      srcset="{%- if block.settings.image.width >= 320 -%}{{ block.settings.image | image_url: width: 245 }} 320w,{%- endif -%}
+                      {%- if block.settings.image.width >= 350 -%}{{ block.settings.image | image_url: width: 275 }} 350w,{%- endif -%}
+                      {%- if block.settings.image.width >= 390 -%}{{ block.settings.image | image_url: width: 315 }} 390w,{%- endif -%}
+                      {%- if block.settings.image.width >= 450 -%}{{ block.settings.image | image_url: width: 375 }} 450w,{%- endif -%}
+                      {%- if block.settings.image.width >= 550 -%}{{ block.settings.image | image_url: width: 550 }} 550w,{%- endif -%}
+                      {%- if block.settings.image.width >= 710 -%}{{ block.settings.image | image_url: width: 710 }} 710w,{%- endif -%}
+                      {%- if block.settings.image.width >= 1420 -%}{{ block.settings.image | image_url: width: 1420 }} 1420w,{%- endif -%}
+                      {{ block.settings.image | image_url }} {{ block.settings.image.width }}w"
                       src="{{ block.settings.image | image_url: width: 550 }}"
-                      sizes="(min-width: 990px) {% if section.blocks.size <= 2 %}710px{% else %}550px{% endif %},
-                        (min-width: 750px) {% if section.blocks.size == 1 %}710px{% else %}550px{% endif %},
-                        calc(100vw - 30px)"
+                      sizes="(min-width: 990px) 710px, (min-width: 550px) 550px, (max-width: 450px) 450px, (max-width: 390px) 390px, (max-width: 350px) 350px, calc(100vw - 60px)"
                       alt="{{ block.settings.image.alt | truncate: 100 }}"
                       height="{{ block.settings.image.height }}"
                       width="{{ block.settings.image.width }}"
