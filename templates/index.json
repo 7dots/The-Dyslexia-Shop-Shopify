@@ -126,12 +126,12 @@
     "image_banner_contained": {
       "type": "image-banner",
       "settings": {
-        "image": "shopify:\/\/shop_images\/Banner2_2.png",
-        "image_mobile": "shopify:\/\/shop_images\/Mobile2_2.png",
+        "image": "shopify:\/\/shop_images\/thedyslexiashop-descktop_1.jpg",
+        "image_mobile": "shopify:\/\/shop_images\/thedyslexiashop-mob_1.jpg",
         "banner_contained": true,
         "show_text_box": false,
         "set_padding": true,
-        "link": "",
+        "link": "shopify:\/\/collections\/exercise-books",
         "show_text_below": false
       }
     },
