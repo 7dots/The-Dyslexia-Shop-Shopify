@@ -30,7 +30,7 @@
     {% render 'meta-tags' %}
 
     <script src="{{ 'global.js' | asset_url }}" defer="defer"></script>
-    
+
 
   <!-- Avada Email Marketing Script -->
  {% include 'avada-em-setting' %}
@@ -240,7 +240,7 @@
               //rounds to whole number
               var converted_price_rounded = Math.ceil(converted_price);
               return (converted_price_rounded).toString()+'.00';
-            }  
+            }
           },
         },
         globals: {
@@ -250,16 +250,21 @@
       });
     </script>
     <!-- End of Clerk.io E-commerce Personalisation tool - www.clerk.io -->
-    
+
     <!-- Google Tag Manager -->
       <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
         new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
         j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
         'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
         })(window,document,'script','dataLayer','GTM-NV592BJ');</script>
-  <!-- End Google Tag Manager -->
+    <!-- End Google Tag Manager -->
 
-  {% include 'hulk_po_vd.liquid' %}</head>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    {% include 'hulk_po_vd.liquid' %}
+    {% include 'hulkcode_common' %}
+    <script src='https://ha-volume-discount.nyc3.digitaloceanspaces.com/assets/api/v2-beta/hulkcode.js?{{ 'now' | date: '%s'}}' defer='defer'></script>
+    {{ 'hulk-variant-change.js'  | asset_url | script_tag }}
+  </head>
 
   <body>
     <!-- Google Tag Manager (noscript) -->
@@ -321,7 +326,7 @@
     {%- endif -%}
     <script src="{{ 'card-square-checker.js' | asset_url }}" defer="defer"></script>
     <script src="{{ 'clerkio-recommendations.js' | asset_url }}" defer="defer"></script>
-    
+
   </body>
 </html>
 

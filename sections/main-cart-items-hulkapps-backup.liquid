@@ -60,7 +60,7 @@
 
             <tbody>
               {%- for item in cart.items -%}
-                <tr data-hulkapps-lineitem class="cart-item" id="CartItem-{{ item.index | plus: 1 }}">
+                <tr class="cart-item" id="CartItem-{{ item.index | plus: 1 }}">
                   <td class="cart-item__media">
                     {% if item.image %}
                       {% comment %} Leave empty space due to a:empty CSS display: none rule {% endcomment %}
@@ -68,7 +68,7 @@
                         <div class="cart-item__image-container gradient global-media-settings">
                           <img src="{{ item.image | image_url: width: 300 }}"
                             class="cart-item__image"
-                            alt="{{ item.image.alt | truncate: 100 }}"
+                            alt="{{ item.image.alt | escape }}"
                             loading="lazy"
                             width="150"
                             height="{{ 150 | divided_by: item.image.aspect_ratio | ceil }}"
@@ -89,19 +89,19 @@
                         <span class="visually-hidden">
                           {{ 'products.product.price.regular_price' | t }}
                         </span>
-                        <s data-hulkapps-ci-price data-key='{{item.key}}' class="cart-item__old-price product-option">
+                        <s class="cart-item__old-price product-option">
                           {{- item.original_price | money -}}
                         </s>
                         <span class="visually-hidden">
                           {{ 'products.product.price.sale_price' | t }}
                         </span>
-                        <strong data-hulkapps-ci-price data-key='{{item.key}}' class="cart-item__final-price product-option">
+                        <strong class="cart-item__final-price product-option">
                           {{ item.final_price | money }}
                         </strong>
                       </div>
                     {%- else -%}
                       <div class="product-option">
-                        <span data-hulkapps-ci-price data-key='{{item.key}}' class='hulkapps-cart-item-price'>{{ item.original_price | money }}</span>
+                        <span class='hulkapps-cart-item-price' data-key='{{ item.key }}'>{{ item.original_price | money }}</span>
                       </div>
                     {%- endif -%}
 
@@ -124,27 +124,23 @@
                           {%- endif -%}
                           <div class='hulkapps-reminder' data-key='{{ item.key }}'></div>
 
-                        <div class='hulkapps-reminder' data-key='{{item.key}}'></div>
-                        <span data-hulkapps-line-properties>
-                          {%- for property in item.properties -%}
-                            {%- assign property_first_char = property.first | slice: 0 -%}
-                            {%- if property.last != blank and property_first_char != '_' -%}
-                              <div class="product-option">
-                                <dt>{{ property.first }}: </dt>
-                                <dd>
-                                  {%- if property.last contains '/uploads/' -%}
-                                    <a href="{{ property.last }}" class="link" target="_blank">
-                                      {{ property.last | split: '/' | last }}
-                                    </a>
-                                  {%- else -%}
-                                    {{ property.last }}
-                                  {%- endif -%}
-                                </dd>
-                              </div>
-                            {%- endif -%}
-                          {%- endfor -%}
-                        </span>
-                        <button type='button' style='display: none;' class='edit_cart_option btn btn--primary button' data-product_id='{{item.product_id}}' data-key='{{item.key}}' data-variant_id='{{item.variant_id}}' data-quantity='{{item.quantity}}'>Edit Options</button>
+                        {%- for property in item.properties -%}
+                          {%- assign property_first_char = property.first | slice: 0 -%}
+                          {%- if property.last != blank and property_first_char != '_' -%}
+                            <div class="product-option">
+                              <dt>{{ property.first }}: </dt>
+                              <dd>
+                                {%- if property.last contains '/uploads/' -%}
+                                  <a href="{{ property.last }}" class="link" target="_blank">
+                                    {{ property.last | split: '/' | last }}
+                                  </a>
+                                {%- else -%}
+                                  {{ property.last }}
+                                {%- endif -%}
+                              </dd>
+                            </div>
+                          {%- endif -%}
+                        {%- endfor -%}
                       </dl>
 
                       <p class="product-option">{{ item.selling_plan_allocation.selling_plan.name }}</p>
@@ -176,19 +172,19 @@
                           </dt>
                           <dd>
                             <s class="cart-item__old-price price price--end">
-                              <span data-hulkapps-line-price class='hulkapps-cart-item-line-price' data-key='{{ item.key }}'>{{ item.original_line_price | money }}</span>
+                              <span class='hulkapps-cart-item-line-price' data-key='{{ item.key }}'>{{ item.original_line_price | money }}</span>
                             </s>
                           </dd>
                           <dt class="visually-hidden">
                             {{ 'products.product.price.sale_price' | t }}
                           </dt>
-                          <dd data-hulkapps-line-price class="price price--end">
+                          <dd class="price price--end">
                             {{ item.final_line_price | money }}
                           </dd>
                         </dl>
                       {%- else -%}
                         <span class="price price--end">
-                          <span data-hulkapps-line-price class='hulkapps-cart-item-line-price' data-key='{{ item.key }}'>{{ item.original_line_price | money }}</span>
+                          <span class='hulkapps-cart-item-line-price' data-key='{{ item.key }}'>{{ item.original_line_price | money }}</span>
                         </span>
                       {%- endif -%}
 
@@ -266,19 +262,19 @@
                           </dt>
                           <dd>
                             <s class="cart-item__old-price price price--end">
-                              <span data-hulkapps-line-price class='hulkapps-cart-item-line-price' data-key='{{ item.key }}'>{{ item.original_line_price | money }}</span>
+                              <span class='hulkapps-cart-item-line-price' data-key='{{ item.key }}'>{{ item.original_line_price | money }}</span>
                             </s>
                           </dd>
                           <dt class="visually-hidden">
                             {{ 'products.product.price.sale_price' | t }}
                           </dt>
-                          <dd data-hulkapps-line-price class="price price--end">
+                          <dd class="price price--end">
                             {{ item.final_line_price | money }}
                           </dd>
                         </dl>
                       {%- else -%}
                         <span class="price price--end">
-                          <span data-hulkapps-line-price class='hulkapps-cart-item-line-price' data-key='{{ item.key }}'>{{ item.original_line_price | money }}</span>
+                          <span class='hulkapps-cart-item-line-price' data-key='{{ item.key }}'>{{ item.original_line_price | money }}</span>
                         </span>
                       {%- endif -%}
 
