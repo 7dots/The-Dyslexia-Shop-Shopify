@@ -1,12 +1,5 @@
 {
   "sections": {
-    "announcement_popup": {
-      "type": "announcement-popup",
-      "settings": {
-        "popup_text": "",
-        "display": true
-      }
-    },
     "image_banner": {
       "type": "image-banner",
       "settings": {
@@ -230,10 +223,17 @@
         "columns_desktop": 4,
         "swipe_on_mobile": false
       }
+    },
+    "announcement_popup": {
+      "type": "announcement-popup",
+      "disabled": true,
+      "settings": {
+        "popup_text": "",
+        "display": true
+      }
     }
   },
   "order": [
-    "announcement_popup",
     "image_banner",
     "cta_image_column",
     "rich_text",
@@ -243,6 +243,7 @@
     "image_banner_contained",
     "trending_products",
     "image_with_text",
-    "multicolumn-icon"
+    "multicolumn-icon",
+    "announcement_popup"
   ]
 }
