@@ -1,0 +1,46 @@
+.announcement-popup_wrapper{
+    height: 100%;
+    background-color: rgb(254, 107, 107);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    font-size: 28px;
+    padding: 10px 20px 10px 20px;
+}
+
+
+.announcement-popup_wrapper a {
+    color: inherit;
+}
+
+.announcement-popup_exit{
+    position: absolute;
+    top: 10px;
+    right: 20px;
+    height: 20px;
+    width: 20px;
+    color: var(--color-dark-grey);
+}
+
+.announcement-popup_exit:hover svg{
+    color: var(--color-black);
+    stroke-width: 3px;
+}
+
+@media  screen and (max-width: 980px) {
+    .announcement-popup_wrapper{
+        font-size: 20px;
+        padding: 10px 10px 10px 20px;
+    }
+    .announcement-popup_exit{
+        top: 15px;
+        right: 10px;
+    }  
+
+    .announcement-popup_exit svg{
+        height: 15px;
+        width: 15px;
+        position: absolute;
+    }
+}

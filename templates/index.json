@@ -1,5 +1,8 @@
 {
   "sections": {
+    "announcement_popup": {
+      "type": "announcement-popup"
+    },
     "image_banner": {
       "type": "image-banner",
       "settings": {
@@ -226,6 +229,7 @@
     }
   },
   "order": [
+    "announcement_popup",
     "image_banner",
     "cta_image_column",
     "rich_text",

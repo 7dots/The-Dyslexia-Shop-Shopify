@@ -1,0 +1,29 @@
+{{ 'announcement-popup.css' | asset_url | stylesheet_tag }}
+
+{% if section.settings.display == true %}
+<div class="page-width-desktop announcement-popup_wrapper">
+    <div class="announcement-popup_exit" onClick="this.parentElement.remove()">{% render 'icon-close' %}</div>
+    {{ section.settings.popup_text }}
+</div>
+{% endif %}
+
+{% schema %}
+{
+    "name": "Announcement Popup",
+    "class": "section",
+    "tag": "section",
+    "settings": [
+      { 
+        "type": "richtext",
+        "id": "popup_text",
+        "label": "Caption"
+      },
+      {
+        "type": "checkbox",
+        "id": "display",
+        "default": true,
+        "label": "Hide/show announcement popup"
+      }
+    ]
+  }
+{% endschema %}
