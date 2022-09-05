@@ -1,5 +1,5 @@
 {{ 'announcement-popup.css' | asset_url | stylesheet_tag }}
-
+<script src="{{ 'announcement-popup.js' | asset_url }}" defer="defer"></script>
 <div class="page-width-desktop announcement-popup_wrapper">
     <div class="announcement-popup_exit" onClick="this.parentElement.remove()">{% render 'icon-close' %}</div>
     {{ section.settings.popup_text }}
