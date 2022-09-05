@@ -1,7 +1,11 @@
 {
   "sections": {
     "announcement_popup": {
-      "type": "announcement-popup"
+      "type": "announcement-popup",
+      "settings": {
+        "popup_text": "<p>Exampe popup message. For more information please click <a href=\"\/pages\/no-route\" title=\"404 Not Found\">here<\/a><\/p>",
+        "display": true
+      }
     },
     "image_banner": {
       "type": "image-banner",
