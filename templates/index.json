@@ -2,9 +2,8 @@
   "sections": {
     "announcement_popup": {
       "type": "announcement-popup",
-      "disabled": true,
       "settings": {
-        "popup_text": "",
+        "popup_text": "<p>Annoucement example<\/p>",
         "display": true
       }
     },
