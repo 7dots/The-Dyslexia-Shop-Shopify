@@ -3,7 +3,7 @@
     "announcement_popup": {
       "type": "announcement-popup",
       "settings": {
-        "popup_text": "<p>Example popup message. For more information please click <a href=\"\/pages\/no-route\" title=\"404 Not Found\">here<\/a><\/p>",
+        "popup_text": "",
         "display": true
       }
     },
