@@ -2,9 +2,8 @@
   "sections": {
     "announcement_popup": {
       "type": "announcement-popup",
-      "disabled": true,
       "settings": {
-        "popup_text": ""
+        "popup_text": "<p>Dear Customer<\/p><p>Royal Mail & Parcelforce will be affected by strike action on Thursday 8th September & Friday 9th September. Please expect significant delays with these services if selected, however, Fedex should be operating normally during this time. We apologise for this disruption and will do our best to work around it where possible.<\/p>"
       }
     },
     "image_banner": {
