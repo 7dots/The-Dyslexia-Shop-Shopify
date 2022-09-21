@@ -337,6 +337,11 @@ a.product__text {
   text-align: center;
 }
 
+#product__backorder-notice{
+  color: rgba(var(--color-red-rgb));
+  font-weight: 600;
+}
+
 .product__sku.-inline{
   display: inline;
 }
