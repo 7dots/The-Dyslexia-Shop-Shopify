@@ -780,6 +780,7 @@ class VariantSelects extends HTMLElement {
     this.updateMasterId();
     this.toggleAddButton(true, '', false);
     this.updatePickupAvailability();
+    this.toggleBackorderNotice();
     this.removeErrorMessage();
 
     if (!this.currentVariant) {
@@ -850,6 +851,16 @@ class VariantSelects extends HTMLElement {
       pickUpAvailability.innerHTML = '';
     }
   }
+
+  toggleBackorderNotice(){
+    const notice = document.getElementById('product__backorder-notice')
+    if (notice && this.currentVariant && this.currentVariant.available) {
+      notice.innerHTML = '';
+    } else {
+      notice.innerHTML = notice.getAttribute('data-msg');
+    }
+  }
+
 
   removeErrorMessage() {
     const section = this.closest('section');

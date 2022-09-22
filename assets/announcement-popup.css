@@ -1,4 +1,5 @@
 .announcement-popup_wrapper{
+    max-height: 0;
     height: 100%;
     background-color: rgb(254, 107, 107);
     display: flex;
@@ -6,21 +7,32 @@
     align-items: center;
     position: relative;
     font-size: 28px;
+    padding: 0;
+    color: #ffffff00;
+    transition: max-height 300ms ease-in-out, padding 300ms ease-in-out, color 300ms ease-in-out;
+}
+
+.announcement-popup_wrapper.-loaded{
+    max-height: 100%;
     padding: 10px 20px 10px 20px;
+    color: var(--color-black);
 }
 
-
-.announcement-popup_wrapper a {
-    color: inherit;
-}
-
-.announcement-popup_exit{
+.announcement-popup_wrapper.-loaded > .announcement-popup_exit{
     position: absolute;
     top: 10px;
     right: 20px;
     height: 20px;
     width: 20px;
     color: var(--color-dark-grey);
+}
+
+.announcement-popup_wrapper a {
+    color: inherit;
+}
+
+.announcement-popup_exit:hover{
+    cursor: pointer;
 }
 
 .announcement-popup_exit:hover svg{
