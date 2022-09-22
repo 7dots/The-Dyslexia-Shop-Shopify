@@ -3,8 +3,7 @@
     "announcement_popup": {
       "type": "announcement-popup",
       "settings": {
-        "popup_text": "<p>Annoucement example<\/p>",
-        "display": true
+        "popup_text": "<p>Annoucement example!<\/p>"
       }
     },
     "image_banner": {
