@@ -30,7 +30,7 @@
     {% render 'meta-tags' %}
 
     <script src="{{ 'global.js' | asset_url }}" defer="defer"></script>
-    
+
 
   <!-- Avada Email Marketing Script -->
  {% include 'avada-em-setting' %}
@@ -240,7 +240,7 @@
               //rounds to whole number
               var converted_price_rounded = Math.ceil(converted_price);
               return (converted_price_rounded).toString()+'.00';
-            }  
+            }
           },
         },
         globals: {
@@ -250,7 +250,7 @@
       });
     </script>
     <!-- End of Clerk.io E-commerce Personalisation tool - www.clerk.io -->
-    
+
     <!-- Google Tag Manager -->
       <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
         new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
@@ -321,7 +321,18 @@
     {%- endif -%}
     <script src="{{ 'card-square-checker.js' | asset_url }}" defer="defer"></script>
     <script src="{{ 'clerkio-recommendations.js' | asset_url }}" defer="defer"></script>
-    
+
+    <!-- Start of Clerk.io Instant Search - www.clerk.io -->
+    <span
+        class="clerk"
+        data-template="@live-search"
+        data-instant-search-suggestions="6"
+        data-instant-search-categories="6"
+        data-instant-search-pages="6"
+        data-instant-search='.search__input'
+        data-instant-search-positioning='left'>
+    </span>
+    <!-- End of Clerk.io Instant Search - www.clerk.io -->
   </body>
 </html>
 
