@@ -857,7 +857,7 @@ class VariantSelects extends HTMLElement {
     const notice = document.getElementById('product__backorder-notice')
     if (notice && this.currentVariant && this.currentVariant.available) {
       notice.innerHTML = '';
-    } else {
+    } else if (notice) {
       notice.innerHTML = notice.getAttribute('data-msg');
     }
   }
@@ -921,9 +921,7 @@ class VariantSelects extends HTMLElement {
   }
 
   updateProductSku(){
-    console.log(this.currentVariant.sku)
     const productSku = document.getElementById('product-sku')
-    console.log(productSku)
     productSku.innerHTML = this.currentVariant.sku
   }
 
