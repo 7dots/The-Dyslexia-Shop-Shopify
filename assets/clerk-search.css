@@ -29,6 +29,10 @@
     padding: 10px 15px 10px 15px !important;
     margin-top: 25px;
 }
+.clerk-design-component-M0KnPD8H > div > button:hover {
+    cursor: pointer;
+}
+
 
 .clerk-design-component-rQYxQBI2{
     margin: 0;
@@ -36,4 +40,73 @@
 
 .clerk-design-component-hG7mRER0 >* {
     line-height: 22px;
+}
+
+.clerk-design-component-v8BvdlxP{
+    display: flex;
+    display: -webkit-box;
+    -webkit-box-pack: center;
+    justify-content: center;
+    align-items: baseline;
+    position: relative;
+    width: 100%;
+}
+
+.clerk-range-selected-range {
+    display: block !important;
+    background-color: var(--color-black);
+}
+
+.clerk-facet-name{
+    overflow: hidden;
+    white-space: initial;
+    display: flex;
+    column-gap: 10px;
+    height: 100%;
+}
+
+.clerk-facet-name:before {
+    background-color: var(--color-light-grey);
+    margin: 0;
+    min-width: 15px;
+    top: 0.4em;
+}
+
+.clerk-facet-name:hover:before {
+    background-color: var(--color-mid-grey);
+}
+
+.clerk-facet-selected .clerk-facet-name:before{
+    background-color: var(--color-black);
+}
+
+.clerk-facet-group-title{
+    color: var(--color-black);
+}
+
+.clerk_flex_wrap{
+    margin-top: 30px;
+}
+
+.clerk-facet-group-facets{
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+.clerk-range-inverse-left{
+    display: block !important;
+}
+
+.clerk-range-inverse-right{
+    display: block !important;
+}
+
+@media screen and (min-width: 801px){
+    #clerk-facets-container{
+    max-width: 320px !important;
+}
+}
+
+.clerk-facets{
+    width: 100%;
 }
