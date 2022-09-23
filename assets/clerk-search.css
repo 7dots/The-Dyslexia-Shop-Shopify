@@ -1,0 +1,39 @@
+.clerk-design-component-GpV2bpUY:hover{
+    cursor: pointer;
+}
+
+.clerk-design-component-LnnnJcCi > img {
+    object-fit: contain;
+}
+
+.clerk-design-component-hG7mRER0{
+    height: 100%;
+}
+
+.clerk-design-component-daHhViaw{
+    height: 100%;
+}
+
+.clerk-design-component-daHhViaw > div {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 100%;
+}  
+
+
+/* Not ideal to use !important but style is applied for this very specific class */
+.clerk-design-component-M0KnPD8H > div > button {
+    background-color: black !important;
+    color: var(--color-white) !important;
+    padding: 10px 15px 10px 15px !important;
+    margin-top: 25px;
+}
+
+.clerk-design-component-rQYxQBI2{
+    margin: 0;
+}
+
+.clerk-design-component-hG7mRER0 >* {
+    line-height: 22px;
+}
