@@ -220,7 +220,7 @@
               </a>
             </div>
             {% assign current_variant = product.selected_or_first_available_variant %}
-            <p class="product__sku {% if product.images != blank %} -inline{% endif %}">sku: {{ current_variant.sku }}</p>
+            <p class="product__sku {% if product.images != blank %} -inline{% endif %}" id="product-sku">sku: {{ current_variant.sku }}</p>
           {%- when 'price' -%}
             <div class="no-js-hidden" id="price-{{ section.id }}" role="status" {{ block.shopify_attributes }}>
               {%- render 'price', product: product, use_variant: true, show_badges: true, price_class: 'price--large' -%}

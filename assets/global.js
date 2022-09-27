@@ -781,6 +781,7 @@ class VariantSelects extends HTMLElement {
     this.toggleAddButton(true, '', false);
     this.updatePickupAvailability();
     this.removeErrorMessage();
+    this.updateProductSku();
 
     if (!this.currentVariant) {
       this.toggleAddButton(true, '', true);
@@ -907,6 +908,14 @@ class VariantSelects extends HTMLElement {
     this.variantData = this.variantData || JSON.parse(this.querySelector('[type="application/json"]').textContent);
     return this.variantData;
   }
+
+  updateProductSku(){
+    console.log(this.currentVariant.sku)
+    const productSku = document.getElementById('product-sku')
+    console.log(productSku)
+    productSku.innerHTML = this.currentVariant.sku
+  }
+
 }
 
 customElements.define('variant-selects', VariantSelects);
