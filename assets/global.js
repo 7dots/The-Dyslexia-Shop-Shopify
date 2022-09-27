@@ -780,6 +780,7 @@ class VariantSelects extends HTMLElement {
     this.updateMasterId();
     this.toggleAddButton(true, '', false);
     this.updatePickupAvailability();
+    this.toggleBackorderNotice();
     this.removeErrorMessage();
     this.updateProductSku();
 
@@ -852,6 +853,16 @@ class VariantSelects extends HTMLElement {
     }
   }
 
+  toggleBackorderNotice(){
+    const notice = document.getElementById('product__backorder-notice')
+    if (notice && this.currentVariant && this.currentVariant.available) {
+      notice.innerHTML = '';
+    } else if (notice) {
+      notice.innerHTML = notice.getAttribute('data-msg');
+    }
+  }
+
+
   removeErrorMessage() {
     const section = this.closest('section');
     if (!section) return;
@@ -910,9 +921,7 @@ class VariantSelects extends HTMLElement {
   }
 
   updateProductSku(){
-    console.log(this.currentVariant.sku)
     const productSku = document.getElementById('product-sku')
-    console.log(productSku)
     productSku.innerHTML = this.currentVariant.sku
   }
 

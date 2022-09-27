@@ -221,6 +221,10 @@
             </div>
             {% assign current_variant = product.selected_or_first_available_variant %}
             <p class="product__sku {% if product.images != blank %} -inline{% endif %}" id="product-sku">sku: {{ current_variant.sku }}</p>
+          {%- when 'backorder_notice'%}
+            <p id="product__backorder-notice" data-msg="{{block.settings.notice_text}}">
+              {% if current_variant.inventory_quantity == 0 %}{{block.settings.notice_text}}{% endif %}
+            </p>
           {%- when 'price' -%}
             <div class="no-js-hidden" id="price-{{ section.id }}" role="status" {{ block.shopify_attributes }}>
               {%- render 'price', product: product, use_variant: true, show_badges: true, price_class: 'price--large' -%}
@@ -676,6 +680,19 @@
       "type": "quantity_selector",
       "name": "t:sections.main-product.blocks.quantity_selector.name",
       "limit": 1
+    },
+    {
+      "type": "backorder_notice",
+      "name": "Backorder notice",
+      "limit": 1,
+      "settings": [
+        { "type": "text",
+          "id": "notice_text",
+          "label": "Backorder notice",
+          "info": "Once the order is out of stock, this message will appear.",
+          "default": "<p>Product is out of stock</p>"
+        }
+      ]
     },
     {
       "type": "variant_picker",
