@@ -2,7 +2,6 @@
   "sections": {
     "announcement_popup": {
       "type": "announcement-popup",
-      "disabled": true,
       "settings": {
         "popup_text": "<p>Dear Customers, We will be moving to a new premesiss from 29th September. Orders placed after 1.00pm on Thursday the 29th of September will not be dispatched until Tuesday the 4th of October. We apologies for any inconvenience caused.<\/p>"
       }
