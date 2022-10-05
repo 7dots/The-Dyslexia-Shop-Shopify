@@ -3,7 +3,7 @@
     "announcement_popup": {
       "type": "announcement-popup",
       "settings": {
-        "popup_text": "<p>Dear Customers, We will be moving to a new premesiss from Thursday 29th of September. Orders placed after 2.00pm on  Wednesday the 28th of September will not be dispatched until Tuesday the 4th of October. We apologies for any inconvenience caused.<\/p>"
+        "popup_text": "<p>Unfortunately currently we are experiencing problems with our telephones. Please email if you require assistance.<\/p>"
       }
     },
     "image_banner": {
