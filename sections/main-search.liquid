@@ -1,3 +1,4 @@
+{%- if settings.predictive_search_enabled == false %}
 <div class="page-width clerk-page-width">
   <span
       id="clerk-search"
@@ -29,7 +30,6 @@
 			el.classList.toggle('active');
 		}
   </script>
-
 
   <style>
       #clerk-show-facets {
@@ -87,8 +87,8 @@
       }
   </style>
 </div>
+{% else %}
 
-{% comment %}
 {{ 'template-collection.css' | asset_url | stylesheet_tag }}
 {{ 'component-card.css' | asset_url | stylesheet_tag }}
 {{ 'component-price.css' | asset_url | stylesheet_tag }}
@@ -350,7 +350,7 @@
     </div>
   {%- endif -%}
 </div>
-
+{% endif %}
 {% schema %}
 {
   "name": "t:sections.main-search.name",
@@ -510,4 +510,3 @@
   ]
 }
 {% endschema %}
-{% endcomment %}

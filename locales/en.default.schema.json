@@ -212,7 +212,7 @@
           "content": "Product suggestions"
         },
         "predictive_search_enabled": {
-          "label": "Enable product suggestions"
+          "label": "Enable clerk search"
         },
         "predictive_search_show_vendor": {
           "label": "Show vendor",

@@ -1,0 +1,107 @@
+/* Search bar */
+/* Cleark io search */
+.clerk-design-component-FLTuBhDV:nth-child(2){
+    width: 100%;
+}
+
+
+
+@media screen and (min-width: 769px){
+    .clerk-design-component-FLTuBhDV > div {
+        width: 100%;
+    }
+}
+
+.clerk-design-component-wXM4byra:hover{
+cursor: pointer;
+}
+
+.clerk-design-component-nOYFOVwE:hover{
+    cursor: pointer;
+}
+
+.clerk-design-component-TXIR6b55:hover{
+    cursor: pointer;
+}
+
+.clerk-design-component-rOZTdXip .clerk-highlighted{
+    text-decoration: none;
+    color: var(--color-black);
+}
+
+.clerk-design-component-rOZTdXip > div > a {
+    text-decoration: none !important;
+    color: var(--color-dark-grey) !important;
+}
+
+@media screen and (max-width: 768px){
+    .clerk-instant-search-container{
+        left: 0 !important;
+        width: 100%;
+    }
+    .clerk-design-component-aZJr2du0{
+        display: none;
+    }
+    .clerk-design-component-YWwgYGfF{
+        display: none;
+    }
+    .clerk-design-component-JoJdC4gi > div > div:nth-child(n + 5){
+        display: none;
+     }
+}
+
+.clerk-design-component-nOYFOVwE{
+    font-weight: normal;
+}
+
+.clerk-design-component-nOYFOVwE:hover, .clerk-design-component-TXIR6b55:hover{
+    -webkit-box-shadow: 0px 0px 0px 1px #000000; 
+    box-shadow: 0px 0px 0px 1px #000000;
+}
+
+.clerk-design-component-HLfmKReU{
+    min-width: 100%;
+}
+
+.clerk-range .clerk-range-inverse-left {
+    display: block !important;
+}
+
+.clerk-design-component-71BR2QEV{
+    color: var(--color-black);
+}
+
+.clerk-design-component-dVDw4elV > img {
+    height: 100%;
+    width: 100%;
+}
+
+.clerk-design-component-dVDw4elV{
+    height: 100%;
+    width: 100%;
+}
+
+.clerk-design-component-FLTuBhDV > div {
+    width: unset;
+}
+
+.clerk-design-component-nzSg77vq > div:first-child {
+    height: 50px;
+    width: 50px;
+}
+
+.clerk-design-component-nzSg77vq > div:nth-child(2){
+    max-width: 300px;
+}
+
+.clerk-design-component-FLTuBhDV {
+    column-gap: 10px;
+}
+
+.clerk-design-component-FLTuBhDV > div:last-child {
+    margin-left: auto;
+}
+
+.clerk-design-component-aZJr2du0{
+    min-width: 200px;
+}
