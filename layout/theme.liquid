@@ -213,9 +213,8 @@
       <link rel="stylesheet" href="{{ 'component-predictive-search.css' | asset_url }}" media="print" onload="this.media='all'">
     {%- endif -%}
 
-    {%- if settings.predictive_search_enabled == false %}
+    {%- if settings.predictive_search_enabled == true %}
       {{ 'clerk-search.css' | asset_url | stylesheet_tag }}
-      <script src="{{ 'clerk-search.js' | asset_url }}" defer="defer"></script>
     {%- endif -%}  
 
 
