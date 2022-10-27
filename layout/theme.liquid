@@ -259,7 +259,9 @@
         })(window,document,'script','dataLayer','GTM-NV592BJ');</script>
   <!-- End Google Tag Manager -->
 
-  {% include 'hulk_po_vd.liquid' %}</head>
+  {% include 'hulk_po_vd.liquid' %}
+	                {% if content_for_header contains 'bss-b2b' %}{% include 'bss-b2b-cp-header' %}{% endif %}</head>
+	            
 
   <body>
     <!-- Google Tag Manager (noscript) -->
@@ -322,6 +324,6 @@
     <script src="{{ 'card-square-checker.js' | asset_url }}" defer="defer"></script>
     <script src="{{ 'clerkio-recommendations.js' | asset_url }}" defer="defer"></script>
     
-  </body>
+  {% if content_for_header contains 'bss-b2b' %}{% include 'bss-b2b-jquery-341-js' %}{% include 'bss-b2b-js' %}{% endif %}</body>
 </html>
 
