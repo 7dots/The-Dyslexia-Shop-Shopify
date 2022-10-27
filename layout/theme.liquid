@@ -260,7 +260,7 @@
   <!-- End Google Tag Manager -->
 
   {% include 'hulk_po_vd.liquid' %}
-	                {% if content_for_header contains 'bss-b2b' %}{% include 'bss-b2b-cp-header' %}{% endif %}</head>
+	                {% if content_for_header contains 'bss-b2b' %}{% include 'bss-b2b-cp-header' %}{% endif %}{% if content_for_header contains 'bss-b2b-customer-portal' %}{% render "bss-bcp-header" %}{% endif %}</head>
 	            
 
   <body>
@@ -324,6 +324,6 @@
     <script src="{{ 'card-square-checker.js' | asset_url }}" defer="defer"></script>
     <script src="{{ 'clerkio-recommendations.js' | asset_url }}" defer="defer"></script>
     
-  {% if content_for_header contains 'bss-b2b' %}{% include 'bss-b2b-jquery-341-js' %}{% include 'bss-b2b-js' %}{% endif %}</body>
+  {% if content_for_header contains 'bss-b2b' %}{% include 'bss-b2b-jquery-341-js' %}{% include 'bss-b2b-js' %}{% endif %}{% if request.path contains "/apps/customer-portal" %}{% if content_for_header contains 'bss-b2b-customer-portal' %}{% render "bss-b2b-customer-portal-styles" %}{% endif %}{% endif %}</body>
 </html>
 
