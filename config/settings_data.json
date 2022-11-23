@@ -179,7 +179,7 @@
           "f500c74d-8c9c-4df3-9eab-5c111cbe1811"
         ],
         "settings": {
-          "newsletter_enable": true,
+          "newsletter_enable": false,
           "newsletter_heading": "Subscribe to our emails",
           "show_social": true,
           "payment_enable": true
