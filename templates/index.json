@@ -9,12 +9,12 @@
     "image_banner": {
       "type": "image-banner",
       "settings": {
-        "image": "shopify:\/\/shop_images\/Banner1_3.png",
-        "image_mobile": "shopify:\/\/shop_images\/Mobile1_2.png",
+        "image": "shopify:\/\/shop_images\/Website_banner.png",
+        "image_mobile": "shopify:\/\/shop_images\/Mobile.png",
         "banner_contained": true,
         "show_text_box": false,
         "set_padding": true,
-        "link": "https:\/\/www.thedyslexiashop.co.uk\/",
+        "link": "shopify:\/\/collections\/educational-games",
         "show_text_below": false
       }
     },
