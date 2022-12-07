@@ -32,6 +32,8 @@
     <script src="{{ 'global.js' | asset_url }}" defer="defer"></script>
 
 
+
+
   <!-- Avada Email Marketing Script -->
  {% include 'avada-em-setting' %}
   <!-- /Avada Email Marketing Script -->
@@ -198,6 +200,10 @@
           font-size: 16px;
         }
       }
+
+      #feefo-service-review-floating-widgetId {
+        display: block;
+      }
     {% endstyle %}
 
     {{ 'base.css' | asset_url | stylesheet_tag }}
@@ -264,6 +270,13 @@
     {% include 'hulkcode_common' %}
     <script src='https://ha-volume-discount.nyc3.digitaloceanspaces.com/assets/api/v2-beta/hulkcode.js?{{ 'now' | date: '%s'}}' defer='defer'></script>
     {{ 'hulk-variant-change.js'  | asset_url | script_tag }}
+    {% include 'hulk_po_vd.liquid' %}
+    {% if content_for_header contains 'bss-b2b' %}
+      {% include 'bss-b2b-cp-header' %}
+    {% endif %}
+    {% if content_for_header contains 'bss-b2b-customer-portal' %}
+      {% render "bss-bcp-header" %}
+    {% endif %}
   </head>
 
   <body>
@@ -283,6 +296,7 @@
     {% section 'announcement-bar' %}
     <main id="MainContent" class="content-for-layout focus-none" role="main" tabindex="-1">
       {{ content_for_layout }}
+      <div id="feefo-service-review-floating-widgetId"></div>
     </main>
 
     {% section 'footer' %}
@@ -327,6 +341,20 @@
     <script src="{{ 'card-square-checker.js' | asset_url }}" defer="defer"></script>
     <script src="{{ 'clerkio-recommendations.js' | asset_url }}" defer="defer"></script>
 
+    <script type="text/javascript" src="https://api.feefo.com/api/javascript/the-dyslexia-shop" async></script>
+
+    {% if content_for_header contains 'bss-b2b' %}
+      {% include 'bss-b2b-jquery-341-js' %}
+      {% include 'bss-b2b-js' %}
+    {% endif %}
+    {% if request.path contains "/apps/customer-portal" %}
+      {% if content_for_header contains 'bss-b2b-customer-portal' %}
+        {% render "bss-b2b-customer-portal-styles" %}
+      {% endif %}
+    {% endif %}
+    {% if content_for_header contains 'bss-b2b-customer-portal' %}
+      {% render "bss-bcp-js" %}
+    {% endif %}
   </body>
 </html>
 

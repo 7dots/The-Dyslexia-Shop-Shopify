@@ -43,7 +43,7 @@
           "settings": {
           }
         },
-        "e34be02b-8ca7-4fa3-a9d6-b7b967fbd31a": {
+        "a2729f3a-5332-49a8-9def-1852e75cf4ff": {
           "type": "backorder_notice",
           "settings": {
             "notice_text": "Currently out of stock - due back soon. Backorder now and it'll be shipped when it's back in stock."
@@ -75,7 +75,7 @@
         "price",
         "variant_picker",
         "quantity_selector",
-        "e34be02b-8ca7-4fa3-a9d6-b7b967fbd31a",
+        "a2729f3a-5332-49a8-9def-1852e75cf4ff",
         "buy_buttons",
         "description",
         "share"

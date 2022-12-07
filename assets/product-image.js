@@ -1,4 +1,3 @@
-
 const productDetailsReviewsTabs = () => {
   const tabs = document.querySelectorAll('[role="tab"]');
   const tabList = document.querySelector('[role="tablist"]');

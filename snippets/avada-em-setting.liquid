@@ -32,6 +32,9 @@
             window.AVADA_EM = window.AVADA_EM || {};
             window.AVADA_EM.template = "{{ template }}";
             window.AVADA_EM.shopId = '0OD5oxprrMALph5MPRz0';
+            window.AVADA_EM.disablePopupScript = false;
+            window.AVADA_EM.disableTrackingScript = false;
+            window.AVADA_EM.disablePushScript = false;
             const params = new URL(document.location).searchParams;
             if (params.get('_avde') && params.get('redirectUrl')) {
               window.location.replace(params.get('redirectUrl'));

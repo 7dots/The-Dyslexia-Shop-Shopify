@@ -221,6 +221,8 @@
             </div>
             {% assign current_variant = product.selected_or_first_available_variant %}
             <p class="product__sku {% if product.images != blank %} -inline{% endif %}" id="product-sku">sku: {{ current_variant.sku }}</p>
+              <!-- Feefo rating -->
+              <div class="feefo-review-badge-wrapper-product"></div>
           {%- when 'backorder_notice'%}
             <p id="product__backorder-notice" data-msg="{{block.settings.notice_text}}">
               {% if current_variant.inventory_quantity == 0 %}{{block.settings.notice_text}}{% endif %}
@@ -578,6 +580,8 @@
       assign seo_media = product.featured_media
     endif
   -%}
+
+  <script type="text/javascript" src="https://api.feefo.com/api/javascript/the-dyslexia-shop" async></script>
 
   <script id="main-product_structured-data" type="application/ld+json">
     {
