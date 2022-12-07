@@ -35,7 +35,7 @@ const scrollToReviews = () => {
         const reviewsTabBtn = document.querySelector('.reviews-tab-btn')
         if (stars) {
             stars.addEventListener('click', e => {
-                console.log(reviewsTabBtn.click())
+                reviewsTabBtn.click()
             })
         }
     }
