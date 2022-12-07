@@ -1,0 +1,17 @@
+.feefo-product-reviews-outer{
+    padding: 40px;
+}
+
+@media screen and (max-width: 450px){
+    .feefo-product-reviews-outer{
+        padding: 20px 10px;
+    }
+}
+
+.feefo-review-badge-wrapper-product {
+    display: block!important;
+}
+
+#feefo-service-review-floating-widgetId, #feefo-product-review-widgetId {
+    display: block!important;
+}

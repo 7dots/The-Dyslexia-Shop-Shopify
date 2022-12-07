@@ -1,7 +1,7 @@
 {{ 'component-product-review.css' | asset_url | stylesheet_tag }}
-{{ 'ekomi-reviews.css' | asset_url | stylesheet_tag }}
-<script src="{{ 'ekomi-product-reviews.js' | asset_url  }}" defer></script>
-<script src={{ 'product-image.js' | asset_url }}" defer></script>
+{{ 'feefo-reviews.css' | asset_url | stylesheet_tag }}
+<script src="{{ 'product-image.js' | asset_url }}" defer></script>
+<script src="{{ 'feefo-product-reviews.js' | asset_url  }}" defer></script>
 {%- style -%}
   .section-{{ section.id }}-padding {
     padding-top: 35px;
@@ -19,7 +19,7 @@
   {% assign current_variant = product.selected_or_first_available_variant %}
   <div role="tablist" aria-label="Product reviews and details tabs" class="product-review__tabs-list {% if section.settings.block_background == "grey" %}-grey{% endif %}">
     <button role="tab" aria-selected="true" aria-controls="panel-1" id="tab-1" tabindex="0"><span class="product-review__button-anchor" id="review-tab__anchor"></span>Details</button>
-    <button role="tab" aria-selected="false" aria-controls="panel-2" id="tab-2" tabindex="-1">Reviews</button>
+    <button role="tab" aria-selected="false" aria-controls="panel-2" id="tab-2" tabindex="-1" class="reviews-tab-btn">Reviews</button>
   </div>
   <div class="product-review__tabs-tab product-review__grid grid grid--gapless grid--1-col grid--3-col-tablet {% if section.settings.block_background == "grey" %}-grey{% endif %}
     {% if section.settings.layout == 'text_first' %} product-review__grid--reverse{% endif %}">
@@ -28,28 +28,8 @@
         <div class="product-review__text {% if section.settings.image == null %}-increased-width{% endif %} rte {{ block.settings.text_style }}" {{ block.shopify_attributes }}>{{ product.description }}</div>
       </div>
     </div>
-    <div id="panel-2" role="tabpanel" tabindex="0" hidden="true" aria-labelledby="tab-2" class="ekomi-product-reviews-outer product-review__tabs-tab">
-      <h2 class="h1">Product reviews</h2>
-      <!-- eKomiSeal START -->
-      <div id="eKomiSeal_default"></div>
-      <!-- eKomiSeal END -->
-
-      <!-- eKomiLoader START, only needed once per page -->
-      <script type="text/javascript">
-        (function(){
-          eKomiIntegrationConfig = new Array(
-                  {certId:'ACEB1FC7F042572'}
-          );
-          if(typeof eKomiIntegrationConfig != "undefined"){for(var eKomiIntegrationLoop=0;eKomiIntegrationLoop<eKomiIntegrationConfig.length;eKomiIntegrationLoop++){
-            var eKomiIntegrationContainer = document.createElement('script');
-            eKomiIntegrationContainer.type = 'text/javascript'; eKomiIntegrationContainer.defer = true;
-            eKomiIntegrationContainer.src = (document.location.protocol=='https:'?'https:':'http:') +"//connect.ekomi.de/integration_1659528886/" + eKomiIntegrationConfig[eKomiIntegrationLoop].certId + ".js";
-            document.getElementsByTagName("head")[0].appendChild(eKomiIntegrationContainer);
-          }}else{if('console' in window){ console.error('connectEkomiIntegration - Cannot read eKomiIntegrationConfig'); }}
-        })();
-      </script>
-      <!-- eKomiLoader END, only needed once per page -->
-      <div id="ekomi-product-reviews" data-sku="{{ current_variant.sku }}"></div>
+    <div id="panel-2" role="tabpanel" hidden="hidden" tabindex="0" aria-labelledby="tab-2" class="feefo-product-reviews-outer product-review__tabs-tab">
+      <div id="feefo-product-review-widgetId" class="feefo-review-widget-product" data-feefo-product-id={{ product.id }}></div>
     </div>
   </div>
 </div>

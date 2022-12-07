@@ -125,3 +125,7 @@ div[class^="clerk-design-component-"] > div.clerk-slider .clerk-slider-nav {
     box-shadow: none;
     -webkit-box-shadow: none;
 }
+
+#feefo-service-review-carousel-widgetId.feefo-review-carousel-widget-service {
+    display: block;
+}

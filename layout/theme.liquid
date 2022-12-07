@@ -200,6 +200,15 @@
           font-size: 16px;
         }
       }
+
+      #feefo-service-review-floating-widgetId {
+        display: block;
+      }
+
+      #feefowidget-modal {
+        display: block;
+      }
+
     {% endstyle %}
 
     {{ 'base.css' | asset_url | stylesheet_tag }}
@@ -282,6 +291,7 @@
     {% section 'announcement-bar' %}
     <main id="MainContent" class="content-for-layout focus-none" role="main" tabindex="-1">
       {{ content_for_layout }}
+      <div id="feefo-service-review-floating-widgetId"></div>
     </main>
 
     {% section 'footer' %}
@@ -325,7 +335,9 @@
     {%- endif -%}
     <script src="{{ 'card-square-checker.js' | asset_url }}" defer="defer"></script>
     <script src="{{ 'clerkio-recommendations.js' | asset_url }}" defer="defer"></script>
-    
+
+    <script type="text/javascript" src="https://api.feefo.com/api/javascript/the-dyslexia-shop" async></script>
+
   {% if content_for_header contains 'bss-b2b' %}{% include 'bss-b2b-jquery-341-js' %}{% include 'bss-b2b-js' %}{% endif %}{% if request.path contains "/apps/customer-portal" %}{% if content_for_header contains 'bss-b2b-customer-portal' %}{% render "bss-b2b-customer-portal-styles" %}{% endif %}{% endif %}{% if content_for_header contains 'bss-b2b-customer-portal' %}{% render "bss-bcp-js" %}{% endif %}</body>
 </html>
 
