@@ -3,7 +3,7 @@
     "announcement_popup": {
       "type": "announcement-popup",
       "settings": {
-        "popup_text": "<p>We're sorry to report that Royal Mail will be affected by strike action on Wednesday 30th November and Thursday 1st December. Please expect significant delays with these services if selected, however, DPD should be operating normally during this time. We apologise for this disruption and will do our best to work around it where possible.<\/p>"
+        "popup_text": "<p>We're sorry to report that Royal Mail will be affected by strike action on Wednesday 14th and Thursday 15th December 2022. Please expect significant delays with these services if selected, however, DPD should be operating normally during this time. We apologise for this disruption and will do our best to work around it where possible.<\/p>"
       }
     },
     "image_banner": {
@@ -102,11 +102,6 @@
       "settings": {
       }
     },
-    "feefo_carousel": {
-      "type": "feefo-carousel",
-      "settings": {
-      }
-    },
     "featured_collection": {
       "type": "featured-collection",
       "disabled": true,
@@ -148,6 +143,11 @@
     },
     "trending_products": {
       "type": "trending-products",
+      "settings": {
+      }
+    },
+    "feefo_carousel": {
+      "type": "feefo-carousel",
       "settings": {
       }
     },
