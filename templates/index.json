@@ -2,6 +2,7 @@
   "sections": {
     "announcement_popup": {
       "type": "announcement-popup",
+      "disabled": true,
       "settings": {
         "popup_text": "<p>We will be closed from Friday 23rd of Deceber 2022 until Tuesday 3rd of January 2023. All orders placed during this time will be dispatch on Tuesday the 3rd of January 2023.<\/p>"
       }
