@@ -2,15 +2,16 @@
   "sections": {
     "announcement_popup": {
       "type": "announcement-popup",
+      "disabled": true,
       "settings": {
-        "popup_text": "<p>We're sorry to report that Royal Mail will be affected by strike action on Wednesday 14th and Thursday 15th December 2022. Please expect significant delays with these services if selected, however, DPD should be operating normally during this time. We apologise for this disruption and will do our best to work around it where possible.<\/p>"
+        "popup_text": "<p>We will be closed from Friday 23rd of Deceber 2022 until Tuesday 3rd of January 2023. All orders placed during this time will be dispatch on Tuesday the 3rd of January 2023.<\/p>"
       }
     },
     "image_banner": {
       "type": "image-banner",
       "settings": {
-        "image": "shopify:\/\/shop_images\/Website_banner.png",
-        "image_mobile": "shopify:\/\/shop_images\/Mobile.png",
+        "image": "shopify:\/\/shop_images\/thedyslexiashop-descktop_1.jpg",
+        "image_mobile": "shopify:\/\/shop_images\/thedyslexiashop-mob_1.jpg",
         "banner_contained": true,
         "show_text_box": false,
         "set_padding": true,
@@ -132,8 +133,8 @@
     "image_banner_contained": {
       "type": "image-banner",
       "settings": {
-        "image": "shopify:\/\/shop_images\/thedyslexiashop-descktop_1.jpg",
-        "image_mobile": "shopify:\/\/shop_images\/thedyslexiashop-mob_1.jpg",
+        "image": "shopify:\/\/shop_images\/ezgif-3-977ae8ee33.jpg",
+        "image_mobile": "shopify:\/\/shop_images\/Mobile1.png",
         "banner_contained": true,
         "show_text_box": false,
         "set_padding": true,
