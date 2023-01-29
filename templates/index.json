@@ -166,7 +166,7 @@
         "image-with-text-1": {
           "type": "text",
           "settings": {
-            "text": "<p>We pride ourselves on providing outstanding, expert and friendly customer services - please do call us for advice.<br\/><\/p><p>We have one of the largest selections of products for special educational needs - all hand selected and tested by our team.<br\/><\/p><p>Gold rated in customer feedback, fast convenient delivery and flexible payment options (including on account for organisations).<\/p>",
+            "text": "<p>As a family with a hisotry of Dyslexia we hav ea real passion for providing hight quality products that make a real difference to learning and everyday life both in the classroom and at home.<\/p><p>We pride ourselves on providing outstanding, expert and friendly customer services - please do call us for advice.<br\/>We have one of the largest selections of products for special educational needs - all hand selected and tested by our team.<br\/>4.8 Star rated in customer feedback, fast convenient delivery and flexible payment options (including on account for organisations).<\/p>",
             "text_style": "body"
           }
         }
@@ -176,13 +176,13 @@
         "image-with-text-1"
       ],
       "settings": {
-        "image": "shopify:\/\/shop_images\/Note.png",
+        "image": "shopify:\/\/shop_images\/6070E0D1-30E9-4147-BD56-E1E8207DD609.jpg",
         "section_padding": true,
         "image_padding": false,
         "layout": "image_first",
         "content_ratio": "1:1",
         "desktop_content_position": "top",
-        "block_background": "image-text__white"
+        "block_background": "image-text__light-green"
       }
     },
     "multicolumn-icon": {
