@@ -176,10 +176,10 @@
         "image-with-text-1"
       ],
       "settings": {
-        "image": "shopify:\/\/shop_images\/6070E0D1-30E9-4147-BD56-E1E8207DD609.jpg",
-        "section_padding": true,
+        "image": "shopify:\/\/shop_images\/6070E0D1-30E9-4147-BD56-E1E8207DD609_d9b42ab5-8edc-4aa0-b94b-82c9fc97d570.jpg",
+        "section_padding": false,
         "image_padding": false,
-        "layout": "image_first",
+        "layout": "text_first",
         "content_ratio": "1:1",
         "desktop_content_position": "top",
         "block_background": "image-text__light-green"
