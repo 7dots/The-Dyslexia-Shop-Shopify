@@ -223,6 +223,10 @@
             <p class="product__sku {% if product.images != blank %} -inline{% endif %}" id="product-sku">sku: {{ current_variant.sku }}</p>
               <!-- Feefo rating -->
               <div class="feefo-review-badge-wrapper-product"></div>
+          {%- when 'backorder_notice'%}
+            <p id="product__backorder-notice" data-msg="{{block.settings.notice_text}}">
+              {% if current_variant.inventory_quantity == 0 %}{{block.settings.notice_text}}{% endif %}
+            </p>
           {%- when 'price' -%}
             <div class="no-js-hidden" id="price-{{ section.id }}" role="status" {{ block.shopify_attributes }}>
               {%- render 'price', product: product, use_variant: true, show_badges: true, price_class: 'price--large' -%}
