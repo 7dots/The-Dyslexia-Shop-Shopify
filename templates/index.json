@@ -235,9 +235,15 @@
         "columns_desktop": 4,
         "swipe_on_mobile": false
       }
+    },
+    "a4ad61c7_1684947053": {
+      "type": "powr-popup",
+      "settings": {
+      }
     }
   },
   "order": [
+    "a4ad61c7_1684947053",
     "announcement_popup",
     "image_banner",
     "cta_image_column",
