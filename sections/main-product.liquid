@@ -451,7 +451,7 @@
                           </svg>
                         </div>
                     </button>
-                    
+
                   </div>
                 {%- endform -%}
               </product-form>
@@ -483,7 +483,7 @@
               <a id='main-product__rating' class="main-product__rating-hidden" href="#tab-2">
                 <span id='main-product__rating-background' class="ekomi-review__stars stars-sm-background">
                   <span id='main-product__rating-foreground' class="stars-sm-full"></span>
-                </span>  
+                </span>
                 <span id='main-product__rating-average'></span>
               </a>
           {%- endcase -%}
@@ -1109,3 +1109,5 @@
     tags: {{ product.tags |json }},
   };
 </script>
+
+{% render 'view-item-datalayer' %}
