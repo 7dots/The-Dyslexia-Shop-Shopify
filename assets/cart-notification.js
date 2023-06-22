@@ -1,13 +1,3 @@
-// dataLayer push `7dots_begin_checkout`
-function beginCheckoutDataLayer() {
-	console.log(beginCheckoutButton)
-	window.dataLayer.push({ ecommerce: null });
-	window.dataLayer.push({
-		'event': '7dots_begin_checkout',
-		'ecommerce': {}
-	});
-}
-
 class CartNotification extends HTMLElement {
 	constructor() {
 		super()
@@ -38,7 +28,7 @@ class CartNotification extends HTMLElement {
 				trapFocus(this.notification)
 
 				if (this.checkoutButton) {
-					this.checkoutButton.addEventListener('click', beginCheckoutDataLayer)
+					this.checkoutButton.addEventListener('click', this.beginCheckoutDataLayer)
 				}
 			},
 			{ once: true }
@@ -54,7 +44,7 @@ class CartNotification extends HTMLElement {
 		document.body.removeEventListener('click', this.onBodyClick)
 
 		if (this.checkoutButton) {
-			this.checkoutButton.removeEventListener('click', beginCheckoutDataLayer)
+			this.checkoutButton.removeEventListener('click', this.beginCheckoutDataLayer)
 		}
 
 		removeTrapFocus(this.activeElement)
@@ -107,6 +97,15 @@ class CartNotification extends HTMLElement {
 
 	setActiveElement(element) {
 		this.activeElement = element
+	}
+
+	beginCheckoutDataLayer() {
+		// dataLayer push `7dots_begin_checkout`
+		window.dataLayer.push({ ecommerce: null });
+		window.dataLayer.push({
+			'event': '7dots_begin_checkout',
+			'ecommerce': {}
+		});
 	}
 }
 

@@ -181,7 +181,8 @@ if (!customElements.get('cart-po-number')) {
   });
 };
 
-const beginCheckoutButton = document.querySelector('.js-cart-checkout-button');
+const beginCheckoutButton = document.querySelector('.js-main-cart-footer .js-cart-checkout-button');
+console.log(beginCheckoutButton)
 if (beginCheckoutButton) {
 	beginCheckoutButton.addEventListener('click', () => {
 		console.log(beginCheckoutButton)
