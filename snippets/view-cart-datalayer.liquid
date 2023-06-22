@@ -12,14 +12,12 @@
 				"event": "7dots_view_cart",
 				"ecommerce": {
 					"currencyCode": "{{ shop.currency }}",
-					"value": "{{ cart.total_price | money_without_currency }}",
           "items": [
             {% for item in cart.items %}
               {
                 "productName": "{{ item.product.title | remove: "'" | remove: '"' }}",
                 "productId": "{{ item.variant.id }}",
                 "productSku": "{{ item.variant.sku | remove: "'" | remove: '"' }}",
-                "productPrice": "{{ item.product.price | money_without_currency }}",
                 "productQuantity": "{{ item.quantity }}"
               },
             {% endfor %}
