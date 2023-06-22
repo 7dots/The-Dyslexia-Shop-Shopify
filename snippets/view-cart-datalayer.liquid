@@ -7,6 +7,7 @@
 
 	window.appStart = function() {
 		window.viewCartHandle = function() {
+			window.dataLayer.push({ ecommerce: null });
 			window.dataLayer.push({
 				"event": "7dots_view_cart",
 				"ecommerce": {

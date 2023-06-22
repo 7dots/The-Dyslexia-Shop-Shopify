@@ -70,6 +70,13 @@ if (!customElements.get('product-form')) {
           if (this.cart && this.cart.classList.contains('is-empty')) this.cart.classList.remove('is-empty');
           if (!this.error) this.submitButton.removeAttribute('aria-disabled');
           this.querySelector('.loading-overlay__spinner').classList.add('hidden');
+
+					// dataLayer push `7dots_add_to_cart`
+					window.dataLayer.push({ ecommerce: null });
+					window.dataLayer.push({
+						'event': '7dots_add_to_cart',
+						'ecommerce': {}
+					});
         });
     }
 

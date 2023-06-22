@@ -1,3 +1,13 @@
+// dataLayer push `7dots_begin_checkout`
+function beginCheckoutDataLayer() {
+	console.log(beginCheckoutButton)
+	window.dataLayer.push({ ecommerce: null });
+	window.dataLayer.push({
+		'event': '7dots_begin_checkout',
+		'ecommerce': {}
+	});
+}
+
 class CartNotification extends HTMLElement {
 	constructor() {
 		super()
@@ -6,6 +16,7 @@ class CartNotification extends HTMLElement {
 		this.notification = document.getElementById('cart-notification')
 		this.header = document.querySelector('sticky-header')
 		this.onBodyClick = this.handleBodyClick.bind(this)
+		this.checkoutButton = this.notification.querySelector('.js-cart-checkout-button')
 
 		this.notification.addEventListener(
 			'keyup',
@@ -25,6 +36,10 @@ class CartNotification extends HTMLElement {
 			() => {
 				this.notification.focus()
 				trapFocus(this.notification)
+
+				if (this.checkoutButton) {
+					this.checkoutButton.addEventListener('click', beginCheckoutDataLayer)
+				}
 			},
 			{ once: true }
 		)
@@ -37,6 +52,10 @@ class CartNotification extends HTMLElement {
 		this.notification.classList.remove('active')
 
 		document.body.removeEventListener('click', this.onBodyClick)
+
+		if (this.checkoutButton) {
+			this.checkoutButton.removeEventListener('click', beginCheckoutDataLayer)
+		}
 
 		removeTrapFocus(this.activeElement)
 	}

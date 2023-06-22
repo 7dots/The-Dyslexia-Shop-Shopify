@@ -16,6 +16,7 @@
 			var productVariantId = "{{ product.selected_variant.id | default: product.variants[0].id }}";
 			var productVariantTitle = "{{ product.selected_variant.title | default: product.variants[0].title }}";
 
+			window.dataLayer.push({ ecommerce: null });
 			window.dataLayer.push({
 				'event': '7dots_view_item',
 				'ecommerce': {
