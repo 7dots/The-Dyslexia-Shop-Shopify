@@ -1,0 +1,32 @@
+{% comment %}
+  Run a `view_item` dataLayer push when a product is viewed.
+{% endcomment %}
+
+<script type="text/javascript">
+	window.dataLayer = window.dataLayer || [];
+
+	window.appStart = function() {
+		window.viewCartHandle = function() {
+			window.dataLayer.push({ ecommerce: null });
+			window.dataLayer.push({
+				"event": "7dots_view_cart",
+				"ecommerce": {
+					"currencyCode": "{{ shop.currency }}",
+          "items": [
+            {% for item in cart.items %}
+              {
+                "productName": "{{ item.product.title | remove: "'" | remove: '"' }}",
+                "productId": "{{ item.variant.id }}",
+                "productSku": "{{ item.variant.sku | remove: "'" | remove: '"' }}",
+                "productQuantity": "{{ item.quantity }}"
+              },
+            {% endfor %}
+          ],
+				}
+			});
+		};
+
+		viewCartHandle();
+	}
+	appStart();
+</script>
