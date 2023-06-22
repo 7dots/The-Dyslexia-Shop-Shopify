@@ -348,18 +348,7 @@
 
     <script type="text/javascript" src="https://api.feefo.com/api/javascript/the-dyslexia-shop" async></script>
 
-    {% if content_for_header contains 'bss-b2b' %}
-      {% include 'bss-b2b-jquery-341-js' %}
-      {% include 'bss-b2b-js' %}
-    {% endif %}
-    {% if request.path contains "/apps/customer-portal" %}
-      {% if content_for_header contains 'bss-b2b-customer-portal' %}
-        {% render "bss-b2b-customer-portal-styles" %}
-      {% endif %}
-    {% endif %}
-    {% if content_for_header contains 'bss-b2b-customer-portal' %}
-      {% render "bss-bcp-js" %}
-    {% endif %}
-  </body>
+  {% if content_for_header contains 'bss-b2b' %}{% include 'bss-b2b-jquery-341-js' %}{% include 'bss-b2b-js' %}{% endif %}{% if request.path contains "/apps/customer-portal" %}{% if content_for_header contains 'bss-b2b-customer-portal' %}{% render "bss-b2b-customer-portal-styles" %}{% endif %}{% endif %}{% if content_for_header contains 'bss-b2b-customer-portal' %}{% render "bss-bcp-js" %}{% endif %} <div class="index-section--flush powr-popup" id="a4ad61c7_1684947053"></div>
+ </body>
 </html>
 

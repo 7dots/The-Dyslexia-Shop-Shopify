@@ -180,3 +180,16 @@ if (!customElements.get('cart-po-number')) {
     }
   });
 };
+
+const beginCheckoutButton = document.querySelector('.js-cart-checkout-button');
+if (beginCheckoutButton) {
+	beginCheckoutButton.addEventListener('click', () => {
+		console.log(beginCheckoutButton)
+		// dataLayer push `7dots_begin_checkout`
+		window.dataLayer.push({ ecommerce: null });
+		window.dataLayer.push({
+			'event': '7dots_begin_checkout',
+			'ecommerce': {}
+		});
+	})
+}

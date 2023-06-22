@@ -1,0 +1,39 @@
+{% comment %}
+  Run a `view_item` dataLayer push when a product is viewed.
+{% endcomment %}
+
+<script type="text/javascript">
+	window.dataLayer = window.dataLayer || [];
+
+	window.appStart = function() {
+		window.viewItemHandle = function() {
+			var productName = "{{ product.title | remove: "'" | remove: '"' }}";
+			var productId = "{{ product.id }}";
+			var productPrice = "{{ product.price | money_without_currency }}";
+			var productBrand = "{{ product.vendor | remove: "'" | remove: '"' }}";
+			var productCollection = "{{ product.collections.first.title | remove: "'" | remove: '"' }}";
+			var productSku = "{{ product.selected_or_first_available_variant.sku | remove: "'" | remove: '"' }}";
+			var productVariantId = "{{ product.selected_variant.id | default: product.variants[0].id }}";
+			var productVariantTitle = "{{ product.selected_variant.title | default: product.variants[0].title }}";
+
+			window.dataLayer.push({ ecommerce: null });
+			window.dataLayer.push({
+				'event': '7dots_view_item',
+				'ecommerce': {
+					'productId': productId,
+					'productName': productName,
+					'productPrice': productPrice,
+					'productBrand': productBrand,
+					'productCategory': productCollection,
+					'productSku': productSku,
+					'productVariantId': productVariantId,
+					'productVariantTitle': productVariantTitle,
+					'currencyCode': '{{ shop.currency }}',
+				}
+			});
+		};
+
+		viewItemHandle();
+	}
+	appStart();
+</script>

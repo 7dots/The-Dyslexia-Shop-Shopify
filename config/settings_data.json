@@ -126,7 +126,7 @@
             "type": "announcement",
             "settings": {
               "text": "<p>Sign Up to our <strong>Newsletter<\/strong><\/p>",
-              "link": "http:\/\/eepurl.com\/hY3EKv",
+              "link": "",
               "popup_trigger": false
             }
           }
@@ -247,6 +247,12 @@
       "558381514691908246": {
         "type": "shopify:\/\/apps\/volumeboost-volume-discount\/blocks\/app-embed\/25745434-52e7-4378-88f1-890df18a0110",
         "disabled": true,
+        "settings": {
+        }
+      },
+      "246135896087123374": {
+        "type": "shopify:\/\/apps\/1clickpopup\/blocks\/main\/233742b9-16cb-4f75-9de7-3fe92c29fdff",
+        "disabled": false,
         "settings": {
         }
       }
