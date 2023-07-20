@@ -4,7 +4,7 @@
       "type": "announcement-popup",
       "disabled": true,
       "settings": {
-        "popup_text": "<p>We will be closed from Friday 23rd of Deceber 2022 until Tuesday 3rd of January 2023. All orders placed during this time will be dispatch on Tuesday the 3rd of January 2023.<\/p>"
+        "popup_text": "<p>Please note that we automatically hold school orders over<br\/>the holidays, to prevent non-deliveries occuring. If you are open to accept<br\/>deliveries during holidays please contact us and we will release it for<br\/>despatch.<\/p>"
       }
     },
     "image_banner": {
