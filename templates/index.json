@@ -14,7 +14,7 @@
         "image_mobile": "shopify:\/\/shop_images\/website_banner_2.png",
         "banner_contained": true,
         "show_text_box": false,
-        "set_padding": true,
+        "set_padding": false,
         "link": "shopify:\/\/collections\/games",
         "show_text_below": false
       }
