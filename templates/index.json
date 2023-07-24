@@ -10,12 +10,12 @@
     "image_banner": {
       "type": "image-banner",
       "settings": {
-        "image": "shopify:\/\/shop_images\/thedyslexiashop-descktop_1.jpg",
-        "image_mobile": "shopify:\/\/shop_images\/thedyslexiashop-mob_1.jpg",
+        "image": "shopify:\/\/shop_images\/Website_banner_c44cfbfd-5b04-47ce-84d3-806e3b779f78.png",
+        "image_mobile": "shopify:\/\/shop_images\/Mobile_fa17a1a8-382a-4977-8211-77553e8da262.png",
         "banner_contained": true,
         "show_text_box": false,
         "set_padding": true,
-        "link": "shopify:\/\/collections\/tinted-paper-exercise-books",
+        "link": "shopify:\/\/collections\/games",
         "show_text_below": false
       }
     },
