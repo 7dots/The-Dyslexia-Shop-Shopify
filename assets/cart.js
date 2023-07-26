@@ -182,10 +182,8 @@ if (!customElements.get('cart-po-number')) {
 };
 
 const beginCheckoutButton = document.querySelector('.js-main-cart-footer .js-cart-checkout-button');
-console.log(beginCheckoutButton)
 if (beginCheckoutButton) {
 	beginCheckoutButton.addEventListener('click', () => {
-		console.log(beginCheckoutButton)
 		// dataLayer push `7dots_begin_checkout`
 		window.dataLayer.push({ ecommerce: null });
 		window.dataLayer.push({
