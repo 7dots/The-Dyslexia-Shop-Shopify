@@ -529,6 +529,7 @@ class SliderComponent extends HTMLElement {
     this.pageTotalElement = this.querySelector('.slider-counter--total');
     this.prevButton = this.querySelector('button[name="previous"]');
     this.nextButton = this.querySelector('button[name="next"]');
+    this.thumbnailList = document.querySelector('.thumbnail-list')
     this.slideHighlighted = 1;
     this.thumbnailSliders = this.querySelector('[id^="Slider-Thumbnails-"]');
 
@@ -551,8 +552,10 @@ class SliderComponent extends HTMLElement {
     this.sliderItemOffset = this.sliderItemsToShow[1].offsetLeft - this.sliderItemsToShow[0].offsetLeft;
     this.slidesPerPage = Math.floor((this.slider.clientWidth - this.sliderItemsToShow[0].offsetLeft) / this.sliderItemOffset);
     this.totalPages = this.sliderItemsToShow.length - this.slidesPerPage + 1;
-    this.update();
-    this.updateHighlight(1);
+    if (this.thumbnailList) {
+      this.update();
+      this.updateHighlight(1);
+    }
   }
 
   resetPages() {
@@ -619,11 +622,11 @@ class SliderComponent extends HTMLElement {
   }
 
   updateHighlight(page){
-    const thumbnailList = document.querySelector('.thumbnail-list')
-    const thumbnails = thumbnailList.querySelectorAll('.thumbnail-list__item')
-
-    thumbnails.forEach(e => e.classList.remove('-highlighted'))
-    thumbnails[page - 1].classList.add('-highlighted')
+      if (this.thumbnailList) {
+      const thumbnails = this.thumbnailList.querySelectorAll('.thumbnail-list__item')
+      thumbnails.forEach(e => e.classList.remove('-highlighted'))
+      thumbnails[page - 1].classList.add('-highlighted')
+    }
   }
 }
 
