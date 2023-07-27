@@ -545,14 +545,14 @@ class SliderComponent extends HTMLElement {
 
   initPages() {
     this.sliderItemsToShow = Array.from(this.sliderItems).filter(element => element.clientWidth > 0);
-    if (this.thumbnailSliders){    
+    if (this.thumbnailSliders){
         this.thumbnailSlide = this.thumbnailSliders.children;
     }
     this.sliderItemOffset = this.sliderItemsToShow[1].offsetLeft - this.sliderItemsToShow[0].offsetLeft;
     this.slidesPerPage = Math.floor((this.slider.clientWidth - this.sliderItemsToShow[0].offsetLeft) / this.sliderItemOffset);
     this.totalPages = this.sliderItemsToShow.length - this.slidesPerPage + 1;
     this.update();
-    this.updateHighlight(1);
+    // this.updateHighlight(1);
   }
 
   resetPages() {
@@ -563,7 +563,7 @@ class SliderComponent extends HTMLElement {
   update() {
     const previousPage = this.currentPage;
     this.currentPage = Math.round(this.slider.scrollLeft / this.sliderItemOffset) + 1;
-    
+
     if (this.currentPageElement && this.pageTotalElement) {
       this.currentPageElement.textContent = this.currentPage;
       this.pageTotalElement.textContent = this.totalPages;
@@ -574,9 +574,9 @@ class SliderComponent extends HTMLElement {
         currentPage: this.currentPage,
         currentElement: this.sliderItemsToShow[this.currentPage - 1]
       }}));
-      if (this.classList.contains('thumbnail-slider') == false){
+      /*if (this.classList.contains('thumbnail-slider') == false){
         this.updateHighlight(this.currentPage)
-      }
+      }*/
     }
 
     if (this.enableSliderLooping) return;
@@ -613,18 +613,18 @@ class SliderComponent extends HTMLElement {
       left: this.slideScrollPosition
     });
 
-    if(this.prevButton.classList.contains('slider-button__highlight-trigger')){
+    /*if(this.prevButton.classList.contains('slider-button__highlight-trigger')){
       this.updateHighlight(this.slideHighlighted);
-    }
+    }*/
   }
 
-  updateHighlight(page){
+  /*updateHighlight(page){
     const thumbnailList = document.querySelector('.thumbnail-list')
     const thumbnails = thumbnailList.querySelectorAll('.thumbnail-list__item')
 
     thumbnails.forEach(e => e.classList.remove('-highlighted'))
     thumbnails[page - 1].classList.add('-highlighted')
-  }
+  }*/
 }
 
 customElements.define('slider-component', SliderComponent);
