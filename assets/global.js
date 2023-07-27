@@ -529,6 +529,7 @@ class SliderComponent extends HTMLElement {
     this.pageTotalElement = this.querySelector('.slider-counter--total');
     this.prevButton = this.querySelector('button[name="previous"]');
     this.nextButton = this.querySelector('button[name="next"]');
+    this.thumbnailList = document.querySelector('.thumbnail-list')
     this.slideHighlighted = 1;
     this.thumbnailSliders = this.querySelector('[id^="Slider-Thumbnails-"]');
 
