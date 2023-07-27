@@ -40,12 +40,7 @@ if (!customElements.get('media-gallery')) {
 
       this.preventStickyHeader();
       window.setTimeout(() => {
-        if (this.elements.thumbnails) {
           activeMedia.parentElement.scrollTo({ left: activeMedia.offsetLeft });
-        }
-        if (this.dataset.desktopLayout === 'stacked') {
-          activeMedia.scrollIntoView({behavior: 'smooth'});
-        }
       });
       this.playActiveMedia(activeMedia);
 
