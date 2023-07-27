@@ -552,7 +552,6 @@ class SliderComponent extends HTMLElement {
     this.slidesPerPage = Math.floor((this.slider.clientWidth - this.sliderItemsToShow[0].offsetLeft) / this.sliderItemOffset);
     this.totalPages = this.sliderItemsToShow.length - this.slidesPerPage + 1;
     this.update();
-    // this.updateHighlight(1);
   }
 
   resetPages() {
@@ -574,9 +573,6 @@ class SliderComponent extends HTMLElement {
         currentPage: this.currentPage,
         currentElement: this.sliderItemsToShow[this.currentPage - 1]
       }}));
-      /*if (this.classList.contains('thumbnail-slider') == false){
-        this.updateHighlight(this.currentPage)
-      }*/
     }
 
     if (this.enableSliderLooping) return;
@@ -612,19 +608,7 @@ class SliderComponent extends HTMLElement {
     this.slider.scrollTo({
       left: this.slideScrollPosition
     });
-
-    /*if(this.prevButton.classList.contains('slider-button__highlight-trigger')){
-      this.updateHighlight(this.slideHighlighted);
-    }*/
   }
-
-  /*updateHighlight(page){
-    const thumbnailList = document.querySelector('.thumbnail-list')
-    const thumbnails = thumbnailList.querySelectorAll('.thumbnail-list__item')
-
-    thumbnails.forEach(e => e.classList.remove('-highlighted'))
-    thumbnails[page - 1].classList.add('-highlighted')
-  }*/
 }
 
 customElements.define('slider-component', SliderComponent);
