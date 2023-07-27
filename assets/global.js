@@ -529,7 +529,6 @@ class SliderComponent extends HTMLElement {
     this.pageTotalElement = this.querySelector('.slider-counter--total');
     this.prevButton = this.querySelector('button[name="previous"]');
     this.nextButton = this.querySelector('button[name="next"]');
-    this.slideHighlighted = 1;
     this.thumbnailSliders = this.querySelector('[id^="Slider-Thumbnails-"]');
 
     if (!this.slider || !this.nextButton) return;
@@ -598,12 +597,6 @@ class SliderComponent extends HTMLElement {
     event.preventDefault();
     const step = event.currentTarget.dataset.step || 1;
     this.slideScrollPosition = event.currentTarget.name === 'next' ? this.slider.scrollLeft + (step * this.sliderItemOffset) : this.slider.scrollLeft - (step * this.sliderItemOffset);
-
-    if (event.currentTarget.name == 'next' && (this.currentPage + step) <= this.sliderItemsToShow.length){
-      this.slideHighlighted = this.currentPage + step;
-    } else if(event.currentTarget.name == 'previous' && (this.currentPage - step) > 0 ) {
-      this.slideHighlighted = this.currentPage - step;
-    }
 
     this.slider.scrollTo({
       left: this.slideScrollPosition
