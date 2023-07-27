@@ -39,9 +39,11 @@ if (!customElements.get('media-gallery')) {
       }
 
       this.preventStickyHeader();
-      window.setTimeout(() => {
-          activeMedia.parentElement.scrollTo({ left: activeMedia.offsetLeft });
-      });
+			window.setTimeout(() => {
+				if (this.elements.thumbnails) {
+					activeMedia.parentElement.scrollTo({ left: activeMedia.offsetLeft });
+				}
+			});
       this.playActiveMedia(activeMedia);
 
       if (!this.elements.thumbnails) return;
