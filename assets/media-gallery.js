@@ -12,6 +12,7 @@ if (!customElements.get('media-gallery')) {
 
       this.elements.viewer.addEventListener('slideChanged', debounce(this.onSlideChanged.bind(this), 500));
       this.elements.thumbnails.querySelectorAll('[data-target]').forEach((mediaToSwitch) => {
+				console.log('Bind me: ', typeof this.setActiveMedia);
         mediaToSwitch.querySelector('button').addEventListener('click', this.setActiveMedia.bind(this, mediaToSwitch.dataset.target, false));
       });
       if (this.dataset.desktopLayout !== 'stacked' && this.mql.matches) this.removeListSemantic();
@@ -30,6 +31,7 @@ if (!customElements.get('media-gallery')) {
       activeMedia.classList.add('is-active');
 
       if (prepend) {
+				console.log('prepend')
         activeMedia.parentElement.prepend(activeMedia);
         if (this.elements.thumbnails) {
           const activeThumbnail = this.elements.thumbnails.querySelector(`[data-target="${ mediaId }"]`);
