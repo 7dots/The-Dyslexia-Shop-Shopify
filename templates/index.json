@@ -10,8 +10,8 @@
     "image_banner": {
       "type": "image-banner",
       "settings": {
-        "image": "shopify:\/\/shop_images\/Website_banner_c44cfbfd-5b04-47ce-84d3-806e3b779f78.png",
-        "image_mobile": "shopify:\/\/shop_images\/Square_1.png",
+        "image": "shopify:\/\/shop_images\/Howard-descktop_1.jpg",
+        "image_mobile": "shopify:\/\/shop_images\/Howard-mob_1.jpg",
         "banner_contained": true,
         "show_text_box": false,
         "set_padding": false,
