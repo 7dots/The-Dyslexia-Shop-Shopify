@@ -235,6 +235,53 @@
         "columns_desktop": 4,
         "swipe_on_mobile": false
       }
+    },
+    "981fa1d3-c38e-4428-8734-e49176f60e85": {
+      "type": "image-banner",
+      "blocks": {
+        "template--16275800391929__981fa1d3-c38e-4428-8734-e49176f60e85-heading-1": {
+          "type": "heading",
+          "disabled": true,
+          "settings": {
+            "heading": "Image banner",
+            "heading_size": "h1"
+          }
+        },
+        "template--16275800391929__981fa1d3-c38e-4428-8734-e49176f60e85-text-1": {
+          "type": "text",
+          "disabled": true,
+          "settings": {
+            "text": "Give customers details about the banner image(s) or content on the template.",
+            "text_style": "body"
+          }
+        },
+        "template--16275800391929__981fa1d3-c38e-4428-8734-e49176f60e85-buttons-1": {
+          "type": "buttons",
+          "disabled": true,
+          "settings": {
+            "button_label_1": "Button label",
+            "button_link_1": "",
+            "button_style_secondary_1": false,
+            "button_label_2": "Button label",
+            "button_link_2": "",
+            "button_style_secondary_2": false
+          }
+        }
+      },
+      "block_order": [
+        "template--16275800391929__981fa1d3-c38e-4428-8734-e49176f60e85-heading-1",
+        "template--16275800391929__981fa1d3-c38e-4428-8734-e49176f60e85-text-1",
+        "template--16275800391929__981fa1d3-c38e-4428-8734-e49176f60e85-buttons-1"
+      ],
+      "settings": {
+        "image": "shopify:\/\/shop_images\/thedyslexiashop-descktop22.jpg",
+        "image_mobile": "shopify:\/\/shop_images\/thedyslexiashop-mob-4_1.jpg",
+        "banner_contained": true,
+        "show_text_box": false,
+        "set_padding": false,
+        "link": "",
+        "show_text_below": true
+      }
     }
   },
   "order": [
@@ -249,6 +296,7 @@
     "trending_products",
     "feefo_carousel",
     "image_with_text",
-    "multicolumn-icon"
+    "multicolumn-icon",
+    "981fa1d3-c38e-4428-8734-e49176f60e85"
   ]
 }
