@@ -35,11 +35,11 @@
         "column2": {
           "type": "column",
           "settings": {
-            "image": "shopify:\/\/shop_images\/Robot.png",
+            "image": "shopify:\/\/shop_images\/Howard-small-4.jpg",
             "header_title": "",
             "header_caption": "",
             "link_label": "See more",
-            "link": "https:\/\/www.thedyslexiashop.co.uk\/collections\/educational-games-and-toys"
+            "link": "shopify:\/\/collections\/reluctant-readers"
           }
         },
         "column3": {
