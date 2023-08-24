@@ -25,11 +25,11 @@
         "column1": {
           "type": "column",
           "settings": {
-            "image": "shopify:\/\/shop_images\/Stabilo.png",
+            "image": "shopify:\/\/shop_images\/Howard-small-3.jpg",
             "header_title": "",
             "header_caption": "",
             "link_label": "See more",
-            "link": "https:\/\/www.thedyslexiashop.co.uk\/collections\/pens-pencils-and-writing-aids"
+            "link": "shopify:\/\/collections\/five-minute-boxes"
           }
         },
         "column2": {
@@ -45,11 +45,11 @@
         "column3": {
           "type": "column",
           "settings": {
-            "image": "shopify:\/\/shop_images\/Note.png",
-            "header_title": "Exercise Books",
-            "header_caption": "<p>We stock a wide range of coloured paper exercise books<\/p>",
+            "image": "shopify:\/\/shop_images\/Howard-small-5.jpg",
+            "header_title": "",
+            "header_caption": "",
             "link_label": "See more",
-            "link": "https:\/\/www.thedyslexiashop.co.uk\/collections\/exercise-books"
+            "link": "shopify:\/\/collections\/visual-stress"
           }
         }
       },
