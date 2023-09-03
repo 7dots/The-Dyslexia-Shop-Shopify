@@ -45,11 +45,11 @@
         "column3": {
           "type": "column",
           "settings": {
-            "image": "shopify:\/\/shop_images\/Howard-small-5.jpg",
+            "image": "shopify:\/\/shop_images\/Howard-small-ss_1.jpg",
             "header_title": "",
             "header_caption": "",
             "link_label": "See more",
-            "link": "shopify:\/\/collections\/visual-stress"
+            "link": "shopify:\/\/collections\/dekko"
           }
         }
       },
