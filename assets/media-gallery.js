@@ -1,5 +1,5 @@
-if (!customElements.get('media-gallery')) {
-  customElements.define('media-gallery', class MediaGallery extends HTMLElement {
+if (!customElements.get('custom-media-gallery')) {
+  customElements.define('custom-media-gallery', class MediaGallery extends HTMLElement {
     constructor() {
       super();
       this.elements = {
@@ -12,7 +12,6 @@ if (!customElements.get('media-gallery')) {
 
       this.elements.viewer.addEventListener('slideChanged', debounce(this.onSlideChanged.bind(this), 500));
       this.elements.thumbnails.querySelectorAll('[data-target]').forEach((mediaToSwitch) => {
-				console.log('Bind me: ', typeof this.setActiveMedia);
         mediaToSwitch.querySelector('button').addEventListener('click', this.setActiveMedia.bind(this, mediaToSwitch.dataset.target, false));
       });
       if (this.dataset.desktopLayout !== 'stacked' && this.mql.matches) this.removeListSemantic();
@@ -31,12 +30,10 @@ if (!customElements.get('media-gallery')) {
       activeMedia.classList.add('is-active');
 
       if (prepend) {
-				console.log('prepend')
         activeMedia.parentElement.prepend(activeMedia);
         if (this.elements.thumbnails) {
           const activeThumbnail = this.elements.thumbnails.querySelector(`[data-target="${ mediaId }"]`);
           activeThumbnail.parentElement.prepend(activeThumbnail);
-					if (this.elements.thumbnails.slider) this.elements.thumbnails.resetPages();
         }
         if (this.elements.viewer.slider) this.elements.viewer.resetPages();
       }

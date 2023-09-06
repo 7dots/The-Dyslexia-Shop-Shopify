@@ -45,6 +45,7 @@
         },
         "a2729f3a-5332-49a8-9def-1852e75cf4ff": {
           "type": "backorder_notice",
+          "disabled": true,
           "settings": {
             "notice_text": "Item status: Backorder - Order now and it’ll be shipped when it’s back in stock."
           }

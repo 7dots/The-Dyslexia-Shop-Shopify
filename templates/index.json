@@ -10,12 +10,12 @@
     "image_banner": {
       "type": "image-banner",
       "settings": {
-        "image": "shopify:\/\/shop_images\/Website_banner_c44cfbfd-5b04-47ce-84d3-806e3b779f78.png",
-        "image_mobile": "shopify:\/\/shop_images\/Square_1.png",
+        "image": "shopify:\/\/shop_images\/Howard-descktop_1.jpg",
+        "image_mobile": "shopify:\/\/shop_images\/Howard-mob_1.jpg",
         "banner_contained": true,
         "show_text_box": false,
         "set_padding": false,
-        "link": "shopify:\/\/collections\/games",
+        "link": "shopify:\/\/collections\/back-to-school",
         "show_text_below": false
       }
     },
@@ -25,31 +25,31 @@
         "column1": {
           "type": "column",
           "settings": {
-            "image": "shopify:\/\/shop_images\/Stabilo.png",
+            "image": "shopify:\/\/shop_images\/Howard-small-3.jpg",
             "header_title": "",
             "header_caption": "",
             "link_label": "See more",
-            "link": "https:\/\/www.thedyslexiashop.co.uk\/collections\/pens-pencils-and-writing-aids"
+            "link": "shopify:\/\/collections\/five-minute-boxes"
           }
         },
         "column2": {
           "type": "column",
           "settings": {
-            "image": "shopify:\/\/shop_images\/Robot.png",
+            "image": "shopify:\/\/shop_images\/Howard-small-4.jpg",
             "header_title": "",
             "header_caption": "",
             "link_label": "See more",
-            "link": "https:\/\/www.thedyslexiashop.co.uk\/collections\/educational-games-and-toys"
+            "link": "shopify:\/\/collections\/reluctant-readers"
           }
         },
         "column3": {
           "type": "column",
           "settings": {
-            "image": "shopify:\/\/shop_images\/Note.png",
-            "header_title": "Exercise Books",
-            "header_caption": "<p>We stock a wide range of coloured paper exercise books<\/p>",
+            "image": "shopify:\/\/shop_images\/Howard-small-ss_1.jpg",
+            "header_title": "",
+            "header_caption": "",
             "link_label": "See more",
-            "link": "https:\/\/www.thedyslexiashop.co.uk\/collections\/exercise-books"
+            "link": "shopify:\/\/collections\/dekko"
           }
         }
       },
@@ -133,11 +133,11 @@
     "image_banner_contained": {
       "type": "image-banner",
       "settings": {
-        "image": "shopify:\/\/shop_images\/thedyslexiashop-descktop_1.jpg",
-        "image_mobile": "shopify:\/\/shop_images\/thedyslexiashop-mob_1.jpg",
+        "image": "shopify:\/\/shop_images\/thedyslexiashop-descktop-_1_1.jpg",
+        "image_mobile": "shopify:\/\/shop_images\/thedyslexiashop-mob_1_0c271892-7e71-4970-89e7-53102580e8af.jpg",
         "banner_contained": true,
         "show_text_box": false,
-        "set_padding": true,
+        "set_padding": false,
         "link": "shopify:\/\/collections\/exercise-books",
         "show_text_below": false
       }
@@ -235,6 +235,53 @@
         "columns_desktop": 4,
         "swipe_on_mobile": false
       }
+    },
+    "981fa1d3-c38e-4428-8734-e49176f60e85": {
+      "type": "image-banner",
+      "blocks": {
+        "template--16275800391929__981fa1d3-c38e-4428-8734-e49176f60e85-heading-1": {
+          "type": "heading",
+          "disabled": true,
+          "settings": {
+            "heading": "Image banner",
+            "heading_size": "h1"
+          }
+        },
+        "template--16275800391929__981fa1d3-c38e-4428-8734-e49176f60e85-text-1": {
+          "type": "text",
+          "disabled": true,
+          "settings": {
+            "text": "Give customers details about the banner image(s) or content on the template.",
+            "text_style": "body"
+          }
+        },
+        "template--16275800391929__981fa1d3-c38e-4428-8734-e49176f60e85-buttons-1": {
+          "type": "buttons",
+          "disabled": true,
+          "settings": {
+            "button_label_1": "Button label",
+            "button_link_1": "",
+            "button_style_secondary_1": false,
+            "button_label_2": "Button label",
+            "button_link_2": "",
+            "button_style_secondary_2": false
+          }
+        }
+      },
+      "block_order": [
+        "template--16275800391929__981fa1d3-c38e-4428-8734-e49176f60e85-heading-1",
+        "template--16275800391929__981fa1d3-c38e-4428-8734-e49176f60e85-text-1",
+        "template--16275800391929__981fa1d3-c38e-4428-8734-e49176f60e85-buttons-1"
+      ],
+      "settings": {
+        "image": "shopify:\/\/shop_images\/thedyslexiashop-descktop22.jpg",
+        "image_mobile": "shopify:\/\/shop_images\/thedyslexiashop-mob-4_1.jpg",
+        "banner_contained": true,
+        "show_text_box": false,
+        "set_padding": false,
+        "link": "shopify:\/\/collections\/five-minute-boxes",
+        "show_text_below": true
+      }
     }
   },
   "order": [
@@ -249,6 +296,7 @@
     "trending_products",
     "feefo_carousel",
     "image_with_text",
-    "multicolumn-icon"
+    "multicolumn-icon",
+    "981fa1d3-c38e-4428-8734-e49176f60e85"
   ]
 }

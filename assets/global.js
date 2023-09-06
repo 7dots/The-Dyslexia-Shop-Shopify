@@ -790,10 +790,6 @@ class VariantSelects extends HTMLElement {
     if (!this.currentVariant.featured_media) return;
 
     const mediaGallery = document.getElementById(`MediaGallery-${this.dataset.section}`);
-		console.log(typeof mediaGallery.setActiveMedia)
-		/*if (typeof mediaGallery.setActiveMedia !== 'undefined' && typeof mediaGallery.setActiveMedia === 'function') {
-			mediaGallery.setActiveMedia(`${this.dataset.section}-${this.currentVariant.featured_media.id}`, true);
-		}*/
 		mediaGallery.setActiveMedia(`${this.dataset.section}-${this.currentVariant.featured_media.id}`, true);
 
     const modalContent = document.querySelector(`#ProductModal-${this.dataset.section} .product-media-modal__content`);
