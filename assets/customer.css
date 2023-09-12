@@ -11,6 +11,11 @@
   }
 }
 
+.customer > h1,
+.customer__title {
+  margin-top: 0;
+}
+
 .customer form {
   margin-top: 4rem;
 }
@@ -65,7 +70,7 @@
   border-bottom: 0.01rem solid rgba(var(--color-foreground), 0.08);
   box-shadow: none;
   width: 100%;
-  font-size: 16px;
+  font-size: 1.6rem;
   position: relative;
 }
 
@@ -415,7 +420,8 @@
 
 @media screen and (min-width: 750px) {
   :is(.account, .order) {
-    padding: 0 5rem;
+    padding-left: 5rem;
+    padding-right: 5rem;
   }
 }
 
@@ -445,7 +451,7 @@
 
 :is(.account, .order) p {
   margin: 0 0 2rem;
-  font-size: 16px;
+  font-size: 1.6rem;
 }
 
 :is(.account, .order) h1 {
@@ -685,7 +691,7 @@
 
 .addresses li>button:hover{
   -webkit-box-shadow: 0px 0px 0px 1px var(--color-black); 
-  box-shadow: 0px 0px 0px 1px var(--color-black); 
+  box-shadow: 0px 0px 0px 1px var(--color-black);
 }
 
 .addresses li > button + button,

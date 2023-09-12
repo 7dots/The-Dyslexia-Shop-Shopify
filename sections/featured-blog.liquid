@@ -66,7 +66,14 @@
               <span class="visually-hidden">{{ 'general.slider.of' | t }}</span>
               <span class="slider-counter--total">{{ section.settings.post_limit }}</span>
             </div>
-            <button type="button" class="slider-button slider-button--next" name="next" aria-label="{{ 'general.slider.next_slide' | t }}">{% render 'icon-caret' %}</button>
+            <button
+              type="button"
+              class="slider-button slider-button--next"
+              name="next"
+              aria-label="{{ 'general.slider.next_slide' | t }}"
+            >
+              {% render 'icon-caret' %}
+            </button>
           </div>
         {%- endif -%}
       </slider-component>

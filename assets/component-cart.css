@@ -166,7 +166,7 @@ cart-items {
 
 .cart__ctas button:hover {
   -webkit-box-shadow: 0px 0px 0px 1px var(--color-primary); 
-  box-shadow: 0px 0px 0px 1px var(--color-primary);  
+  box-shadow: 0px 0px 0px 1px var(--color-primary);
 }
 
 .cart__ctas > *:not(noscript:first-child) + * {
@@ -188,6 +188,10 @@ cart-items {
 
 .cart__dynamic-checkout-buttons div[role='button'] {
   border-radius: var(--buttons-radius-outset) !important;
+}
+
+.cart__blocks > * + * {
+  margin-top: 1rem;
 }
 
 .cart-note__label {
