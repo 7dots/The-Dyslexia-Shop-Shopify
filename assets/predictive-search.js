@@ -30,7 +30,6 @@ class PredictiveSearch extends SearchForm {
   }
 
   onChange() {
-    super.onChange();
     const newSearchTerm = this.getQuery();
     if (!this.searchTerm || !newSearchTerm.startsWith(this.searchTerm)) {
       // Remove the results when they are no longer relevant for the new search term
