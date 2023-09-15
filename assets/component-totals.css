@@ -5,7 +5,7 @@
 }
 
 .totals > * {
-  font-size: 16px;
+  font-size: 1.6rem;
   margin: 0;
 }
 
@@ -22,6 +22,14 @@
 }
 
 .totals__subtotal-value {
+  font-size: 1.8rem;
+}
+
+.totals__total {
+  margin-top: .5rem;
+}
+
+.totals__total-value {
   font-size: 1.8rem;
 }
 

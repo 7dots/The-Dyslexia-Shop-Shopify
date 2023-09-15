@@ -16,11 +16,15 @@
   top: 100%;
   z-index: -1;
   -webkit-box-shadow: var(--box-shadow-primary); 
-  box-shadow: var(--box-shadow-primary);  
+  box-shadow: var(--box-shadow-primary);
 }
 
 .shopify-section-header-sticky .mega-menu__content {
   max-height: calc(100vh - var(--header-bottom-position-desktop, 20rem) - 4rem);
+}
+
+.header-wrapper--border-bottom .mega-menu__content {
+  border-top: 0;
 }
 
 .js .mega-menu__content {

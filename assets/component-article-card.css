@@ -13,7 +13,6 @@
   padding: 0;
 }
 
-
 .grid--peek .article-card {
   box-sizing: border-box;
 }
@@ -29,7 +28,7 @@
 
 .article-card__title a:after {
   bottom: 0;
-  content: "";
+  content: '';
   height: 100%;
   left: 0;
   position: absolute;
@@ -92,6 +91,7 @@
 .article-card__image--small .ratio::before {
   padding-bottom: 11rem;
 }
+
 .article-card__image--medium{
   flex-direction: row;
 }

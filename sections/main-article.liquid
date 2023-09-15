@@ -118,7 +118,10 @@
                 <article id="{{ comment.id }}" class="article-template__comments-comment">
                   {{ comment.content }}
                   <footer class="right">
-                    <span class="circle-divider caption-with-letter-spacing">{{ comment.author }}</span><span class="caption-with-letter-spacing">{{ comment.created_at | time_tag: format: 'date' }}</span>
+                    <span class="circle-divider caption-with-letter-spacing">{{ comment.author }}</span
+                    ><span class="caption-with-letter-spacing">
+                      {{- comment.created_at | time_tag: format: 'date' -}}
+                    </span>
                   </footer>
                 </article>
               {%- endfor -%}
@@ -137,7 +140,8 @@
           {%- if form.errors -%}
             <div class="form__message" role="alert">
               <h3 class="form-status caption-large text-body" tabindex="-1" autofocus>
-                {% render 'icon-error' %} {{ 'templates.contact.form.error_heading' | t }}
+                {% render 'icon-error' %}
+                {{ 'templates.contact.form.error_heading' | t }}
               </h3>
             </div>
             <ul class="form-status-list caption-large">
@@ -146,8 +150,8 @@
                   <a href="#CommentForm-{{ field }}" class="link">
                     {%- if form.errors.translated_fields[field] contains 'author' -%}
                       {{ 'blogs.article.name' | t }}
-                    {%- elsif form.errors.translated_fields[field] contains 'body'-%}
-                     {{ 'blogs.article.message' | t }}
+                    {%- elsif form.errors.translated_fields[field] contains 'body' -%}
+                      {{ 'blogs.article.message' | t }}
                     {%- else -%}
                       {{ form.errors.translated_fields[field] }}
                     {%- endif -%}
@@ -158,11 +162,18 @@
             </ul>
           {%- elsif form.posted_successfully? -%}
             <div class="form-status-list form__message" role="status">
-              <h3 class="form-status" tabindex="-1" autofocus>{% render 'icon-success' %} {{ post_message | t }}</h3>
+              <h3 class="form-status" tabindex="-1" autofocus>
+                {% render 'icon-success' %}
+                {{ post_message | t }}
+              </h3>
             </div>
           {%- endif -%}
 
-          <div{% if blog.moderated? == false %} class="article-template__comments-fields"{% endif %}>
+          <div
+            {% if blog.moderated? == false %}
+              class="article-template__comments-fields"
+            {% endif %}
+          >
             <div class="article-template__comment-fields">
               <div class="field field--with-error">
                 <input
@@ -180,10 +191,17 @@
                   {% endif %}
                   placeholder="{{ 'blogs.article.name' | t }}"
                 >
-                <label class="field__label" for="CommentForm-author">{{ 'blogs.article.name' | t }} <span aria-hidden="true">*</span></label>
+                <label class="field__label" for="CommentForm-author">
+                  {{- 'blogs.article.name' | t }}
+                  <span aria-hidden="true">*</span></label
+                >
                 {%- if form.errors contains 'author' -%}
                   <small id="CommentForm-author-error">
-                    <span class="form__message">{% render 'icon-error' %}{{ 'blogs.article.name' | t }} {{ form.errors.messages['author'] }}.</span>
+                    <span class="form__message">
+                      {%- render 'icon-error' -%}
+                      {{- 'blogs.article.name' | t }}
+                      {{ form.errors.messages.author }}.</span
+                    >
                   </small>
                 {%- endif -%}
               </div>
@@ -205,10 +223,17 @@
                   {% endif %}
                   placeholder="{{ 'blogs.article.email' | t }}"
                 >
-                <label class="field__label" for="CommentForm-email">{{ 'blogs.article.email' | t }} <span aria-hidden="true">*</span></label>
+                <label class="field__label" for="CommentForm-email">
+                  {{- 'blogs.article.email' | t }}
+                  <span aria-hidden="true">*</span></label
+                >
                 {%- if form.errors contains 'email' -%}
                   <small id="CommentForm-email-error">
-                    <span class="form__message">{% render 'icon-error' %}{{ 'blogs.article.email' | t }} {{ form.errors.messages['email'] }}.</span>
+                    <span class="form__message">
+                      {%- render 'icon-error' -%}
+                      {{- 'blogs.article.email' | t }}
+                      {{ form.errors.messages.email }}.</span
+                    >
                   </small>
                 {%- endif -%}
               </div>
@@ -227,11 +252,18 @@
                 {% endif %}
                 placeholder="{{ 'blogs.article.message' | t }}"
               >{{ form.body }}</textarea>
-                <label class="form__label field__label" for="CommentForm-body">{{ 'blogs.article.message' | t }} <span aria-hidden="true">*</span></label>
+              <label class="form__label field__label" for="CommentForm-body">
+                {{- 'blogs.article.message' | t }}
+                <span aria-hidden="true">*</span></label
+              >
             </div>
             {%- if form.errors contains 'body' -%}
               <small id="CommentForm-body-error">
-                <span class="form__message">{% render 'icon-error' %}{{ 'blogs.article.message' | t }} {{ form.errors.messages['body'] }}.</span>
+                <span class="form__message">
+                  {%- render 'icon-error' -%}
+                  {{- 'blogs.article.message' | t }}
+                  {{ form.errors.messages.body }}.</span
+                >
               </small>
             {%- endif -%}
           </div>
@@ -241,7 +273,7 @@
           <input type="submit" class="button" value="{{ 'blogs.article.post' | t }}">
         {% endform %}
       </div>
-  </div>
+    </div>
   {%- endif -%}
 </article>
 
