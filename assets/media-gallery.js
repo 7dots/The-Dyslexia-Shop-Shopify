@@ -1,6 +1,6 @@
-if (!customElements.get('media-gallery')) {
+if (!customElements.get('custom-media-gallery')) {
   customElements.define(
-    'media-gallery',
+    'custom-media-gallery',
     class MediaGallery extends HTMLElement {
       constructor() {
         super();
