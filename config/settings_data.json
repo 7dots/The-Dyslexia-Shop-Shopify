@@ -127,7 +127,7 @@
             "settings": {
               "text": "<p>Sign Up to our <strong>Newsletter<\/strong><\/p>",
               "link": "",
-              "popup_trigger": false
+              "popup_trigger": true
             }
           }
         },
