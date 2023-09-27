@@ -2,6 +2,7 @@
   "sections": {
     "announcement_popup": {
       "type": "announcement-popup",
+      "disabled": true,
       "settings": {
         "popup_text": "<p>Please note that we automatically hold school orders over<br\/>the holidays, to prevent non-deliveries occuring. If you are open to accept<br\/>deliveries during holidays please contact us and we will release it for<br\/>despatch.<\/p>"
       }
