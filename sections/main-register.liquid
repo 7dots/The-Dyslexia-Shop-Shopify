@@ -135,6 +135,17 @@
         {{ form.errors.messages.password }}.
       </span>
     {%- endif -%}
+    <div class="checkbox-field">
+      <input
+          id="newsletter"
+          type="checkbox"
+          name="customer[accepts_marketing]"
+          value="true"
+      >
+      <label for="newsletter">
+        Sign up for our newsletter
+      </label>
+    </div>
     <button>
       {{ 'customer.register.submit' | t }}
     </button>
