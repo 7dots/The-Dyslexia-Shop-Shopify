@@ -33,6 +33,7 @@
         type="button"
         aria-expanded="false"
         aria-controls="AddAddress"
+        class="button button--primary customer__address-btn"
       >
         {{ 'customer.addresses.add_new' | t }}
       </button>
@@ -184,6 +185,7 @@
             aria-controls="EditAddress_{{ address.id }}"
             aria-expanded="false"
             data-address-id="{{ address.id }}"
+            class="button button--secondary"
           >
             {{ 'customer.addresses.edit' | t }}
           </button>
@@ -192,6 +194,7 @@
             aria-label="{{ 'customer.addresses.delete' | t }} {{ forloop.index }}"
             data-target="{{ address.url }}"
             data-confirm-message="{{ 'customer.addresses.delete_confirm' | t }}"
+            class="button button--secondary"
           >
             {{ 'customer.addresses.delete' | t }}
           </button>
@@ -330,8 +333,8 @@
                 </label>
               </div>
               <div>
-                <button>{{ 'customer.addresses.update' | t }}</button>
-                <button type="reset">{{ 'customer.addresses.cancel' | t }}</button>
+                <button class="button button--primary customer__address-btn">{{ 'customer.addresses.update' | t }}</button>
+                <button class="button button--secondary" type="reset">{{ 'customer.addresses.cancel' | t }}</button>
               </div>
             {%- endform -%}
           </div>
