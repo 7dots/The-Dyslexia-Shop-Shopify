@@ -1,22 +1,24 @@
-Dawn 6.0.2 introduces a new cart drawer feature, additional customization options on the rich text section, and various fixes and enhancements.
+Dawn 11.0.0 introduces new customization options to the announcement bar, new animations and hover effects, and a Quick order list section to product pages. 
 
 ### Added
-- Important: We introduced new settings to the header section to control top and bottom section padding. This update may cause a visual change to your header. This can be modified by adjusting the bottom padding value.
-- We introduced a new theme setting that allows you to control what happens when an item is added to cart. Choose between a cart drawer, a pop-up notification, or linking directly to the cart page.
-- The rich text section is now more flexible. You can now customize the desktop content position, the content alignment, the size and formatting of headings, and the number of blocks added to the section.
+- You can now add multiple Announcement bar sections to your Header. 
+- You can now display social media icons in the Announcement bar. 
+- You can now add the country/region selector and the language selector to the Announcement bar.
+- You can now set a different color scheme for your navigation menu than for your Header. 
+- We added a new “Zoom in on scroll” animation option to the Image with text and Image banner sections.
+- We added a new “Vertical lift” hover effect option to cards and buttons. 
+- You can now apply the outline button style to the button on Image with text. 
+- You can now adjust the bottom padding on the Subtotal section in the cart.
+- We introduced a new Quick order list section to the product template. This allows you to optimize your product pages for bulk buying. 
+- Customers who qualify for volume pricing will now see the different price breaks on your product pages. 
 
 ### Changed
-
-- Important: We moved “Show vendor” and “Enable cart note” checkboxes from the cart template to the theme settings under the heading “Cart”. This update may cause a visual change to your cart. This can be modified by adjusting the checkboxes in the theme settings.
+- We reduced the height of the Announcement bar section.
+- You can now choose to auto rotate the Announcement bar slides every 3 seconds. The minimum was previously 5 seconds.
+- Your mobile menu drawer will now appear full-width.
+- The Featured collection section will now display placeholder product images until a collection is selected. 
 
 ### Fixes and improvements
-
-- On larger screen sizes, the quick add modal included unnecessary empty space. This is now fixed.
-- We fixed an issue where the product media gallery sometimes hid the subsequent media when larger values of horizontal grid space were used.
-- The product media gallery included unnecessary empty space between the product media and the gallery controls. This is now fixed.
-- We fixed an issue where the collapsible row blocks in the collapsible content section were missing padding.
-- We fixed an issue where hiding the background of the content container on the slideshow section would not work if a gradient was set as the background color.
-- The recaptcha badge was not visible on the contact form. This is now fixed.
-- We fixed an issue where adding a menu block to the footer required a heading to display.
-- The experience of navigating paginated pages when using a screen reader or keyboard is improved.
-- We added a warning to the password footer link opening in a new tab, improving its accessibility.
+- We fixed a bug where text links were not styled properly in the heading of the Related products section.
+- We made light stylistic improvements to link styles, alignment and spacing for both the dropdown and mega menu types in the Header.
+- We fixed a bug where the Footer would display extra white space when the “Show email signup” setting was left unchecked. 
