@@ -30,7 +30,7 @@
 }
 
 .disclosure__list-wrapper.-nav{
-  transform: translateY(12rem);
+  transform: translateY(232px); /* height of currency menu + height of utility nav */
 }
 
 .disclosure__button.-nav{
