@@ -10,8 +10,8 @@
     "image_banner": {
       "type": "image-banner",
       "settings": {
-        "image": "shopify:\/\/shop_images\/thedyslexiashop-descktop232_2_006fbf07-c400-4abe-8771-5b8f989c8869.jpg",
-        "image_mobile": "shopify:\/\/shop_images\/thedyslexiashop-mob-3_2_bc680d11-a8e8-4c15-bd6c-c34238735cfe.jpg",
+        "image": "shopify:\/\/shop_images\/thedyslexiashop-descktop23332.jpg",
+        "image_mobile": "shopify:\/\/shop_images\/thedyslexiashop-mob-343.jpg",
         "banner_contained": true,
         "show_text_box": false,
         "set_padding": false,
