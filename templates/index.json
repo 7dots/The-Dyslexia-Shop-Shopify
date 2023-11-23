@@ -133,12 +133,12 @@
     "image_banner_contained": {
       "type": "image-banner",
       "settings": {
-        "image": "shopify:\/\/shop_images\/thedyslexiashop-descktop-_1_1.jpg",
-        "image_mobile": "shopify:\/\/shop_images\/thedyslexiashop-mob_1_0c271892-7e71-4970-89e7-53102580e8af.jpg",
+        "image": "shopify:\/\/shop_images\/thedyslexiashop-descktop23332.jpg",
+        "image_mobile": "shopify:\/\/shop_images\/thedyslexiashop-mob-343.jpg",
         "banner_contained": true,
         "show_text_box": false,
         "set_padding": false,
-        "link": "shopify:\/\/collections\/exercise-books",
+        "link": "shopify:\/\/collections\/christmas",
         "show_text_below": false
       }
     },
