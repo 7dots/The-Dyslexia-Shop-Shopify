@@ -10,12 +10,12 @@
     "image_banner": {
       "type": "image-banner",
       "settings": {
-        "image": "shopify:\/\/shop_images\/thedyslexiashop-descktop2335332.jpg",
-        "image_mobile": "shopify:\/\/shop_images\/thedyslexiashop-mob-33443_1.jpg",
+        "image": "shopify:\/\/shop_images\/thedyslexiashop-descktop-_1_1.jpg",
+        "image_mobile": "shopify:\/\/shop_images\/thedyslexiashop-mob_1_0c271892-7e71-4970-89e7-53102580e8af.jpg",
         "banner_contained": true,
         "show_text_box": false,
         "set_padding": false,
-        "link": "shopify:\/\/collections\/black-friday-2023",
+        "link": "shopify:\/\/collections\/stationery",
         "show_text_below": false
       }
     },
