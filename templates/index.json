@@ -16,10 +16,17 @@
             "heading": "<p><em>Please note that our office and warehouse will be closed over the festive period, from 22nd of December to 2nd of January 2024. <\/em><\/p><p><em>Wishing you a fantastic holiday season and a prosperous New Year!<\/em><\/p>",
             "heading_size": "h2"
           }
+        },
+        "b5c9176d-69da-4423-b3d0-1454dcabe2e7": {
+          "type": "text",
+          "settings": {
+            "text": "<p>All orders placed between this period will be shipped on the 2nd of January 2024<\/p>"
+          }
         }
       },
       "block_order": [
-        "template--16275800391929__6bb00f71-bbc3-4b63-aa8c-b5578490aded-heading-1"
+        "template--16275800391929__6bb00f71-bbc3-4b63-aa8c-b5578490aded-heading-1",
+        "b5c9176d-69da-4423-b3d0-1454dcabe2e7"
       ],
       "settings": {
         "desktop_content_position": "center",
