@@ -2,6 +2,7 @@
   "sections": {
     "announcement_popup": {
       "type": "announcement-popup",
+      "disabled": true,
       "settings": {
         "popup_text": "<p><em>Please note that our office and warehouse will be closed over the festive period, from 22nd of December to 2nd of January 2024. <\/em><\/p><p><em>Wishing you a fantastic holiday season and a prosperous New Year!<\/em><\/p>"
       }
