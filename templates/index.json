@@ -7,39 +7,6 @@
         "popup_text": "<p><em>Please note that our office and warehouse will be closed over the festive period, from 22nd of December to 2nd of January 2024. <\/em><\/p><p><em>Wishing you a fantastic holiday season and a prosperous New Year!<\/em><\/p>"
       }
     },
-    "6bb00f71-bbc3-4b63-aa8c-b5578490aded": {
-      "type": "rich-text",
-      "blocks": {
-        "template--16275800391929__6bb00f71-bbc3-4b63-aa8c-b5578490aded-heading-1": {
-          "type": "heading",
-          "settings": {
-            "heading": "<h2><strong>Please note that our office and warehouse will be closed over the festive period, from 22nd of December to 2nd of January 2024.                               <\/strong><\/h2><h2><strong>Wishing you a fantastic holiday season and a prosperous New Year!<\/strong><\/h2>",
-            "heading_size": "h2"
-          }
-        },
-        "b5c9176d-69da-4423-b3d0-1454dcabe2e7": {
-          "type": "text",
-          "settings": {
-            "text": "<p>All orders placed between this period will be shipped on the 2nd of January 2024<\/p>"
-          }
-        }
-      },
-      "block_order": [
-        "template--16275800391929__6bb00f71-bbc3-4b63-aa8c-b5578490aded-heading-1",
-        "b5c9176d-69da-4423-b3d0-1454dcabe2e7"
-      ],
-      "custom_css": [
-
-      ],
-      "settings": {
-        "desktop_content_position": "center",
-        "content_alignment": "center",
-        "color_scheme": "background-1",
-        "full_width": true,
-        "padding_top": 16,
-        "padding_bottom": 16
-      }
-    },
     "image_banner": {
       "type": "image-banner",
       "settings": {
@@ -319,7 +286,6 @@
   },
   "order": [
     "announcement_popup",
-    "6bb00f71-bbc3-4b63-aa8c-b5578490aded",
     "image_banner",
     "cta_image_column",
     "rich_text",
