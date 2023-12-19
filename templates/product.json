@@ -1,5 +1,28 @@
 {
   "sections": {
+    "0fa26ba3-5c52-4e9d-b432-0066944d931b": {
+      "type": "rich-text",
+      "blocks": {
+        "template--16275800719609__0fa26ba3-5c52-4e9d-b432-0066944d931b-heading-1": {
+          "type": "heading",
+          "settings": {
+            "heading": "<h3><strong>Please note that our office and warehouse will be closed over the festive period, from the 22nd of December to the 2nd of January 2024<\/strong><\/h3><h3><strong>Wishing you a fantastic holiday season and a prosperous New Year!<\/strong><\/h3><p><\/p>",
+            "heading_size": "h2"
+          }
+        }
+      },
+      "block_order": [
+        "template--16275800719609__0fa26ba3-5c52-4e9d-b432-0066944d931b-heading-1"
+      ],
+      "settings": {
+        "desktop_content_position": "center",
+        "content_alignment": "center",
+        "color_scheme": "background-1",
+        "full_width": true,
+        "padding_top": 40,
+        "padding_bottom": 52
+      }
+    },
     "main": {
       "type": "main-product",
       "blocks": {
@@ -103,6 +126,7 @@
     }
   },
   "order": [
+    "0fa26ba3-5c52-4e9d-b432-0066944d931b",
     "main",
     "product-review",
     "product-recommendations-clerkio"
