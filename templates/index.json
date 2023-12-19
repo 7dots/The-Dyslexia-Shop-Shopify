@@ -28,13 +28,16 @@
         "template--16275800391929__6bb00f71-bbc3-4b63-aa8c-b5578490aded-heading-1",
         "b5c9176d-69da-4423-b3d0-1454dcabe2e7"
       ],
+      "custom_css": [
+
+      ],
       "settings": {
         "desktop_content_position": "center",
         "content_alignment": "center",
         "color_scheme": "background-1",
         "full_width": true,
-        "padding_top": 40,
-        "padding_bottom": 52
+        "padding_top": 16,
+        "padding_bottom": 16
       }
     },
     "image_banner": {
