@@ -133,12 +133,12 @@
     "image_banner_contained": {
       "type": "image-banner",
       "settings": {
-        "image": "shopify:\/\/shop_images\/thedyslexiashop-descktop23332.jpg",
-        "image_mobile": "shopify:\/\/shop_images\/thedyslexiashop-mob-343.jpg",
+        "image": "shopify:\/\/shop_images\/thedyslexiashop-descktop232_2_006fbf07-c400-4abe-8771-5b8f989c8869.jpg",
+        "image_mobile": "shopify:\/\/shop_images\/thedyslexiashop-mob-3_2_a903c33c-361a-45e0-8de1-c13b55396ab2.jpg",
         "banner_contained": true,
         "show_text_box": false,
         "set_padding": false,
-        "link": "shopify:\/\/collections\/christmas",
+        "link": "shopify:\/\/collections\/c-pen",
         "show_text_below": false
       }
     },
