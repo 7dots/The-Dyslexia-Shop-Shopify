@@ -47,7 +47,7 @@
           "type": "backorder_notice",
           "disabled": true,
           "settings": {
-            "notice_text": "Due Soon"
+            "notice_text": "Back Order - Due Soon"
           }
         },
         "buy_buttons": {
