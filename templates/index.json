@@ -274,12 +274,12 @@
         "template--16275800391929__981fa1d3-c38e-4428-8734-e49176f60e85-buttons-1"
       ],
       "settings": {
-        "image": "shopify:\/\/shop_images\/thedyslexiashop-descktop22.jpg",
-        "image_mobile": "shopify:\/\/shop_images\/thedyslexiashop-mob-4_1.jpg",
+        "image": "shopify:\/\/shop_images\/TDS_Desktop.jpg",
+        "image_mobile": "shopify:\/\/shop_images\/TDS_Mobile.jpg",
         "banner_contained": true,
         "show_text_box": false,
         "set_padding": false,
-        "link": "shopify:\/\/collections\/five-minute-boxes",
+        "link": "shopify:\/\/collections\/orcam",
         "show_text_below": true
       }
     }
