@@ -28,6 +28,29 @@
       "settings": {
       }
     },
+    "1710237977f81bb3f0": {
+      "type": "apps",
+      "blocks": {
+        "klarna_on_site_messaging_app_block_Gxp6be": {
+          "type": "shopify:\/\/apps\/klarna-on-site-messaging\/blocks\/app-block\/b95936a9-74b6-4a95-8103-6a1b6459c25e",
+          "settings": {
+            "data_key": "credit-promotion-auto-size",
+            "locale_option": "geolocation",
+            "locale_fallback": "",
+            "theme": "default",
+            "topPadding": "0",
+            "bottomPadding": "0",
+            "messagePrefix": ""
+          }
+        }
+      },
+      "block_order": [
+        "klarna_on_site_messaging_app_block_Gxp6be"
+      ],
+      "settings": {
+        "include_margins": true
+      }
+    },
     "featured-collection": {
       "type": "featured-collection",
       "settings": {
@@ -56,16 +79,12 @@
     },
     "1660291949a1739805": {
       "type": "apps",
-      "blocks": {
-        "f6402bd0-ae03-4d9f-a88d-ccb2f737f267": {
-          "type": "shopify:\/\/apps\/volumeboost-volume-discount\/blocks\/product_page_block\/25745434-52e7-4378-88f1-890df18a0110",
-          "settings": {
-          }
-        }
-      },
-      "block_order": [
-        "f6402bd0-ae03-4d9f-a88d-ccb2f737f267"
-      ],
+      "settings": {
+        "include_margins": true
+      }
+    },
+    "1710237970daec1ffc": {
+      "type": "apps",
       "settings": {
         "include_margins": true
       }
@@ -74,7 +93,9 @@
   "order": [
     "cart-items",
     "cart-footer",
+    "1710237977f81bb3f0",
     "featured-collection",
-    "1660291949a1739805"
+    "1660291949a1739805",
+    "1710237970daec1ffc"
   ]
 }
