@@ -4,42 +4,49 @@
   <div class="announcement-bar__wrapper page-width">
     {%- for block in section.blocks -%}
       {% if block.settings.popup_trigger %}
-        <button class="announcement-bar__link" id="avedaPopupTrigger">{{ block.settings.text }}</a>
+        <button class="announcement-bar__link" id="avedaPopupTrigger">{{ block.settings.text }}</button>
       {% else %}
         <a class="announcement-bar__link" href="{{ block.settings.link }}">{{ block.settings.text }}</a>
       {% endif %}
     {%- endfor -%}
-  "blocks": [
-    {
-      "type": "announcement",
-      "name": "t:sections.announcement-bar.blocks.announcement.name",
-      "settings": [
+  </div>
+</div>
+
+{% schema %}
+  {
+    "name": "t:sections.announcement-bar.name",
+    "max_blocks": 3,
+    "blocks": [
+      {
+        "type": "announcement",
+        "name": "t:sections.announcement-bar.blocks.announcement.name",
+        "settings": [
+          {
+            "type": "richtext",
+            "id": "text",
+            "default": "<p>Welcome to our store</p>",
+            "label": "t:sections.announcement-bar.blocks.announcement.settings.text.label"
+          },
+          {
+            "type": "url",
+            "id": "link",
+            "label": "Link"
+          },
+          {
+            "type": "checkbox",
+            "id": "popup_trigger",
+            "label": "Use as popup trigger - Aveda Email Marketing",
+            "default": false
+          }
+        ]
+      }
+    ],
+    "default": {
+      "blocks": [
         {
-          "type": "richtext",
-          "id": "text",
-          "default": "<p>Welcome to our store</p>",
-          "label": "t:sections.announcement-bar.blocks.announcement.settings.text.label"
-        },
-        {
-          "type": "url",
-          "id": "link",
-          "label": "Link"
-        },
-        {
-          "type": "checkbox",
-          "id": "popup_trigger",
-          "label": "Use as popup trigger - Aveda Email Marketing",
-          "default": false
+          "type": "announcement"
         }
       ]
     }
-  ],
-  "default": {
-    "blocks": [
-      {
-        "type": "announcement"
-      }
-    ]
   }
-}
 {% endschema %}
