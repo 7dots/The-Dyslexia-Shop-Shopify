@@ -62,7 +62,7 @@
             "data_key": "top-strip-promotion-badge",
             "locale_option": "geolocation",
             "locale_fallback": "",
-            "theme": "dark",
+            "theme": "default",
             "topPadding": "0",
             "bottomPadding": "0",
             "messagePrefix": ""
