@@ -10,12 +10,12 @@
     "image_banner": {
       "type": "image-banner",
       "settings": {
-        "image": "shopify:\/\/shop_images\/thedyslexiashop-descktop-_1_1.jpg",
-        "image_mobile": "shopify:\/\/shop_images\/thedyslexiashop-mob_1_0c271892-7e71-4970-89e7-53102580e8af.jpg",
+        "image": "shopify:\/\/shop_images\/thedyslexiashop_with_dyslexie_font.png",
+        "image_mobile": "shopify:\/\/shop_images\/The_dyslexia_shop_1.png",
         "banner_contained": true,
         "show_text_box": false,
         "set_padding": false,
-        "link": "shopify:\/\/collections\/stationery",
+        "link": "shopify:\/\/collections\/assistive-keyboards",
         "show_text_below": false
       }
     },
