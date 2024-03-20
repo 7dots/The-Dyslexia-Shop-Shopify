@@ -228,13 +228,21 @@
               "text": "Create an Account",
               "utility_bar_link": "https:\/\/www.thedyslexiashop.co.uk\/account\/register"
             }
+          },
+          "utility_9kNpKk": {
+            "type": "utility",
+            "settings": {
+              "text": "Information Hub",
+              "utility_bar_link": "shopify:\/\/pages\/parents-hub"
+            }
           }
         },
         "block_order": [
           "6cca7c57-2f6f-400f-a6b4-a264bee43fb1",
           "9c33b6ed-9f67-4db0-9f82-d67834ee4818",
           "a2e739c0-9341-43d6-afaa-da9167ca9150",
-          "f41e79d9-cdaa-4828-ac97-d50a4dfbb1e8"
+          "f41e79d9-cdaa-4828-ac97-d50a4dfbb1e8",
+          "utility_9kNpKk"
         ],
         "settings": {
         }
