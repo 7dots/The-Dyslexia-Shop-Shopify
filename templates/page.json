@@ -2,7 +2,6 @@
   "sections": {
     "main": {
       "type": "main-page",
-      "disabled": true,
       "settings": {
         "padding_top": 28,
         "padding_bottom": 28
@@ -10,23 +9,6 @@
     },
     "171092625520634d16": {
       "type": "apps",
-      "blocks": {
-        "klarna_on_site_messaging_app_block_iYYA3M": {
-          "type": "shopify:\/\/apps\/klarna-on-site-messaging\/blocks\/app-block\/b95936a9-74b6-4a95-8103-6a1b6459c25e",
-          "settings": {
-            "data_key": "info-page",
-            "locale_option": "geolocation",
-            "locale_fallback": "",
-            "theme": "default",
-            "topPadding": "0",
-            "bottomPadding": "0",
-            "messagePrefix": ""
-          }
-        }
-      },
-      "block_order": [
-        "klarna_on_site_messaging_app_block_iYYA3M"
-      ],
       "settings": {
         "include_margins": true
       }
