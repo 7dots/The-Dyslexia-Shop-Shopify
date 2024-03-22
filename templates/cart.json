@@ -34,10 +34,10 @@
         "klarna_on_site_messaging_app_block_Gxp6be": {
           "type": "shopify:\/\/apps\/klarna-on-site-messaging\/blocks\/app-block\/b95936a9-74b6-4a95-8103-6a1b6459c25e",
           "settings": {
-            "data_key": "credit-promotion-auto-size",
+            "data_key": "credit-promotion-badge",
             "locale_option": "geolocation",
             "locale_fallback": "",
-            "theme": "default",
+            "theme": "dark",
             "topPadding": "0",
             "bottomPadding": "0",
             "messagePrefix": ""
@@ -85,6 +85,28 @@
     },
     "1710237970daec1ffc": {
       "type": "apps",
+      "blocks": {
+        "planet_shopify_planet_x7yL68": {
+          "type": "shopify:\/\/apps\/planet\/blocks\/shopify-planet\/12047591-3a2d-45cc-9dfd-2ce5eaa45dee",
+          "settings": {
+            "badgeMode": "info",
+            "showLogo": true,
+            "showMoreInfo": true,
+            "showStats": false,
+            "showProjects": false,
+            "backgroundColor": "#F1F8F5",
+            "textColor": "#1D4136",
+            "borderColor": "#95C9B4",
+            "fullWidth": true,
+            "marginTop": 0,
+            "marginBottom": 0,
+            "borderRadius": 4
+          }
+        }
+      },
+      "block_order": [
+        "planet_shopify_planet_x7yL68"
+      ],
       "settings": {
         "include_margins": true
       }
