@@ -202,9 +202,9 @@
             "showMoreInfo": true,
             "showStats": true,
             "showProjects": true,
-            "backgroundColor": "#F1F8F5",
-            "textColor": "#1D4136",
-            "borderColor": "#95C9B4",
+            "backgroundColor": "#f1f8f5",
+            "textColor": "#1d4136",
+            "borderColor": "#95c9b4",
             "fullWidth": true,
             "marginTop": 0,
             "marginBottom": 0,
@@ -308,8 +308,8 @@
         "template--16275800391929__981fa1d3-c38e-4428-8734-e49176f60e85-buttons-1"
       ],
       "settings": {
-        "image": "shopify:\/\/shop_images\/TDS_Desktop.jpg",
-        "image_mobile": "shopify:\/\/shop_images\/TDS_Mobile.jpg",
+        "image": "shopify:\/\/shop_images\/thedyslexiashop-descktop2332q2_1.jpg",
+        "image_mobile": "shopify:\/\/shop_images\/thedyslexiashop-mob-363.jpg",
         "banner_contained": true,
         "show_text_box": false,
         "set_padding": false,
