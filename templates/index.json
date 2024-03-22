@@ -191,6 +191,34 @@
         "block_background": "image-text__light-green"
       }
     },
+    "1711094191dea49e8d": {
+      "type": "apps",
+      "blocks": {
+        "planet_shopify_planet_TppbCQ": {
+          "type": "shopify:\/\/apps\/planet\/blocks\/shopify-planet\/12047591-3a2d-45cc-9dfd-2ce5eaa45dee",
+          "settings": {
+            "badgeMode": "info",
+            "showLogo": true,
+            "showMoreInfo": true,
+            "showStats": true,
+            "showProjects": true,
+            "backgroundColor": "#F1F8F5",
+            "textColor": "#1D4136",
+            "borderColor": "#95C9B4",
+            "fullWidth": true,
+            "marginTop": 0,
+            "marginBottom": 0,
+            "borderRadius": 4
+          }
+        }
+      },
+      "block_order": [
+        "planet_shopify_planet_TppbCQ"
+      ],
+      "settings": {
+        "include_margins": true
+      }
+    },
     "multicolumn-icon": {
       "type": "multicolumn-icon",
       "blocks": {
@@ -303,6 +331,7 @@
     "trending_products",
     "feefo_carousel",
     "image_with_text",
+    "1711094191dea49e8d",
     "multicolumn-icon",
     "981fa1d3-c38e-4428-8734-e49176f60e85"
   ]
