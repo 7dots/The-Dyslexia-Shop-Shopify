@@ -110,6 +110,34 @@
         "block_background": "grey"
       }
     },
+    "171109439237a95ef2": {
+      "type": "apps",
+      "blocks": {
+        "planet_shopify_planet_EFn7jx": {
+          "type": "shopify:\/\/apps\/planet\/blocks\/shopify-planet\/12047591-3a2d-45cc-9dfd-2ce5eaa45dee",
+          "settings": {
+            "badgeMode": "info",
+            "showLogo": true,
+            "showMoreInfo": true,
+            "showStats": true,
+            "showProjects": true,
+            "backgroundColor": "#F1F8F5",
+            "textColor": "#1D4136",
+            "borderColor": "#95C9B4",
+            "fullWidth": true,
+            "marginTop": 0,
+            "marginBottom": 0,
+            "borderRadius": 4
+          }
+        }
+      },
+      "block_order": [
+        "planet_shopify_planet_EFn7jx"
+      ],
+      "settings": {
+        "include_margins": true
+      }
+    },
     "product-recommendations-clerkio": {
       "type": "product-recommendations-clerkio",
       "settings": {
@@ -119,6 +147,7 @@
   "order": [
     "main",
     "product-review",
+    "171109439237a95ef2",
     "product-recommendations-clerkio"
   ]
 }
