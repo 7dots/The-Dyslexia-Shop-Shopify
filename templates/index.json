@@ -7,16 +7,51 @@
         "popup_text": "<p><em>Please note that our office and warehouse will be closed over the festive period, from 22nd of December to 2nd of January 2024. <\/em><\/p><p><em>Wishing you a fantastic holiday season and a prosperous New Year!<\/em><\/p>"
       }
     },
-    "image_banner": {
+    "981fa1d3-c38e-4428-8734-e49176f60e85": {
       "type": "image-banner",
+      "blocks": {
+        "template--16275800391929__981fa1d3-c38e-4428-8734-e49176f60e85-heading-1": {
+          "type": "heading",
+          "disabled": true,
+          "settings": {
+            "heading": "Image banner",
+            "heading_size": "h1"
+          }
+        },
+        "template--16275800391929__981fa1d3-c38e-4428-8734-e49176f60e85-text-1": {
+          "type": "text",
+          "disabled": true,
+          "settings": {
+            "text": "Give customers details about the banner image(s) or content on the template.",
+            "text_style": "body"
+          }
+        },
+        "template--16275800391929__981fa1d3-c38e-4428-8734-e49176f60e85-buttons-1": {
+          "type": "buttons",
+          "disabled": true,
+          "settings": {
+            "button_label_1": "Button label",
+            "button_link_1": "",
+            "button_style_secondary_1": false,
+            "button_label_2": "Button label",
+            "button_link_2": "",
+            "button_style_secondary_2": false
+          }
+        }
+      },
+      "block_order": [
+        "template--16275800391929__981fa1d3-c38e-4428-8734-e49176f60e85-heading-1",
+        "template--16275800391929__981fa1d3-c38e-4428-8734-e49176f60e85-text-1",
+        "template--16275800391929__981fa1d3-c38e-4428-8734-e49176f60e85-buttons-1"
+      ],
       "settings": {
-        "image": "shopify:\/\/shop_images\/thedyslexiashop_with_dyslexie_font.png",
-        "image_mobile": "shopify:\/\/shop_images\/The_dyslexia_shop_1.png",
+        "image": "shopify:\/\/shop_images\/thedyslexiashop-descktop2332q2_1.jpg",
+        "image_mobile": "shopify:\/\/shop_images\/thedyslexiashop-mob-363.jpg",
         "banner_contained": true,
         "show_text_box": false,
         "set_padding": false,
-        "link": "shopify:\/\/collections\/assistive-keyboards",
-        "show_text_below": false
+        "link": "shopify:\/\/collections\/orcam",
+        "show_text_below": true
       }
     },
     "cta_image_column": {
@@ -219,6 +254,18 @@
         "include_margins": true
       }
     },
+    "image_banner": {
+      "type": "image-banner",
+      "settings": {
+        "image": "shopify:\/\/shop_images\/thedyslexiashop_with_dyslexie_font.png",
+        "image_mobile": "shopify:\/\/shop_images\/The_dyslexia_shop_1.png",
+        "banner_contained": true,
+        "show_text_box": false,
+        "set_padding": false,
+        "link": "shopify:\/\/collections\/assistive-keyboards",
+        "show_text_below": false
+      }
+    },
     "multicolumn-icon": {
       "type": "multicolumn-icon",
       "blocks": {
@@ -269,58 +316,11 @@
         "columns_desktop": 4,
         "swipe_on_mobile": false
       }
-    },
-    "981fa1d3-c38e-4428-8734-e49176f60e85": {
-      "type": "image-banner",
-      "blocks": {
-        "template--16275800391929__981fa1d3-c38e-4428-8734-e49176f60e85-heading-1": {
-          "type": "heading",
-          "disabled": true,
-          "settings": {
-            "heading": "Image banner",
-            "heading_size": "h1"
-          }
-        },
-        "template--16275800391929__981fa1d3-c38e-4428-8734-e49176f60e85-text-1": {
-          "type": "text",
-          "disabled": true,
-          "settings": {
-            "text": "Give customers details about the banner image(s) or content on the template.",
-            "text_style": "body"
-          }
-        },
-        "template--16275800391929__981fa1d3-c38e-4428-8734-e49176f60e85-buttons-1": {
-          "type": "buttons",
-          "disabled": true,
-          "settings": {
-            "button_label_1": "Button label",
-            "button_link_1": "",
-            "button_style_secondary_1": false,
-            "button_label_2": "Button label",
-            "button_link_2": "",
-            "button_style_secondary_2": false
-          }
-        }
-      },
-      "block_order": [
-        "template--16275800391929__981fa1d3-c38e-4428-8734-e49176f60e85-heading-1",
-        "template--16275800391929__981fa1d3-c38e-4428-8734-e49176f60e85-text-1",
-        "template--16275800391929__981fa1d3-c38e-4428-8734-e49176f60e85-buttons-1"
-      ],
-      "settings": {
-        "image": "shopify:\/\/shop_images\/thedyslexiashop-descktop2332q2_1.jpg",
-        "image_mobile": "shopify:\/\/shop_images\/thedyslexiashop-mob-363.jpg",
-        "banner_contained": true,
-        "show_text_box": false,
-        "set_padding": false,
-        "link": "shopify:\/\/collections\/orcam",
-        "show_text_below": true
-      }
     }
   },
   "order": [
     "announcement_popup",
-    "image_banner",
+    "981fa1d3-c38e-4428-8734-e49176f60e85",
     "cta_image_column",
     "171023789066707133",
     "rich_text",
@@ -332,7 +332,7 @@
     "feefo_carousel",
     "image_with_text",
     "1711094191dea49e8d",
-    "multicolumn-icon",
-    "981fa1d3-c38e-4428-8734-e49176f60e85"
+    "image_banner",
+    "multicolumn-icon"
   ]
 }
