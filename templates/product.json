@@ -1,5 +1,33 @@
 {
   "sections": {
+    "17110944034477fc65": {
+      "type": "apps",
+      "blocks": {
+        "planet_shopify_planet_VMFpBi": {
+          "type": "shopify:\/\/apps\/planet\/blocks\/shopify-planet\/12047591-3a2d-45cc-9dfd-2ce5eaa45dee",
+          "settings": {
+            "badgeMode": "buyer_contribution",
+            "showLogo": true,
+            "showMoreInfo": true,
+            "showStats": false,
+            "showProjects": true,
+            "backgroundColor": "#f1f8f5",
+            "textColor": "#1d4136",
+            "borderColor": "#95c9b4",
+            "fullWidth": true,
+            "marginTop": 0,
+            "marginBottom": 0,
+            "borderRadius": 4
+          }
+        }
+      },
+      "block_order": [
+        "planet_shopify_planet_VMFpBi"
+      ],
+      "settings": {
+        "include_margins": true
+      }
+    },
     "main": {
       "type": "main-product",
       "blocks": {
@@ -120,41 +148,13 @@
       "type": "product-recommendations-clerkio",
       "settings": {
       }
-    },
-    "17110944034477fc65": {
-      "type": "apps",
-      "blocks": {
-        "planet_shopify_planet_VMFpBi": {
-          "type": "shopify:\/\/apps\/planet\/blocks\/shopify-planet\/12047591-3a2d-45cc-9dfd-2ce5eaa45dee",
-          "settings": {
-            "badgeMode": "info",
-            "showLogo": true,
-            "showMoreInfo": true,
-            "showStats": false,
-            "showProjects": true,
-            "backgroundColor": "#F1F8F5",
-            "textColor": "#1D4136",
-            "borderColor": "#95C9B4",
-            "fullWidth": true,
-            "marginTop": 0,
-            "marginBottom": 0,
-            "borderRadius": 4
-          }
-        }
-      },
-      "block_order": [
-        "planet_shopify_planet_VMFpBi"
-      ],
-      "settings": {
-        "include_margins": true
-      }
     }
   },
   "order": [
+    "17110944034477fc65",
     "main",
     "product-review",
     "171109439237a95ef2",
-    "product-recommendations-clerkio",
-    "17110944034477fc65"
+    "product-recommendations-clerkio"
   ]
 }
