@@ -84,6 +84,23 @@
             "show_dynamic_checkout": false
           }
         },
+        "planet_shopify_planet_dWD7xU": {
+          "type": "shopify:\/\/apps\/planet\/blocks\/shopify-planet\/12047591-3a2d-45cc-9dfd-2ce5eaa45dee",
+          "settings": {
+            "badgeMode": "buyer_contribution",
+            "showLogo": true,
+            "showMoreInfo": true,
+            "showStats": false,
+            "showProjects": false,
+            "backgroundColor": "#F1F8F5",
+            "textColor": "#1D4136",
+            "borderColor": "#95C9B4",
+            "fullWidth": true,
+            "marginTop": 0,
+            "marginBottom": 0,
+            "borderRadius": 4
+          }
+        },
         "klarna_on_site_messaging_app_block_EBe4AR": {
           "type": "shopify:\/\/apps\/klarna-on-site-messaging\/blocks\/app-block\/b95936a9-74b6-4a95-8103-6a1b6459c25e",
           "settings": {
@@ -118,6 +135,7 @@
         "quantity_selector",
         "a2729f3a-5332-49a8-9def-1852e75cf4ff",
         "buy_buttons",
+        "planet_shopify_planet_dWD7xU",
         "klarna_on_site_messaging_app_block_EBe4AR",
         "description",
         "share"
