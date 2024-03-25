@@ -28,6 +28,34 @@
       "settings": {
       }
     },
+    "1710237970daec1ffc": {
+      "type": "apps",
+      "blocks": {
+        "planet_shopify_planet_x7yL68": {
+          "type": "shopify:\/\/apps\/planet\/blocks\/shopify-planet\/12047591-3a2d-45cc-9dfd-2ce5eaa45dee",
+          "settings": {
+            "badgeMode": "buyer_contribution",
+            "showLogo": true,
+            "showMoreInfo": true,
+            "showStats": false,
+            "showProjects": false,
+            "backgroundColor": "#f1f8f5",
+            "textColor": "#1d4136",
+            "borderColor": "#95c9b4",
+            "fullWidth": true,
+            "marginTop": 0,
+            "marginBottom": 0,
+            "borderRadius": 4
+          }
+        }
+      },
+      "block_order": [
+        "planet_shopify_planet_x7yL68"
+      ],
+      "settings": {
+        "include_margins": true
+      }
+    },
     "1710237977f81bb3f0": {
       "type": "apps",
       "blocks": {
@@ -82,42 +110,14 @@
       "settings": {
         "include_margins": true
       }
-    },
-    "1710237970daec1ffc": {
-      "type": "apps",
-      "blocks": {
-        "planet_shopify_planet_x7yL68": {
-          "type": "shopify:\/\/apps\/planet\/blocks\/shopify-planet\/12047591-3a2d-45cc-9dfd-2ce5eaa45dee",
-          "settings": {
-            "badgeMode": "info",
-            "showLogo": true,
-            "showMoreInfo": true,
-            "showStats": false,
-            "showProjects": false,
-            "backgroundColor": "#F1F8F5",
-            "textColor": "#1D4136",
-            "borderColor": "#95C9B4",
-            "fullWidth": true,
-            "marginTop": 0,
-            "marginBottom": 0,
-            "borderRadius": 4
-          }
-        }
-      },
-      "block_order": [
-        "planet_shopify_planet_x7yL68"
-      ],
-      "settings": {
-        "include_margins": true
-      }
     }
   },
   "order": [
     "cart-items",
     "cart-footer",
+    "1710237970daec1ffc",
     "1710237977f81bb3f0",
     "featured-collection",
-    "1660291949a1739805",
-    "1710237970daec1ffc"
+    "1660291949a1739805"
   ]
 }
